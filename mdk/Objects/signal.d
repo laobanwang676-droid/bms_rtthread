@@ -1,0 +1,14 @@
+.\objects\signal.o: ..\third_lib\rt-thread\src\signal.c
+.\objects\signal.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\signal.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rthw.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\signal.o: ..\app\rtconfig.h
+.\objects\signal.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\signal.o: ..\app\rtconfig.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\signal.o: ..\app\rtconfig.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\signal.o: ..\third_lib\rt-thread\include\rtthread.h

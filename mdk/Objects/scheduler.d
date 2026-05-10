@@ -1,0 +1,12 @@
+.\objects\scheduler.o: ..\third_lib\rt-thread\src\scheduler.c
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\scheduler.o: ..\app\rtconfig.h
+.\objects\scheduler.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\scheduler.o: ..\app\rtconfig.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\scheduler.o: ..\app\rtconfig.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\scheduler.o: ..\third_lib\rt-thread\include\rthw.h

@@ -1,0 +1,12 @@
+.\objects\memheap.o: ..\third_lib\rt-thread\src\memheap.c
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rthw.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\memheap.o: ..\app\rtconfig.h
+.\objects\memheap.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\memheap.o: ..\app\rtconfig.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\memheap.o: ..\app\rtconfig.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\memheap.o: ..\third_lib\rt-thread\include\rtthread.h

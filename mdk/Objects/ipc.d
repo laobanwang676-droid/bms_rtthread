@@ -1,0 +1,12 @@
+.\objects\ipc.o: ..\third_lib\rt-thread\src\ipc.c
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\ipc.o: ..\app\rtconfig.h
+.\objects\ipc.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\ipc.o: ..\app\rtconfig.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\ipc.o: ..\app\rtconfig.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\ipc.o: ..\third_lib\rt-thread\include\rthw.h

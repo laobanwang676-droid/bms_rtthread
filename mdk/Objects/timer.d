@@ -1,0 +1,12 @@
+.\objects\timer.o: ..\third_lib\rt-thread\src\timer.c
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\timer.o: ..\app\rtconfig.h
+.\objects\timer.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\timer.o: ..\app\rtconfig.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\timer.o: ..\app\rtconfig.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\timer.o: ..\third_lib\rt-thread\include\rthw.h

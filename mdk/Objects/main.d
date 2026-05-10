@@ -1,0 +1,14 @@
+.\objects\main.o: ..\app\main.c
+.\objects\main.o: ..\app\app.h
+.\objects\main.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\main.o: ..\app\rtconfig.h
+.\objects\main.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\main.o: ..\app\rtconfig.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\main.o: ..\app\rtconfig.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\main.o: ..\third_lib\rt-thread\include\rtthread.h

@@ -1,0 +1,11 @@
+.\objects\device.o: ..\third_lib\rt-thread\src\device.c
+.\objects\device.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\device.o: ..\app\rtconfig.h
+.\objects\device.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\device.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\device.o: ..\app\rtconfig.h
+.\objects\device.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\device.o: ..\app\rtconfig.h
+.\objects\device.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\device.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\device.o: ..\third_lib\rt-thread\include\rtthread.h

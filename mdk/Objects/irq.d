@@ -1,0 +1,12 @@
+.\objects\irq.o: ..\third_lib\rt-thread\src\irq.c
+.\objects\irq.o: ..\third_lib\rt-thread\include\rthw.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\irq.o: ..\app\rtconfig.h
+.\objects\irq.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\irq.o: ..\app\rtconfig.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\irq.o: ..\app\rtconfig.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\irq.o: ..\third_lib\rt-thread\include\rtthread.h

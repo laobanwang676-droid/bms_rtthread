@@ -1,0 +1,12 @@
+.\objects\components.o: ..\third_lib\rt-thread\src\components.c
+.\objects\components.o: ..\third_lib\rt-thread\include\rthw.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\components.o: ..\app\rtconfig.h
+.\objects\components.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtdebug.h
+.\objects\components.o: ..\app\rtconfig.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtdef.h
+.\objects\components.o: ..\app\rtconfig.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtservice.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtm.h
+.\objects\components.o: ..\third_lib\rt-thread\include\rtthread.h
