@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\app;..\driver\delay;..\driver\usart;..\driver\soft_i2c;..\driver\bq769;..\driver\bms_config;..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include</IncludePath>
+              <IncludePath>..\app;..\driver\delay;..\driver\usart;..\driver\soft_i2c;..\driver\bq769;..\driver\bms_config;..\driver\bms_app;..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -433,6 +433,41 @@
               <FileName>bms_control.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\bms_config\bms_control.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>bms_app</GroupName>
+          <Files>
+            <File>
+              <FileName>bms_analysis.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bms_analysis.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bms_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_monitor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bms_monitor.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_protect.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bms_protect.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bms_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsm_balance.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_app\bsm_balance.c</FilePath>
             </File>
           </Files>
         </Group>

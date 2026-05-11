@@ -679,7 +679,7 @@ void BQ769X0_UpdateCurrent(void)
 
 
 /* 更新总电压 250ms更新一次 */
-void BQ769X0_UpadteBatVolt(void)
+void BQ769X0_UpdateBatVolt(void)
 {
 	uint16_t adc_value;
 
@@ -994,10 +994,10 @@ void BQ769X0_Initialize(BQ769X0_InitDataTypedef *InitData)
 	/* 设置保护相关寄存器：阈值/延时等 */
 	Registers.Protect1.Protect1Bit.SCD_THRESH = SCDThresh;//设置短路保护阈值
 	Registers.Protect2.Protect2Bit.OCD_THRESH = OCDThresh;//设置过流保护阈值
-	Registers.Protect1.Protect1Bit.SCD_DELAY  = InitData->ConfigData.SCDDelay;    
-	Registers.Protect2.Protect2Bit.OCD_DELAY  = InitData->ConfigData.OCDDelay;    
-	Registers.Protect3.Protect3Bit.UV_DELAY   = InitData->ConfigData.UVDelay;    
-	Registers.Protect3.Protect3Bit.OV_DELAY   = InitData->ConfigData.OVDelay;
+	Registers.Protect1.Protect1Bit.SCD_DELAY  = InitData->ConfigData.SCDDelay;   //设置短路保护延时
+	Registers.Protect2.Protect2Bit.OCD_DELAY  = InitData->ConfigData.OCDDelay;    //设置过流保护延时
+	Registers.Protect3.Protect3Bit.UV_DELAY   = InitData->ConfigData.UVDelay;     //设置欠压保护延时
+	Registers.Protect3.Protect3Bit.OV_DELAY   = InitData->ConfigData.OVDelay; 	  //设置过压保护延时
 
 	/* 根据期望的OV/UV阈值（mV）计算芯片寄存器需要的编码值（参见芯片手册7.3.1.2.1） */
 	Registers.OVTrip = (uint8_t)((((uint16_t)((InitData->ConfigData.OVPThreshold - Adcoffset)/Gain/* + 0.5*/) - OV_THRESH_BASE) >> 4) & 0xFF);

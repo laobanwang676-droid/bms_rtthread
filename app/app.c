@@ -1,12 +1,53 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "app.h"
 #include "stm32f10x.h"
 #include "rtthread.h"
 #include "finsh.h"
+#include "soft_i2c.h"
+#include "bq769.h"
+#include "bms_monitor.h"
+#include "bms_global_define.h"
 
 uint16_t led_time = 200;  /* LED闪烁时间，单位ms */
 rt_thread_t led_thread;
-void led_task(void *parameter);
+
+static void led_init(void);
+
+void app_init(void)
+{
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+
+	BQ769X0_InitDataTypedef InitData;
+
+	// InitData.AlertOps.ocd 	 = BMS_ProtectHwOCD;
+	// InitData.AlertOps.scd 	 = BMS_ProtectHwSCD;
+	// InitData.AlertOps.ov	 = BMS_ProtectHwOV;
+	// InitData.AlertOps.uv 	 = BMS_ProtectHwUV;	
+
+	// // 使用硬件中断通知,如果烧写程序后必须重新上下电一次BQ芯片或者复位
+	// InitData.AlertOps.cc 	 = BMS_MonitorHwCurrent;
+	// //InitData.AlertOps.cc 	 = NULL;
+
+	// // 这两个中断会造成系统故障
+	// // 第一个报警时设备故障,表示BQ芯片有问题了
+	// // 第二个报警可能存在被外界电磁信号干扰造成误判,之前出现过,换了个跟官方一样阻值的电阻就没出现过了
+	// InitData.AlertOps.device = BMS_ProtectHwDevice;
+	// InitData.AlertOps.ovrd 	 = BMS_ProtectHwOvrd;
+
+	InitData.ConfigData.SCDDelay	 = (BQ769X0_SCDDelayTypedef)INIT_SCD_DELAY;
+	InitData.ConfigData.OCDDelay	 = (BQ769X0_OCDDelayTypedef)INIT_OCD_DELAY;
+	InitData.ConfigData.UVDelay	 	 = (BQ769X0_OVDelayTypedef)INIT_UV_DELAY;
+	InitData.ConfigData.OVDelay	 	 = (BQ769X0_UVDelayTypedef)INIT_OV_DELAY;
+	InitData.ConfigData.UVPThreshold = INIT_UV_PROTECT * 1000;
+	InitData.ConfigData.OVPThreshold = INIT_OV_PROTECT * 1000;
+	I2C_BusInitialize();
+	BQ769X0_Initialize(&InitData);
+
+    BMS_MonitorInit();
+    // led_init();
+}
 
 void led_gpio_init(void)
 {
@@ -22,13 +63,6 @@ void led_gpio_init(void)
     GPIO_Init(GPIOC, &GPIO_InitStruct);
 }
 
-void led_init(void)
-{
-    led_gpio_init();
-    led_thread = rt_thread_create("led", led_task, NULL, 256, 5, 10);
-    rt_thread_startup(led_thread);
-}
-
 void led_toggle(void)
 {
     GPIOC->ODR ^= GPIO_Pin_13;  /* 切换LED状态 */
@@ -40,8 +74,14 @@ void led_task(void *parameter)
     {   
         led_toggle();
         rt_thread_delay(led_time);
-        // rt_kprintf("LED toggled in thread.\n");
     }   
+}
+
+static void led_init(void)
+{
+    led_gpio_init();
+    led_thread = rt_thread_create("led", led_task, NULL, 256, 5, 10);
+    rt_thread_startup(led_thread);
 }
 
 static int shell_test(int argc, char **argv)

@@ -2,8 +2,7 @@
 #define __APP_H__
 #include <stdint.h>
 
-void led_init(void);
-void led_toggle(void);
+void app_init(void);
 
 #endif /*__APP_H__*/
 

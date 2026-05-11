@@ -49,11 +49,11 @@ static void I2C1_Unlock(void)
 // 适用于72MHZ
 static void delay_us(uint32_t us)
 {
-	uint16_t i = 0;
+	volatile uint16_t i = 0;
 	
 	while(us--)
 	{
-		i = 10; //自己定义
+		i = 20; //自己定义
 		while(i--);
 	}
 }
@@ -82,7 +82,8 @@ static void I2C_BusHardwareInitialize(struct I2C_BusTypeDef *bus)
     
     GPIO_Init(bus->gpiox, &GPIO_InitStruct);
 
-    GPIO_WriteBit(bus->gpiox, bus->scl_gpio_pin | bus->sda_gpio_pin, Bit_SET);
+    GPIO_WriteBit(bus->gpiox, bus->scl_gpio_pin, Bit_SET);
+	GPIO_WriteBit(bus->gpiox, bus->sda_gpio_pin, Bit_SET);
 	
     if (bus->lockInit)bus->lockInit();
 }
@@ -199,6 +200,7 @@ static uint8_t I2C_WriteByte(struct I2C_BusTypeDef *bus, uint8_t data)
 		data & mask ? SDA_H(bus) : SDA_L(bus);
 		bus->udelay(1);
 		SCL_H(bus);
+		bus->udelay(1);
 	}
 	SCL_L(bus);
 	bus->udelay(1);

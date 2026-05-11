@@ -39,8 +39,8 @@
 #define I2C_ERROR(fmt, arg...)
 
 #elif I2C_DEBUG_LEVEL == 3
-#define I2C_INFO(fmt, arg...)
-#define I2C_WARNING(fmt, arg...)
+#define I2C_INFO(fmt, arg...)			//rt_kprintf("<<-I2C-INFO->> "fmt"\r\n",##arg)
+#define I2C_WARNING(fmt, arg...)		//rt_kprintf("<<-I2C-WARNING->> "fmt"\r\n",##arg)
 #define I2C_ERROR(fmt, arg...)	 		rt_kprintf("<<-I2C-ERROR->> "fmt"\r\n",##arg)
 #endif
 

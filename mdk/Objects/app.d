@@ -1,5 +1,6 @@
 .\objects\app.o: ..\app\app.c
 .\objects\app.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\app.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\app.o: ..\app\app.h
 .\objects\app.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\app.o: ..\firmware\driver\inc\stm32f10x.h
@@ -40,3 +41,10 @@
 .\objects\app.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\app.o: ..\third_lib\rt-thread\include\rtthread.h
 .\objects\app.o: ..\third_lib\rt-thread\components\finsh\finsh.h
+.\objects\app.o: ..\driver\soft_i2c\soft_i2c.h
+.\objects\app.o: ..\third_lib\rt-thread\include\rthw.h
+.\objects\app.o: ..\driver\bq769\bq769.h
+.\objects\app.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\app.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\app.o: ..\driver\bms_config\bms_global_define.h
+.\objects\app.o: ..\driver\bms_app\bms_monitor.h

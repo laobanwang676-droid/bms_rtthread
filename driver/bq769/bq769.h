@@ -720,7 +720,7 @@ void BQ769X0_UpdateCellVolt(void);
 void BQ769X0_UpdateTsTemp(void);
 void BQ769X0_UpdateDieTemp(void);
 void BQ769X0_UpdateCurrent(void);
-void BQ769X0_UpadteBatVolt(void);
+void BQ769X0_UpdateBatVolt(void);
 
 void BQ769X0_SCDDelaySet(BQ769X0_SCDDelayTypedef SCDDelay);
 void BQ769X0_OCDDelaySet(BQ769X0_OCDDelayTypedef OCDDelay);
