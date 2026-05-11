@@ -10,7 +10,7 @@
 extern rt_uint8_t rx_buf[RX_BUF_SIZE];
 extern rt_uint16_t rx_in;  // 写指针 (中断专用)
 extern rt_uint16_t rx_out; // 读指针 (系统专用)
-extern rt_device_t uart_device;
+extern rt_sem_t uart_rx_sem;
 
 void USART1_Init(void);
 void USART_Send_Data( const uint8_t *data, uint16_t size);

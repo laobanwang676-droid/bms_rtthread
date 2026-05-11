@@ -10,3 +10,4 @@
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\mempool.o: ..\third_lib\rt-thread\components\finsh\finsh.h

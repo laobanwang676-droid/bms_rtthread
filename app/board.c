@@ -74,27 +74,42 @@ INIT_BOARD_EXPORT(uart_init);
 
 void rt_hw_console_output(const char *str)
 {
-    USART_Send_Data((const uint8_t *)str, rt_strlen(str));
+    while (*str != '\0')
+    {
+        if (*str == '\n')
+        {
+            USART_SendData(USART1, '\r');
+            while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+        }
+        
+        USART_SendData(USART1, *str);
+        while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+        
+        str++;
+    }
 }
 
-/* 设置finsh shell设备 */
-#ifdef RT_USING_DEVICE
-static int finsh_device_init(void)
+rt_int32_t rt_hw_console_getchar(void)
 {
-    rt_device_t device;
-    
-    device = rt_device_find("uart0");
-    if(device != RT_NULL)
+    rt_int32_t ch = -1;
+
+    if (uart_rx_sem != RT_NULL)
     {
-        extern void finsh_set_device(const char *device_name);
-        finsh_set_device("uart0");
-        rt_kprintf("Finsh shell device set to uart0.\n");
+        rt_sem_take(uart_rx_sem, RT_WAITING_FOREVER);
     }
-    
-    return 0;
+
+    {
+        rt_base_t level = rt_hw_interrupt_disable();
+        if (rx_in != rx_out)
+        {
+            ch = rx_buf[rx_out];  /* 从环形缓冲区读数据 */
+            rx_out = (rx_out + 1) % RX_BUF_SIZE; /* 读指针前移 */
+        }
+        rt_hw_interrupt_enable(level);
+    }
+
+    return ch;
 }
-INIT_APP_EXPORT(finsh_device_init);
-#endif /* RT_USING_DEVICE */
 
 #endif
 

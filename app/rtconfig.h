@@ -27,7 +27,7 @@
 
 // <o>the stack size of main thread<1-4086>
 //  <i>Default: 512
-#define RT_MAIN_THREAD_STACK_SIZE     256
+#define RT_MAIN_THREAD_STACK_SIZE     1024
 
 // </h>
 
@@ -128,14 +128,23 @@
 // <h>FinSH Configuration
 // <c1>include finsh config
 //  <i>Select this choice if you using FinSH 
-// #include "finsh_config.h"
+#define RT_USING_FINSH
+// <c1>Using symbol table in finsh
+//  <i>Enable MSH_CMD_EXPORT macros for shell commands
+#define FINSH_USING_SYMTAB
+// <c1>Using description for finsh commands
+//  <i>Show command descriptions in help
+#define FINSH_USING_DESCRIPTION
+// <c1>Using built-in MSH commands
+//  <i>Enable list_thread and other built-in commands
+#define MSH_USING_BUILT_IN_COMMANDS
 // </c>
 // </h>
 
 // <h>Device Configuration
 // <c1>using device framework
 //  <i>using device framework
-#define RT_USING_DEVICE
+// #define RT_USING_DEVICE
 // </c>
 // </h>
 

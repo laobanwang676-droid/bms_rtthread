@@ -10,4 +10,5 @@
 .\objects\thread.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\thread.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\thread.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\thread.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\thread.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stddef.h

@@ -10,3 +10,4 @@
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\slab.o: ..\third_lib\rt-thread\components\finsh\finsh.h

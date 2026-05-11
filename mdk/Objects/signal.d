@@ -12,3 +12,4 @@
 .\objects\signal.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\signal.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\signal.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\signal.o: ..\third_lib\rt-thread\components\finsh\finsh.h

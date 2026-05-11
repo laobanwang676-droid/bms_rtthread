@@ -9,4 +9,5 @@
 .\objects\kservice.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\kservice.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\kservice.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\kservice.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\kservice.o: ..\third_lib\rt-thread\include\rthw.h

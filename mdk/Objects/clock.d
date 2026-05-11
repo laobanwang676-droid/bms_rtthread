@@ -10,3 +10,4 @@
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\clock.o: ..\third_lib\rt-thread\components\finsh\finsh.h

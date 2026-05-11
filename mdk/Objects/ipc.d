@@ -9,4 +9,5 @@
 .\objects\ipc.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\ipc.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\ipc.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\ipc.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\ipc.o: ..\third_lib\rt-thread\include\rthw.h

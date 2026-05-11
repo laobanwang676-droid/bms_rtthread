@@ -38,6 +38,6 @@ void led_task(void *parameter)
     {   
         led_toggle();
         rt_thread_delay(100);  /* 延时500ms */
-        rt_kprintf("LED toggled in thread.\n");
+        // rt_kprintf("LED toggled in thread.\n");
     }   
 }

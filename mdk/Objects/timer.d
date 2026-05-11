@@ -9,4 +9,5 @@
 .\objects\timer.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\timer.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\timer.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\timer.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\timer.o: ..\third_lib\rt-thread\include\rthw.h

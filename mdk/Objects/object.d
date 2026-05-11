@@ -9,4 +9,5 @@
 .\objects\object.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\object.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\object.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\object.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\object.o: ..\third_lib\rt-thread\include\rthw.h

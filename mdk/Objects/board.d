@@ -10,6 +10,7 @@
 .\objects\board.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\board.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\board.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\board.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\board.o: ..\driver\usart\usart.h
 .\objects\board.o: ..\firmware\driver\inc\stm32f10x.h
 .\objects\board.o: ..\firmware\comsis\core\core_cm3.h

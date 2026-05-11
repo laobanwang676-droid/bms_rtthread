@@ -40,4 +40,5 @@
 .\objects\usart.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\usart.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\usart.o: ..\third_lib\rt-thread\include\rtthread.h
+.\objects\usart.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\usart.o: ..\driver\delay\delay.h
