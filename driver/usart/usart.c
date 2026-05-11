@@ -66,7 +66,7 @@ void USART1_Init(void)
 
     if (uart_rx_sem == RT_NULL)
     {
-        uart_rx_sem = rt_sem_create("uart_rx", 0, RT_IPC_FLAG_FIFO);
+        uart_rx_sem = rt_sem_create("uart_rx", 0, RT_IPC_FLAG_FIFO);//计数信号量
     }
 }
 

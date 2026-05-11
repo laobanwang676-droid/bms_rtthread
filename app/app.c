@@ -2,7 +2,9 @@
 #include "app.h"
 #include "stm32f10x.h"
 #include "rtthread.h"
+#include "finsh.h"
 
+uint16_t led_time = 200;  /* LED闪烁时间，单位ms */
 rt_thread_t led_thread;
 void led_task(void *parameter);
 
@@ -37,7 +39,22 @@ void led_task(void *parameter)
     while(1)
     {   
         led_toggle();
-        rt_thread_delay(100);  /* 延时500ms */
+        rt_thread_delay(led_time);
         // rt_kprintf("LED toggled in thread.\n");
     }   
 }
+
+static int shell_test(int argc, char **argv)
+{
+    if(argc > 1)
+    {
+        led_time = atoi(argv[1]);
+        if (led_time < 50) led_time = 50;  // 最小闪烁时间限制
+    }
+    else
+    {
+        led_time = 200;  // 默认闪烁时间
+    }
+    return 0;
+}
+MSH_CMD_EXPORT(shell_test, user shell test command);

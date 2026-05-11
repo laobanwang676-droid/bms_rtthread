@@ -98,15 +98,13 @@ rt_int32_t rt_hw_console_getchar(void)
         rt_sem_take(uart_rx_sem, RT_WAITING_FOREVER);
     }
 
+    rt_base_t level = rt_hw_interrupt_disable();//关闭中断 函数在汇编实现
+    if (rx_in != rx_out)
     {
-        rt_base_t level = rt_hw_interrupt_disable();
-        if (rx_in != rx_out)
-        {
-            ch = rx_buf[rx_out];  /* 从环形缓冲区读数据 */
-            rx_out = (rx_out + 1) % RX_BUF_SIZE; /* 读指针前移 */
-        }
-        rt_hw_interrupt_enable(level);
+        ch = rx_buf[rx_out];  /* 从环形缓冲区读数据 */
+        rx_out = (rx_out + 1) % RX_BUF_SIZE; /* 读指针前移 */
     }
+    rt_hw_interrupt_enable(level);
 
     return ch;
 }

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\app;..\driver\delay;..\driver\usart;..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include</IncludePath>
+              <IncludePath>..\app;..\driver\delay;..\driver\usart;..\driver\soft_i2c;..\driver\bq769;..\driver\bms_config;..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,6 +418,21 @@
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\usart\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>soft_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\soft_i2c\soft_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>bq769.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bq769\bq769.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\bms_config\bms_control.c</FilePath>
             </File>
           </Files>
         </Group>
