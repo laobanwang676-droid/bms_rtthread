@@ -34,7 +34,7 @@
 // <h>Debug Configuration
 // <c1>enable kernel debug configuration
 //  <i>Default: enable kernel debug configuration
-//#define RT_DEBUG
+#define RT_DEBUG
 // </c>
 // <o>enable components initialization debug configuration<0-1>
 //  <i>Default: 0
@@ -77,7 +77,7 @@
 // </c>
 // <c1>Using Mutex
 //  <i>Using Mutex
-//#define RT_USING_MUTEX
+#define RT_USING_MUTEX
 // </c>
 // <c1>Using Event
 //  <i>Using Event

@@ -126,7 +126,7 @@ BQ76940:3
 
 // 默认电池额定容量值(Ah)
 // 这个值没有实际用容量测仪校准过,是卖家口头说的
-#define BMS_BATTERY_CAPACITY	2.2
+#define BMS_BATTERY_CAPACITY	3.67
 
 // 在待机模式下静止多少时间进入睡眠模式(Min),睡眠低功耗处理暂未考虑
 #define BMS_ENTRY_SLEEP_TIME	60

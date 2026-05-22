@@ -14,18 +14,19 @@
 #ifndef BMS_CONTROL_H__
 #define BMS_CONTROL_H__
 
-
-
 #include "bms_global_define.h"
 
-
+/* 控制类接口 */
 void BMS_HalCtrlWakeup(void);
 void BMS_HalCtrlSleep(void);
 void BMS_HalCtrlDischarge(BMS_StateTypedef NewState);
 void BMS_HalCtrlCharge(BMS_StateTypedef NewState);
 void BMS_HalCtrlCellsBalance(BMS_CellIndexTypedef CellIndex, BMS_StateTypedef NewState);
 
-
+/* 数据采集接口（I2C保护） */
+void BMS_HalUpdateCellVoltage(void);
+void BMS_HalUpdateCellTemperature(void);
+void BMS_HalUpdateCellCurrent(void);
 
 #endif /* BMS_CONTROL_H__ */
 

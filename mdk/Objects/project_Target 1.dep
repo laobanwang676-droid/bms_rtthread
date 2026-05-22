@@ -1,22 +1,30 @@
 Dependencies for Project 'project', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
 F (..\app\main.c)(0x6A01749E)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\app\app.h)(0x6A01739A)
+I (..\app\app.h)(0x6A073AD8)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
-F (..\app\app.c)(0x6A01EBD4)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+F (..\app\app.c)(0x6A10760B)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
-I (..\app\app.h)(0x6A01739A)
+I (..\app\app.h)(0x6A073AD8)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
 I (..\firmware\comsis\core\core_cm3.h)(0x68F3C354)
 I (..\firmware\comsis\device\system_stm32f10x.h)(0x68F3C354)
@@ -43,25 +51,21 @@ I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
 I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
-I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
-I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
-I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
-I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
-I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
-I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (..\driver\soft_i2c\soft_i2c.h)(0x6A01F301)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
-I (..\driver\bq769\bq769.h)(0x6A01C9A5)
+I (..\driver\bq769\bq769.h)(0x6A0528E3)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
-I (..\driver\bms_config\bms_global_define.h)(0x6A016123)
-I (..\driver\bms_app\bms_monitor.h)(0x6A01DB81)
-F (..\app\board.c)(0x6A0127D1)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (..\driver\bms_app\bms_info.h)(0x6A02A41D)
+I (..\driver\bms_app\bms_analysis.h)(0x6A073A5C)
+I (..\driver\bms_app\bms_protect.h)(0x6A073C17)
+I (..\driver\bms_app\bms_balance.h)(0x6A073A1C)
+F (..\app\board.c)(0x6A032F24)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -98,7 +102,7 @@ I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (..\driver\delay\delay.h)(0x695E6124)
-F (..\app\rtconfig.h)(0x6A01F274)()
+F (..\app\rtconfig.h)(0x6A073C2A)()
 F (..\driver\delay\delay.c)(0x6A008165)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
@@ -161,7 +165,7 @@ I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
 I (..\driver\usart\usart.h)(0x6A00A3BA)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -173,7 +177,7 @@ F (..\driver\soft_i2c\soft_i2c.c)(0x6A020183)(--c99 --gnu -c --cpu Cortex-M3 -D_
 I (..\driver\soft_i2c\soft_i2c.h)(0x6A01F301)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -208,8 +212,8 @@ I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
 I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
-F (..\driver\bq769\bq769.c)(0x6A01E011)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bq769.o --omf_browse .\objects\bq769.crf --depend .\objects\bq769.d)
-I (..\driver\bq769\bq769.h)(0x6A01C9A5)
+F (..\driver\bq769\bq769.c)(0x6A107616)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bq769.o --omf_browse .\objects\bq769.crf --depend .\objects\bq769.d)
+I (..\driver\bq769\bq769.h)(0x6A0528E3)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
@@ -241,11 +245,11 @@ I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
 I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
-I (..\driver\bms_config\bms_global_define.h)(0x6A016123)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
 I (D:\APP\keilv5\ARM\ARMCC\include\math.h)(0x5D9B3482)
 I (..\driver\soft_i2c\soft_i2c.h)(0x6A01F301)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -254,57 +258,126 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
-F (..\driver\bms_config\bms_control.c)(0x6A016545)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_control.o --omf_browse .\objects\bms_control.crf --depend .\objects\bms_control.d)
-I (..\driver\bms_config\bms_control.h)(0x6A01654F)
-I (..\driver\bms_config\bms_global_define.h)(0x6A016123)
+F (..\driver\bms_config\bms_control.c)(0x6A073C17)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_control.o --omf_browse .\objects\bms_control.crf --depend .\objects\bms_control.d)
+I (..\driver\bms_config\bms_control.h)(0x6A073C17)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
-I (..\driver\bq769\bq769.h)(0x6A01C9A5)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
-I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
-I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
-I (..\firmware\comsis\core\core_cm3.h)(0x68F3C354)
-I (..\firmware\comsis\device\system_stm32f10x.h)(0x68F3C354)
-I (..\firmware\driver\inc\misc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_adc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_can.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_cec.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_crc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_dac.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_dma.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_exti.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_flash.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
-I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
-I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
-I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
-F (..\driver\bms_app\bms_analysis.c)(0x6A0163A2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_analysis.o --omf_browse .\objects\bms_analysis.crf --depend .\objects\bms_analysis.d)
-F (..\driver\bms_app\bms_info.c)(0x6A0163A2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_info.o --omf_browse .\objects\bms_info.crf --depend .\objects\bms_info.d)
-F (..\driver\bms_app\bms_monitor.c)(0x6A01F824)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_monitor.o --omf_browse .\objects\bms_monitor.crf --depend .\objects\bms_monitor.d)
-I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
-I (..\driver\bq769\bq769.h)(0x6A01C9A5)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
+I (..\driver\bms_app\bms_info.h)(0x6A02A41D)
+I (..\driver\bq769\bq769.h)(0x6A0528E3)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
+I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
+I (..\firmware\comsis\core\core_cm3.h)(0x68F3C354)
+I (..\firmware\comsis\device\system_stm32f10x.h)(0x68F3C354)
+I (..\firmware\driver\inc\misc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
+I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
+F (..\driver\bms_app\bms_analysis.c)(0x6A03F3D6)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_analysis.o --omf_browse .\objects\bms_analysis.crf --depend .\objects\bms_analysis.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
+I (..\driver\bms_app\bms_analysis.h)(0x6A073A5C)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (..\driver\bms_app\bms_utils.h)(0x6A02C141)
+I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
+F (..\driver\bms_app\bms_info.c)(0x6A05F122)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_info.o --omf_browse .\objects\bms_info.crf --depend .\objects\bms_info.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
+I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
+I (..\firmware\comsis\core\core_cm3.h)(0x68F3C354)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (..\firmware\comsis\device\system_stm32f10x.h)(0x68F3C354)
+I (..\firmware\driver\inc\misc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (..\driver\bms_app\bms_info.h)(0x6A02A41D)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
+I (..\driver\bms_app\bms_analysis.h)(0x6A073A5C)
+I (..\driver\bms_app\bms_balance.h)(0x6A073A1C)
+I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
+F (..\driver\bms_app\bms_monitor.c)(0x6A073C17)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_monitor.o --omf_browse .\objects\bms_monitor.crf --depend .\objects\bms_monitor.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
+I (..\driver\bq769\bq769.h)(0x6A0528E3)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
@@ -335,12 +408,79 @@ I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
 I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
-I (..\driver\bms_config\bms_global_define.h)(0x6A016123)
-I (..\driver\bms_app\bms_monitor.h)(0x6A01DB81)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (..\driver\bms_app\bms_utils.h)(0x6A02C141)
+I (..\driver\bms_config\bms_control.h)(0x6A073C17)
 I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
-F (..\driver\bms_app\bms_protect.c)(0x6A0163A2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_protect.o --omf_browse .\objects\bms_protect.crf --depend .\objects\bms_protect.d)
-F (..\driver\bms_app\bms_utils.c)(0x6A0163A2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_utils.o --omf_browse .\objects\bms_utils.crf --depend .\objects\bms_utils.d)
-F (..\driver\bms_app\bsm_balance.c)(0x6A0163A2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bsm_balance.o --omf_browse .\objects\bsm_balance.crf --depend .\objects\bsm_balance.d)
+F (..\driver\bms_app\bms_protect.c)(0x6A05E5A0)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_protect.o --omf_browse .\objects\bms_protect.crf --depend .\objects\bms_protect.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
+I (..\driver\bms_app\bms_protect.h)(0x6A073C17)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (..\driver\bq769\bq769.h)(0x6A0528E3)
+I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdlib.h)(0x5D9B348A)
+I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
+I (..\firmware\comsis\core\core_cm3.h)(0x68F3C354)
+I (..\firmware\comsis\device\system_stm32f10x.h)(0x68F3C354)
+I (..\firmware\driver\inc\misc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_adc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_bkp.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_can.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_cec.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_crc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dac.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dbgmcu.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_dma.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_exti.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_flash.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_fsmc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_gpio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_i2c.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_iwdg.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_pwr.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rcc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_rtc.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_sdio.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_spi.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_tim.h)(0x646763F8)
+I (..\firmware\driver\inc\stm32f10x_usart.h)(0x644612F6)
+I (..\firmware\driver\inc\stm32f10x_wwdg.h)(0x644612F6)
+I (..\driver\bms_config\bms_control.h)(0x6A073C17)
+I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
+F (..\driver\bms_app\bms_utils.c)(0x6A02C145)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_utils.o --omf_browse .\objects\bms_utils.crf --depend .\objects\bms_utils.d)
+I (..\driver\bms_app\bms_utils.h)(0x6A02C141)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+F (..\driver\bms_app\bms_balance.c)(0x6A05F423)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\bms_balance.o --omf_browse .\objects\bms_balance.crf --depend .\objects\bms_balance.d)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdio.h)(0x5D9B348A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdbool.h)(0x5D9B3488)
+I (..\driver\bms_app\bms_balance.h)(0x6A073A1C)
+I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
+I (..\app\rtconfig.h)(0x6A073C2A)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
+I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtservice.h)(0x6A005452)
+I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
+I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
+I (..\driver\bms_config\bms_global_define.h)(0x6A071771)
+I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
+I (..\driver\bms_config\bms_control.h)(0x6A073C17)
+I (..\driver\bms_app\bms_monitor.h)(0x6A073C17)
+I (..\driver\bms_app\bms_analysis.h)(0x6A073A5C)
+I (..\driver\bms_app\bms_Protect.h)(0x6A073C17)
+I (..\third_lib\rt-thread\include\rtdbg.h)(0x6A005452)
 F (..\firmware\driver\src\misc.c)(0x644612F6)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (..\firmware\driver\inc\misc.h)(0x644612F6)
 I (..\firmware\driver\inc\stm32f10x.h)(0x65D9A79E)
@@ -1052,7 +1192,7 @@ I (..\firmware\driver\inc\misc.h)(0x644612F6)
 F (..\third_lib\rt-thread\src\clock.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\clock.o --omf_browse .\objects\clock.crf --depend .\objects\clock.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1062,7 +1202,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\components.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\components.o --omf_browse .\objects\components.crf --depend .\objects\components.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1072,7 +1212,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\cpu.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\cpu.o --omf_browse .\objects\cpu.crf --depend .\objects\cpu.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1081,7 +1221,7 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\device.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\device.o --omf_browse .\objects\device.crf --depend .\objects\device.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1091,7 +1231,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\idle.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\idle.o --omf_browse .\objects\idle.crf --depend .\objects\idle.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1100,7 +1240,7 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\ipc.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\ipc.o --omf_browse .\objects\ipc.crf --depend .\objects\ipc.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1111,7 +1251,7 @@ I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 F (..\third_lib\rt-thread\src\irq.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\irq.o --omf_browse .\objects\irq.crf --depend .\objects\irq.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1120,7 +1260,7 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\kservice.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\kservice.o --omf_browse .\objects\kservice.crf --depend .\objects\kservice.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1131,7 +1271,7 @@ I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 F (..\third_lib\rt-thread\src\mem.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\mem.o --omf_browse .\objects\mem.crf --depend .\objects\mem.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1141,7 +1281,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\memheap.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\memheap.o --omf_browse .\objects\memheap.crf --depend .\objects\memheap.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1151,7 +1291,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\mempool.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\mempool.o --omf_browse .\objects\mempool.crf --depend .\objects\mempool.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1160,7 +1300,7 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\object.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\object.o --omf_browse .\objects\object.crf --depend .\objects\object.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1170,7 +1310,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 F (..\third_lib\rt-thread\src\scheduler.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\scheduler.o --omf_browse .\objects\scheduler.crf --depend .\objects\scheduler.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1183,7 +1323,7 @@ I (D:\APP\keilv5\ARM\ARMCC\include\stdint.h)(0x5D9B3488)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1193,7 +1333,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\slab.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\slab.o --omf_browse .\objects\slab.crf --depend .\objects\slab.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1203,7 +1343,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\src\thread.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\thread.o --omf_browse .\objects\thread.crf --depend .\objects\thread.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1213,7 +1353,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (D:\APP\keilv5\ARM\ARMCC\include\stddef.h)(0x5D9B3488)
 F (..\third_lib\rt-thread\src\timer.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1224,7 +1364,7 @@ I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 F (..\third_lib\rt-thread\libcpu\arm\cortex-m3\context_rvds.S)(0x6A005452)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32F10X_MD SETA 1"--list .\listings\context_rvds.lst --xref -o .\objects\context_rvds.o --depend .\objects\context_rvds.d)
 F (..\third_lib\rt-thread\libcpu\arm\cortex-m3\cpuport.c)(0x6A005452)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\cpuport.o --omf_browse .\objects\cpuport.crf --depend .\objects\cpuport.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1234,7 +1374,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\components\finsh\cmd.c)(0x6A005451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\cmd.o --omf_browse .\objects\cmd.crf --depend .\objects\cmd.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1244,7 +1384,7 @@ I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 I (D:\APP\keilv5\ARM\ARMCC\include\string.h)(0x5D9B3488)
 F (..\third_lib\rt-thread\components\finsh\msh.c)(0x6A005451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\msh.o --omf_browse .\objects\msh.crf --depend .\objects\msh.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1256,7 +1396,7 @@ I (..\third_lib\rt-thread\components\finsh\msh.h)(0x6A005451)
 I (..\third_lib\rt-thread\components\finsh\shell.h)(0x6A005451)
 F (..\third_lib\rt-thread\components\finsh\msh_file.c)(0x6A005451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\msh_file.o --omf_browse .\objects\msh_file.crf --depend .\objects\msh_file.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1265,7 +1405,7 @@ I (..\third_lib\rt-thread\include\rtm.h)(0x6A005452)
 I (..\third_lib\rt-thread\components\finsh\finsh.h)(0x6A005451)
 F (..\third_lib\rt-thread\components\finsh\msh_parse.c)(0x6A005451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\msh_parse.o --omf_browse .\objects\msh_parse.crf --depend .\objects\msh_parse.d)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)
@@ -1276,7 +1416,7 @@ I (D:\APP\keilv5\ARM\ARMCC\include\ctype.h)(0x5D9B348A)
 F (..\third_lib\rt-thread\components\finsh\shell.c)(0x6A005451)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\app -I ..\driver\delay -I ..\driver\usart -I ..\driver\soft_i2c -I ..\driver\bq769 -I ..\driver\bms_config -I ..\driver\bms_app -I ..\firmware\driver\inc -I ..\firmware\comsis\core -I ..\firmware\comsis\device -I ..\third_lib\rt-thread\bsp -I ..\third_lib\rt-thread\components\finsh -I ..\third_lib\rt-thread\include-ID:\APP\keilv5\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -DHSE_VALUE="8000000"-o .\objects\shell.o --omf_browse .\objects\shell.crf --depend .\objects\shell.d)
 I (..\third_lib\rt-thread\include\rthw.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtthread.h)(0x6A005452)
-I (..\app\rtconfig.h)(0x6A01F274)
+I (..\app\rtconfig.h)(0x6A073C2A)
 I (D:\APP\keilv5\ARM\ARMCC\include\stdarg.h)(0x5D9B348A)
 I (..\third_lib\rt-thread\include\rtdebug.h)(0x6A005452)
 I (..\third_lib\rt-thread\include\rtdef.h)(0x6A005452)

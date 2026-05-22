@@ -46,20 +46,17 @@ void rt_os_tick_callback(void)
  */
 void rt_hw_board_init(void)
 {
-    /* 
-     * TODO 1: OS Tick Configuration
-     * Enable the hardware timer and call the rt_os_tick_callback function
-     * periodically with the frequency RT_TICK_PER_SECOND. 
-     */
-    tim_tick_init();  /* Initialize TIM3 for OS tick (1ms interval) */
+    /* 1. 初始化系统时钟/Tick（保持不变） */
+    tim_tick_init();  
 
-    /* Call components board initial (use INIT_BOARD_EXPORT()) */
-#ifdef RT_USING_COMPONENTS_INIT
-    rt_components_board_init();
-#endif
-
+    /* 2. 必须把内存堆初始化挪到前面！有了内存，后面的外设才能使用 rt_malloc */
 #if defined(RT_USING_USER_MAIN) && defined(RT_USING_HEAP)
     rt_system_heap_init(rt_heap_begin_get(), rt_heap_end_get());
+#endif
+
+    /* 3. 然后再执行板级组件初始化 (此时 uart_init 里面的 rt_sem_create 就能成功拿到内存了) */
+#ifdef RT_USING_COMPONENTS_INIT
+    rt_components_board_init();
 #endif
 }
 

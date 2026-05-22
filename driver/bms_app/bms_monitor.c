@@ -7,6 +7,8 @@
 #include <rtthread.h>
 #include "bq769.h"
 #include "bms_monitor.h"
+#include "bms_utils.h"
+#include "bms_control.h"
 
 #define DBG_TAG "monitor"
 #define DBG_LVL DBG_LOG
@@ -47,6 +49,17 @@ static uint16_t CountCellTemp = 0;    // 电芯温度计时器（ms）
 static uint16_t CountBatCurrent = 0; // 电流计时器（ms）
 static uint16_t CountSysModeSleep = 0; // 系统模式切换睡眠计时器（ms）
 
+//初始化全局参数
+BMS_GlobalParamTypedef BMS_GlobalParam = 
+{
+	.SysMode 			= BMS_MODE_STANDBY,
+	.Cell_Real_Number 	= BMS_CELL_MAX,
+	.Temp_Real_Number 	= BMS_TEMP_MAX,
+	.Charge 			= BMS_STATE_DISABLE,
+	.Discharge 			= BMS_STATE_DISABLE,
+	.Balance		 	= BMS_STATE_DISABLE,
+};
+
 //声明函数
 static void Bms_MonitorTask(void *parameter);
 static void BMS_MonitorBattery(void);
@@ -78,15 +91,72 @@ static void Bms_MonitorTask(void *parameter)
         BMS_MonitorSysMode(); // 根据采集的数据判断系统模式
 
         rt_thread_delay(MONITOR_TASK_PERIOD); // 延时，控制任务周期
-        rt_kprintf("%d.%03dV, %d.%03dA\n", (int)BMS_MonitorData.BatteryVoltage, (int)(BMS_MonitorData.BatteryVoltage * 1000) % 1000,
-               (int)BMS_MonitorData.BatteryCurrent, (int)(BMS_MonitorData.BatteryCurrent * 1000) % 1000);
-        //打印单节电压
-        for(uint8_t i = 0; i < BQ769X0_CELL_MAX; i++)
-        {
-            rt_kprintf("Cell%d: %d.%03dV\n", i + 1, (int)BMS_MonitorData.CellVoltage[i], (int)(BMS_MonitorData.CellVoltage[i] * 1000) % 1000);
-        }
     }
 }
+
+/****************************HAL抽象层**********************/
+
+// 冒泡排序的比较程序,对电压数据进行比较
+static int compaer_cell(void *e1, void *e2)
+{
+	float temp1, temp2;
+	
+	temp1 = (*(BMS_CellDataTypedef *)e1).CellVoltage;
+	temp2 = (*(BMS_CellDataTypedef *)e2).CellVoltage;
+
+	if (temp1 > temp2)
+	{
+		return 1;
+	}
+
+    return 0;
+}
+
+// 采集电压数据的函数，更新单体电芯电压和电池组总电压，并保存到监控数据结构中
+static void BMS_HalMonitorBattery(void)
+{
+    BMS_HalUpdateCellVoltage(); // 通过HAL接口采集电压（含I2C互斥锁保护）
+    
+    for(uint8_t i = 0; i < BMS_GlobalParam.Cell_Real_Number; i++)
+    {
+        BMS_MonitorData.CellVoltage[i] = BQ769X0_SampleData.CellVoltage[i];// 保存未排序的电芯电压
+        BMS_MonitorData.CellData[i].CellVoltage = BQ769X0_SampleData.CellVoltage[i];// 保存电芯电压到CellData结构
+        BMS_MonitorData.CellData[i].CellNumber = i;// 电芯编号
+    }
+    BubbleSort(BMS_MonitorData.CellData, BMS_GlobalParam.Cell_Real_Number, sizeof(BMS_CellDataTypedef), compaer_cell); // 对电芯数据进行冒泡排序，按电压从小到大排序
+    
+    BMS_MonitorData.BatteryVoltage = BQ769X0_SampleData.BatteryVoltage; // 保存电池组总电压到监控数据
+}
+
+// 采集电芯温度的函数，更新单体电芯温度，并保存到监控数据结构中
+static void Bms_HalMonitorCellTemperature(void)
+{	
+	uint8_t index1 = 0, index2 = 0;//读指针和写指针 避免无效温度数据对排序的影响
+	
+	BMS_HalUpdateCellTemperature(); // 通过HAL接口采集温度（含I2C互斥锁保护）
+	
+	for (; index1 < BMS_GlobalParam.Temp_Real_Number; index1++)
+	{
+		if (BQ769X0_SampleData.TsxTemperature[index1] >= BMS_TEMP_MEASURE_MIN &&  BQ769X0_SampleData.TsxTemperature[index1] <= BMS_TEMP_MEASURE_MAX)
+		{
+			BMS_MonitorData.CellTemp[index2++] = BQ769X0_SampleData.TsxTemperature[index1];
+		}
+	}
+	
+	BMS_MonitorData.CellTempEffectiveNumber = index2;
+
+	// 进行顺序排序
+	BubbleFloat(BMS_MonitorData.CellTemp, index2);
+}
+
+// 采集电流数据的函数，更新电池组总电流，并保存到监控数据结构中
+static void Bms_HalMonitorBatteryCurrent(void)
+{
+	BMS_HalUpdateCellCurrent(); // 通过HAL接口采集电流（含I2C互斥锁保护）
+	
+	BMS_MonitorData.BatteryCurrent = BQ769X0_SampleData.BatteryCurrent;	
+}
+/***********************************************************/
 
 /*
 250ms执行一次
@@ -99,66 +169,50 @@ static void BMS_MonitorBattery(void)
     if(CountVoltage >= UPDATE_CELL_VOLTAGE_CYCLE && FlagVoltage)
     {
         CountVoltage = 0; // 重置电压计时器
-        BQ769X0_UpdateCellVolt(); // 更新单体电芯电压
-        BQ769X0_UpdateBatVolt(); // 更新电池组电压
-
-        BMS_MonitorData.BatteryVoltage = BQ769X0_SampleData.BatteryVoltage; // 保存电池组总电压到监控数据
-
-        for(uint8_t i = 0; i < BQ769X0_CELL_MAX; i++)
-        {
-            BMS_MonitorData.CellVoltage[i] = BQ769X0_SampleData.CellVoltage[i];// 保存未排序的电芯电压
-            BMS_MonitorData.CellData[i].CellVoltage = BQ769X0_SampleData.CellVoltage[i];// 保存电芯电压到CellData结构
-            BMS_MonitorData.CellData[i].CellNumber = i + 1;// 电芯编号
-        }
+        BMS_HalMonitorBattery(); 
     }
 
     CountCellTemp += MONITOR_TASK_PERIOD; // 每次任务周期增加电芯温度计时器
     if(CountCellTemp >= UPDATE_CELL_TEMP_CYCLE && FlagCellTemp)
     {
-        CountCellTemp = 0; // 重置电芯温度计时器
-        BQ769X0_UpdateTsTemp(); // 更新单体电芯温度
-
-        for(uint8_t i = 0; i < BQ769X0_TMEP_MAX; i++)
-        {
-            BMS_MonitorData.CellTemp[i] = BQ769X0_SampleData.TsxTemperature[i]; // 保存单体电芯温度到监控数据
-        }
+        CountCellTemp = 0;
+        Bms_HalMonitorCellTemperature();
     }
 
     CountBatCurrent += MONITOR_TASK_PERIOD; // 每次任务周期增加电流计时器
     if(CountBatCurrent >= UPDATE_BAT_CURRENT_CYCLE && FlagBatCurrent)
     {
-        CountBatCurrent = 0; // 重置电流计时器
-        BQ769X0_UpdateCurrent(); // 更新电池组电流
-
-        BMS_MonitorData.BatteryCurrent = BQ769X0_SampleData.BatteryCurrent; // 保存电池组总电流到监控数据
+        CountBatCurrent = 0;
+        Bms_HalMonitorBatteryCurrent();
     }
 }
 
 static void BMS_MonitorSysMode(void)
 {
-    static BMS_SysModeTypedef SysMode = BMS_MODE_NULL;
-    
     if(BMS_MonitorData.BatteryCurrent > SYS_MODE_DECISION_CURRENT)
     {
-        SysMode = BMS_MODE_DISCHARGE; // 放电模式
+        BMS_GlobalParam.SysMode = BMS_MODE_DISCHARGE; // 放电模式
     }
     else if(BMS_MonitorData.BatteryCurrent < -SYS_MODE_DECISION_CURRENT)
     {
-        SysMode = BMS_MODE_CHARGE; // 充电模式
+        BMS_GlobalParam.SysMode = BMS_MODE_CHARGE; // 充电模式
     }
     else
     {
-        SysMode = BMS_MODE_STANDBY; // 待机模式
+        if(BMS_GlobalParam.SysMode != BMS_MODE_SLEEP)
+        {
+            BMS_GlobalParam.SysMode = BMS_MODE_STANDBY; // 待机模式
+        }
     }
 
-    if(SysMode == BMS_MODE_STANDBY)
+    if(BMS_GlobalParam.SysMode == BMS_MODE_STANDBY)
     {
-        CountSysModeSleep += MONITOR_TASK_PERIOD; // 待机模式下增加睡眠计时器
-        if(CountSysModeSleep >= 60000) // 60秒无充放电活动进入睡眠模式
-        {
-            SysMode = BMS_MODE_SLEEP; // 睡眠模式
-            CountSysModeSleep = 0; // 重置睡眠计时器
-        }
+        // CountSysModeSleep += MONITOR_TASK_PERIOD; // 待机模式下增加睡眠计时器
+        // if(CountSysModeSleep >= 60000) // 60秒无充放电活动进入睡眠模式
+        // {
+        //     BMS_GlobalParam.SysMode = BMS_MODE_SLEEP; // 睡眠模式
+        //     CountSysModeSleep = 0; // 重置睡眠计时器
+        // }
     }
 }
 

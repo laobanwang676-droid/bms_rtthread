@@ -12,7 +12,7 @@
 ".\objects\bms_monitor.o"
 ".\objects\bms_protect.o"
 ".\objects\bms_utils.o"
-".\objects\bsm_balance.o"
+".\objects\bms_balance.o"
 ".\objects\misc.o"
 ".\objects\stm32f10x_adc.o"
 ".\objects\stm32f10x_bkp.o"

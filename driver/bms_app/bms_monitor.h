@@ -21,6 +21,7 @@ typedef struct
 }BMS_MonitorDataTypedef;
 
 extern BMS_MonitorDataTypedef BMS_MonitorData;
+extern BMS_GlobalParamTypedef BMS_GlobalParam;
 
 void BMS_MonitorInit(void);
 void BMS_MonitorStateVoltage(BMS_StateTypedef NewState);

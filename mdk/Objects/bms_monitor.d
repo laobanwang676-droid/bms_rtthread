@@ -45,5 +45,7 @@
 .\objects\bms_monitor.o: ..\firmware\driver\inc\stm32f10x_wwdg.h
 .\objects\bms_monitor.o: ..\driver\bms_config\bms_global_define.h
 .\objects\bms_monitor.o: ..\driver\bms_app\bms_monitor.h
+.\objects\bms_monitor.o: ..\driver\bms_app\bms_utils.h
+.\objects\bms_monitor.o: ..\driver\bms_config\bms_control.h
 .\objects\bms_monitor.o: ..\third_lib\rt-thread\include\rtdbg.h
 .\objects\bms_monitor.o: ..\app\rtconfig.h

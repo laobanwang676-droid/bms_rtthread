@@ -51,7 +51,7 @@
 
 // ALERT
 #define BQ769X0_ALERT_GPIOx		GPIOB
-#define BQ769X0_ALERT_Pin		GPIO_PIN_12
+#define BQ769X0_ALERT_Pin		GPIO_Pin_12
 #define BQ769X0_ALERT_EXIT_IRQ	EXTI15_10_IRQn
 /***********************************************************************/
 

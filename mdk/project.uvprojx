@@ -465,9 +465,9 @@
               <FilePath>..\driver\bms_app\bms_utils.c</FilePath>
             </File>
             <File>
-              <FileName>bsm_balance.c</FileName>
+              <FileName>bms_balance.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bsm_balance.c</FilePath>
+              <FilePath>..\driver\bms_app\bms_balance.c</FilePath>
             </File>
           </Files>
         </Group>

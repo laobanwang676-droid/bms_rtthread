@@ -157,9 +157,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>46</LineNumber>
+          <LineNumber>54</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134228638</Address>
+          <Address>134236824</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -168,14 +168,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\app\app.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\project\../app/app.c\46</Expression>
+          <Expression>\\project\../app/app.c\54</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>300</LineNumber>
+          <LineNumber>201</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134223640</Address>
+          <Address>134228978</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -184,23 +184,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\driver\bq769\bq769.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\project\../driver/bq769/bq769.c\300</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>303</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134223646</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\driver\bq769\bq769.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\project\../driver/bq769/bq769.c\303</Expression>
+          <Expression>\\project\../driver/bq769/bq769.c\201</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -413,7 +397,7 @@
 
   <Group>
     <GroupName>bms_app</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -484,8 +468,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\driver\bms_app\bsm_balance.c</PathWithFileName>
-      <FilenameWithoutPath>bsm_balance.c</FilenameWithoutPath>
+      <PathWithFileName>..\driver\bms_app\bms_balance.c</PathWithFileName>
+      <FilenameWithoutPath>bms_balance.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

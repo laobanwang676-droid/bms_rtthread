@@ -170,6 +170,31 @@ static void BQ769X0_TS1_SetInMode(void)
     GPIO_Init(BQ769X0_TS1_GPIOx, &GPIO_InitStruct);
 }
 
+static void BQ769X0_ALERT_Init(void)
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+
+	GPIO_InitStruct.GPIO_Pin = BQ769X0_ALERT_Pin;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_IPD;
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(BQ769X0_ALERT_GPIOx, &GPIO_InitStruct);
+
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource12);// 将GPIOB的Pin12连接到外部中断线12
+	EXTI_InitTypeDef EXTI_InitStruct;
+	EXTI_InitStruct.EXTI_Line = EXTI_Line12;
+	EXTI_InitStruct.EXTI_Mode = EXTI_Mode_Interrupt;
+	EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Rising;
+	EXTI_InitStruct.EXTI_LineCmd = ENABLE;
+	EXTI_Init(&EXTI_InitStruct);
+
+	NVIC_InitTypeDef NVIC_InitStruct;
+	NVIC_InitStruct.NVIC_IRQChannel = BQ769X0_ALERT_EXIT_IRQ;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 3;
+	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStruct);
+}
+
 void EXTI15_10_IRQHandler(void)
 {
     if (EXTI_GetITStatus(EXTI_Line12) != RESET)
@@ -280,7 +305,7 @@ static bool BQ769X0_WriteRegisterByte(uint8_t Register, uint8_t data)
 
 static bool BQ769X0_WriteRegisterByteWithCRC(uint8_t Register, uint8_t data)
 {
-    uint8_t dataBuffer[4];
+  uint8_t dataBuffer[4];
 	struct I2C_MessageTypeDef msg = {0};
 
 	dataBuffer[0] = BQ769X0_I2C_ADDR << 1;
@@ -977,8 +1002,8 @@ void BQ769X0_OVPThresholdSet(uint16_t OVPThreshold)
 // BQ芯片初始化
 void BQ769X0_Initialize(BQ769X0_InitDataTypedef *InitData)
 {
-	/* 可选GPIO初始化（如需要） */
-	//BQ76X0_GpioInit();
+	/* 中断GPIO初始化 */
+	BQ769X0_ALERT_Init();
 
 	/* 进入运输/睡眠再唤醒：相当于软件复位BQ芯片 */
 	BQ769X0_EntryShip();
@@ -992,6 +1017,12 @@ void BQ769X0_Initialize(BQ769X0_InitDataTypedef *InitData)
 	AlertOps = InitData->AlertOps;
 
 	/* 设置保护相关寄存器：阈值/延时等 */
+	/*
+	对于 BQ769x0 系列电池监测芯片，
+	硬件级别的保护功能（充电OV过压、放电UV欠压、放电SCD短路、放电OCD过流）
+	在芯片正常工作状态下是 默认启用的，
+	不需要额外再去设置 “Enable” 开关位。
+	*/
 	Registers.Protect1.Protect1Bit.SCD_THRESH = SCDThresh;//设置短路保护阈值
 	Registers.Protect2.Protect2Bit.OCD_THRESH = OCDThresh;//设置过流保护阈值
 	Registers.Protect1.Protect1Bit.SCD_DELAY  = InitData->ConfigData.SCDDelay;   //设置短路保护延时
