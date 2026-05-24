@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\app;..\driver\delay;..\driver\usart;..\driver\soft_i2c;..\driver\bq769;..\driver\bms_config;..\driver\bms_app;..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include</IncludePath>
+              <IncludePath>..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include;..\ASW;..\ASW\bms_app;..\ASW\bms_config;..\BSW\CDD\bq769;..\BSW\ECUAL;..\BSW\MCAL\can;..\BSW\MCAL\delay;..\BSW\MCAL\soft_i2c;..\BSW\MCAL\usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -382,94 +382,105 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>app</GroupName>
+          <GroupName>ASW/USER</GroupName>
           <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\main.c</FilePath>
-            </File>
             <File>
               <FileName>app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\app.c</FilePath>
+              <FilePath>..\ASW\app.c</FilePath>
             </File>
             <File>
               <FileName>board.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\board.c</FilePath>
+              <FilePath>..\ASW\board.c</FilePath>
             </File>
             <File>
-              <FileName>rtconfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\app\rtconfig.h</FilePath>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\main.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>driver</GroupName>
-          <Files>
-            <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\delay\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\usart\usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>soft_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\soft_i2c\soft_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>bq769.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bq769\bq769.c</FilePath>
-            </File>
-            <File>
-              <FileName>bms_control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bms_config\bms_control.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>bms_app</GroupName>
+          <GroupName>ASW/BMS</GroupName>
           <Files>
             <File>
               <FileName>bms_analysis.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_analysis.c</FilePath>
-            </File>
-            <File>
-              <FileName>bms_info.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_info.c</FilePath>
-            </File>
-            <File>
-              <FileName>bms_monitor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_monitor.c</FilePath>
-            </File>
-            <File>
-              <FileName>bms_protect.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_protect.c</FilePath>
-            </File>
-            <File>
-              <FileName>bms_utils.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_utils.c</FilePath>
+              <FilePath>..\ASW\bms_app\bms_analysis.c</FilePath>
             </File>
             <File>
               <FileName>bms_balance.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\driver\bms_app\bms_balance.c</FilePath>
+              <FilePath>..\ASW\bms_app\bms_balance.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\bms_app\bms_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_monitor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\bms_app\bms_monitor.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_protect.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\bms_app\bms_protect.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\bms_app\bms_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>bms_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\bms_config\bms_control.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>BSW/MCAL</GroupName>
+          <Files>
+            <File>
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\MCAL\can\can.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\MCAL\delay\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>soft_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\MCAL\soft_i2c\soft_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\MCAL\usart\usart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSW/ECUAL</GroupName>
+        </Group>
+        <Group>
+          <GroupName>BSW/CDD</GroupName>
+          <Files>
+            <File>
+              <FileName>bq769.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\CDD\bq769\bq769.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>RTE</GroupName>
         </Group>
         <Group>
           <GroupName>firmware/driver</GroupName>

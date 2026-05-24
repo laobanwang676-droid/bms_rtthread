@@ -1,12 +1,12 @@
 .\objects\mempool.o: ..\third_lib\rt-thread\src\mempool.c
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rthw.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\mempool.o: ..\app\rtconfig.h
+.\objects\mempool.o: ..\ASW\rtconfig.h
 .\objects\mempool.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\mempool.o: ..\app\rtconfig.h
+.\objects\mempool.o: ..\ASW\rtconfig.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\mempool.o: ..\app\rtconfig.h
+.\objects\mempool.o: ..\ASW\rtconfig.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\mempool.o: ..\third_lib\rt-thread\include\rtthread.h

@@ -1,11 +1,11 @@
 .\objects\msh_file.o: ..\third_lib\rt-thread\components\finsh\msh_file.c
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\msh_file.o: ..\app\rtconfig.h
+.\objects\msh_file.o: ..\ASW\rtconfig.h
 .\objects\msh_file.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\msh_file.o: ..\app\rtconfig.h
+.\objects\msh_file.o: ..\ASW\rtconfig.h
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\msh_file.o: ..\app\rtconfig.h
+.\objects\msh_file.o: ..\ASW\rtconfig.h
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\msh_file.o: ..\third_lib\rt-thread\include\rtthread.h

@@ -1,12 +1,12 @@
 .\objects\slab.o: ..\third_lib\rt-thread\src\slab.c
 .\objects\slab.o: ..\third_lib\rt-thread\include\rthw.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\slab.o: ..\app\rtconfig.h
+.\objects\slab.o: ..\ASW\rtconfig.h
 .\objects\slab.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\slab.o: ..\app\rtconfig.h
+.\objects\slab.o: ..\ASW\rtconfig.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\slab.o: ..\app\rtconfig.h
+.\objects\slab.o: ..\ASW\rtconfig.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\slab.o: ..\third_lib\rt-thread\include\rtthread.h

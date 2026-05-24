@@ -1,12 +1,12 @@
 .\objects\cmd.o: ..\third_lib\rt-thread\components\finsh\cmd.c
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rthw.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\cmd.o: ..\app\rtconfig.h
+.\objects\cmd.o: ..\ASW\rtconfig.h
 .\objects\cmd.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\cmd.o: ..\app\rtconfig.h
+.\objects\cmd.o: ..\ASW\rtconfig.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\cmd.o: ..\app\rtconfig.h
+.\objects\cmd.o: ..\ASW\rtconfig.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\cmd.o: ..\third_lib\rt-thread\include\rtthread.h

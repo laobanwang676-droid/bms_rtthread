@@ -1,7 +1,7 @@
-.\objects\delay.o: ..\driver\delay\delay.c
+.\objects\delay.o: ..\BSW\MCAL\delay\delay.c
 .\objects\delay.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\delay.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\string.h
-.\objects\delay.o: ..\driver\delay\delay.h
+.\objects\delay.o: ..\BSW\MCAL\delay\delay.h
 .\objects\delay.o: ..\firmware\driver\inc\stm32f10x.h
 .\objects\delay.o: ..\firmware\comsis\core\core_cm3.h
 .\objects\delay.o: ..\firmware\comsis\device\system_stm32f10x.h

@@ -1,12 +1,12 @@
 .\objects\clock.o: ..\third_lib\rt-thread\src\clock.c
 .\objects\clock.o: ..\third_lib\rt-thread\include\rthw.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\clock.o: ..\app\rtconfig.h
+.\objects\clock.o: ..\ASW\rtconfig.h
 .\objects\clock.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\clock.o: ..\app\rtconfig.h
+.\objects\clock.o: ..\ASW\rtconfig.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\clock.o: ..\app\rtconfig.h
+.\objects\clock.o: ..\ASW\rtconfig.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\clock.o: ..\third_lib\rt-thread\include\rtthread.h

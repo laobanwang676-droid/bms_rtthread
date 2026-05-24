@@ -1,12 +1,12 @@
 .\objects\idle.o: ..\third_lib\rt-thread\src\idle.c
 .\objects\idle.o: ..\third_lib\rt-thread\include\rthw.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\idle.o: ..\app\rtconfig.h
+.\objects\idle.o: ..\ASW\rtconfig.h
 .\objects\idle.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\idle.o: ..\app\rtconfig.h
+.\objects\idle.o: ..\ASW\rtconfig.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\idle.o: ..\app\rtconfig.h
+.\objects\idle.o: ..\ASW\rtconfig.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\idle.o: ..\third_lib\rt-thread\include\rtthread.h

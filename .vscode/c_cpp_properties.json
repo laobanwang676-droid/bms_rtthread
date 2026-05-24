@@ -8,6 +8,7 @@
             "defines": [
                 "_DEBUG",
                 "STM32F10X_MD",
+                "__weak = __attribute__((weak))",
                 "USE_STDPERIPH_DRIVER"
                 // "HSE_VALUE"
             ],

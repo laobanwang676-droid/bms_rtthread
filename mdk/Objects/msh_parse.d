@@ -1,11 +1,11 @@
 .\objects\msh_parse.o: ..\third_lib\rt-thread\components\finsh\msh_parse.c
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtthread.h
-.\objects\msh_parse.o: ..\app\rtconfig.h
+.\objects\msh_parse.o: ..\ASW\rtconfig.h
 .\objects\msh_parse.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtdebug.h
-.\objects\msh_parse.o: ..\app\rtconfig.h
+.\objects\msh_parse.o: ..\ASW\rtconfig.h
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtdef.h
-.\objects\msh_parse.o: ..\app\rtconfig.h
+.\objects\msh_parse.o: ..\ASW\rtconfig.h
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtservice.h
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\msh_parse.o: ..\third_lib\rt-thread\include\rtthread.h
