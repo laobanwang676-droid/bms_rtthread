@@ -1,0 +1,1000 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/ASW/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/ASW/app.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_info.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_monitor.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_protect.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_utils.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_config/bms_control.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/board.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/main.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_info.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_monitor.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_protect.c",
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_app/bms_utils.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_config/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/ASW/bms_config/bms_control.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/CDD/bq769/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/CDD/bq769/bq769.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUAL/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/ECUAL/CanIf.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUM/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/ECUM/EcuM.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/can/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/can/can.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/delay/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/delay/delay.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/soft_i2c/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/soft_i2c/soft_i2c.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/usart/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/usart/usart.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/BSW/SERVICES/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/BSW/SERVICES/Com.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/RTE/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/RTE/Rte.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/*.S",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md.s",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/core_cm3.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/device/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/device/stm32f10x_it.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/comsis/device/system_stm32f10x.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/misc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_adc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_bkp.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_can.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_cec.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_crc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dac.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dbgmcu.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dma.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_exti.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_flash.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_fsmc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_gpio.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_i2c.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_iwdg.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_pwr.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_rcc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_rtc.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_sdio.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_spi.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_tim.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_usart.c",
+				"D:/Desktop/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_wwdg.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/cmd.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh_file.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh_parse.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/shell.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/*.c",
+			"paths" : 
+			[
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/clock.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/components.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/cpu.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/device.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/idle.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/ipc.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/irq.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/kservice.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/mem.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/memheap.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/mempool.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/object.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/scheduler.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/signal.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/slab.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/thread.c",
+				"D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/src/timer.c"
+			],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake"
+		},
+		{
+			"path" : "toolchain.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeSystem.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.2/CMakeSystem.cmake"
+		},
+		{
+			"path" : "toolchain.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeMinGWFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.2/CMakeASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCCompilerABI.c"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.3.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeASMInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeTestASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/Internal/CMakeInspectASMLinker.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/APP/Cmake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "D:/Desktop/bms_rtthread_Cmake/build",
+		"source" : "D:/Desktop/bms_rtthread_Cmake"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

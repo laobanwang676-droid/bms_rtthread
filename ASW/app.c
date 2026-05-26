@@ -12,6 +12,7 @@
 #include "bms_analysis.h"
 #include "bms_protect.h"
 #include "bms_balance.h"
+#include "EcuM.h"
 
 uint16_t led_time = 200;  /* LED闪烁时间，单位ms */
 rt_thread_t led_thread;
@@ -59,9 +60,11 @@ void app_init(void)
 	if (i2c_mutex == RT_NULL)
 	{
 		rt_kprintf("Failed to create I2C mutex!\n");
-		return;
+		return; 
 	}
 	
+    // EcuM_Init();
+    // EcuM_StartupTwo();
 	BQ769X0_Initialize(&InitData);
 
     BMS_MonitorInit();
@@ -69,7 +72,6 @@ void app_init(void)
     BMS_AnalysisInit();
     BMS_InfoInit();
     BMS_BalanceInit();
-    // led_init();
 }
 
 void led_gpio_init(void)

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include;..\ASW;..\ASW\bms_app;..\ASW\bms_config;..\BSW\CDD\bq769;..\BSW\ECUAL;..\BSW\MCAL\can;..\BSW\MCAL\delay;..\BSW\MCAL\soft_i2c;..\BSW\MCAL\usart</IncludePath>
+              <IncludePath>..\firmware\driver\inc;..\firmware\comsis\core;..\firmware\comsis\device;..\third_lib\rt-thread\bsp;..\third_lib\rt-thread\components\finsh;..\third_lib\rt-thread\include;..\ASW;..\ASW\bms_app;..\ASW\bms_config;..\BSW\CDD\bq769;..\BSW\ECUAL;..\BSW\MCAL\can;..\BSW\MCAL\delay;..\BSW\MCAL\soft_i2c;..\BSW\MCAL\usart;..\BSW\SERVICES;..\RTE;..\BSW\ECUM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -468,6 +468,23 @@
         </Group>
         <Group>
           <GroupName>BSW/ECUAL</GroupName>
+          <Files>
+            <File>
+              <FileName>CanIf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\ECUAL\CanIf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSW/ECUM</GroupName>
+          <Files>
+            <File>
+              <FileName>EcuM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\ECUM\EcuM.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>BSW/CDD</GroupName>
@@ -480,7 +497,24 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>BSW/SERVICES</GroupName>
+          <Files>
+            <File>
+              <FileName>Com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\SERVICES\Com.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>RTE</GroupName>
+          <Files>
+            <File>
+              <FileName>Rte.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RTE\Rte.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>firmware/driver</GroupName>

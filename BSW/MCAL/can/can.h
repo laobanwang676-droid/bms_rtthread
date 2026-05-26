@@ -24,8 +24,8 @@ typedef struct {
 } Std_VersionInfoType;
 
 // AUTOSAR CAN 相关基础类型
-typedef uint32_t Can_IdType;
-typedef uint16_t PduIdType;
+typedef uint32_t Can_IdType;   // CAN ID 类型，最高位可用作扩展帧标志，次高位可用作 RTR 标志
+typedef uint16_t PduIdType;    // 软件 PDU 句柄类型，供上层使用
 typedef uint16_t Can_HwHandleType; // 硬件对象句柄（如邮箱编号或通道）
 
 typedef uint16_t SduLengthType;
@@ -34,7 +34,7 @@ typedef uint8_t* SduDataPtrType;
 typedef struct {
     SduLengthType SduLength;
     SduDataPtrType SduDataPtr;
-} PduInfoType;
+} PduInfoType;  // PDU 信息结构体，包含数据长度和数据指针
 
 typedef enum {
     CAN_OK = 0x00u,
@@ -63,9 +63,9 @@ typedef enum {
 } Can_ErrorStateType;
 
 typedef struct {
-    Can_IdType CanId;
-    uint8_t ControllerId;
-    Can_HwHandleType Hoh;
+    Can_IdType CanId;  //id
+    uint8_t ControllerId;  
+    Can_HwHandleType Hoh;  
 } Can_HwType;
 
 #define CAN_ID_EXTENDED_FLAG 0x80000000u

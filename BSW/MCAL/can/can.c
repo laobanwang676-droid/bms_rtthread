@@ -4,12 +4,24 @@
 
 #define CAN_CONTROLLER_ID       0u  // 仅一个CAN，索引为 0
 #define CAN_TX_MAILBOX_COUNT    3u  // STM32F103 有 3 个发送邮箱
+#define CAN_RX_QUEUE_SIZE       8u  // 接收缓冲队列深度（最小改动）
 
 static const Can_ConfigType* g_canConfig = NULL;   // 全局配置指针，存储初始化时传入的配置
 static volatile Can_ControllerStateType g_canControllerState = CAN_CS_UNINIT;  // 当前控制器状态
 static volatile uint8_t g_canInterruptsEnabled = 1u;        // 中断使能状态跟踪
 static PduIdType g_canTxSwHandle[CAN_TX_MAILBOX_COUNT];     // 发送邮箱软件句柄跟踪数组，索引对应邮箱编号
 static uint8_t g_canTxPending[CAN_TX_MAILBOX_COUNT];        // 发送邮箱占用状态跟踪，为 0 表示空闲，为 1 表示占用
+
+typedef struct
+{
+    Can_HwType hw;
+    uint8_t dlc;
+    uint8_t data[8];
+} Can_RxQueueEntry;  //定义接收队列条目结构，包含硬件信息、数据长度和数据内容
+
+static Can_RxQueueEntry g_canRxQueue[CAN_RX_QUEUE_SIZE];   // 接收队列数组，存储从硬件接收的消息，使用循环缓冲区管理
+static volatile uint8_t g_canRxHead = 0u;                   // 接收队列头索引，指向下一个入队位置
+static volatile uint8_t g_canRxTail = 0u;                   // 接收队列尾索引，指向下一个出队位置
 
 /**
  * @brief  上层接收指示弱回调。
@@ -66,6 +78,52 @@ static void Can_ResetTxTracking(void)
         g_canTxPending[i] = 0u;
         g_canTxSwHandle[i] = 0u;
     }
+}
+
+/**
+ * @brief  清空接收缓冲队列。
+ * @retval 无。
+ */
+static void Can_ResetRxQueue(void)
+{
+    g_canRxHead = 0u;
+    g_canRxTail = 0u;
+}
+
+/**
+ * @brief  接收队列入队。
+ * @param  entry: 待入队的数据。
+ * @retval 成功返回 1，失败返回 0。
+ */
+static uint8_t Can_RxQueue_Push(const Can_RxQueueEntry* entry)
+{
+    uint8_t nextHead = (uint8_t)((g_canRxHead + 1u) % CAN_RX_QUEUE_SIZE);
+
+    if (nextHead == g_canRxTail)
+    {
+        return 0u;
+    }
+
+    g_canRxQueue[g_canRxHead] = *entry;
+    g_canRxHead = nextHead;
+    return 1u;
+}
+
+/**
+ * @brief  接收队列出队。
+ * @param  entry: 输出数据指针。
+ * @retval 成功返回 1，队列空返回 0。
+ */
+static uint8_t Can_RxQueue_Pop(Can_RxQueueEntry* entry)
+{
+    if (g_canRxHead == g_canRxTail)
+    {
+        return 0u;
+    }
+
+    *entry = g_canRxQueue[g_canRxTail];
+    g_canRxTail = (uint8_t)((g_canRxTail + 1u) % CAN_RX_QUEUE_SIZE);
+    return 1u;
 }
 
 /**
@@ -160,19 +218,17 @@ static void Can_ApplyFilters(const Can_ConfigType* Config)
  */
 static void Can_ProcessRxFifo(uint8_t fifo)
 {
-    while (CAN_MessagePending(CAN1, fifo) > 0u)
+    while (CAN_MessagePending(CAN1, fifo) > 0u)//返回待处理的消息数量
     {
         CanRxMsg RxMessage;
-        uint8_t payload[8];  //用于存储接收数据的临时缓冲区
-        Can_HwType hw;
-        PduInfoType pduInfo;
+        Can_RxQueueEntry entry;
         Can_IdType canId;
 
         CAN_Receive(CAN1, fifo, &RxMessage);
 
         for (uint8_t i = 0; i < RxMessage.DLC; i++)
         {
-            payload[i] = RxMessage.Data[i];
+            entry.data[i] = RxMessage.Data[i];
         }
 
         if (RxMessage.IDE == CAN_Id_Extended)
@@ -189,14 +245,12 @@ static void Can_ProcessRxFifo(uint8_t fifo)
             canId |= CAN_ID_RTR_FLAG;
         }
 
-        hw.CanId = canId;
-        hw.ControllerId = CAN_CONTROLLER_ID;
-        hw.Hoh = 0u;
+        entry.hw.CanId = canId;
+        entry.hw.ControllerId = CAN_CONTROLLER_ID;
+        entry.hw.Hoh = 0u;
+        entry.dlc = RxMessage.DLC;
 
-        pduInfo.SduLength = RxMessage.DLC;
-        pduInfo.SduDataPtr = payload;
-
-        CanIf_RxIndication(&hw, &pduInfo);
+        (void)Can_RxQueue_Push(&entry);
     }
 }
 
@@ -250,13 +304,16 @@ static void CAN_NVIC_Init(void)
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE; 
     NVIC_Init(&NVIC_InitStructure);
 
+    NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX1_IRQn;
+    NVIC_Init(&NVIC_InitStructure);
+
     NVIC_InitStructure.NVIC_IRQChannel = USB_HP_CAN1_TX_IRQn;
     NVIC_Init(&NVIC_InitStructure);
 
     NVIC_InitStructure.NVIC_IRQChannel = CAN1_SCE_IRQn;
     NVIC_Init(&NVIC_InitStructure);
 
-    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, ENABLE); 
+    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_FMP1 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, ENABLE); 
 }
 
 //AUTOSAR 标准初始化接口
@@ -265,6 +322,7 @@ static void CAN_NVIC_Init(void)
  * @param  Config: CAN 驱动配置。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用，计划在Ecum层调用并传入配置
 void Can_Init(const Can_ConfigType* Config)
 {
     CAN_InitTypeDef CAN_InitStructure;
@@ -305,6 +363,7 @@ void Can_Init(const Can_ConfigType* Config)
     CAN_NVIC_Init(); // 内部调用 NVIC 初始化
 
     Can_ResetTxTracking();
+    Can_ResetRxQueue();
     g_canControllerState = CAN_CS_STOPPED;
 }
 
@@ -312,13 +371,15 @@ void Can_Init(const Can_ConfigType* Config)
  * @brief  反初始化 CAN 控制器。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_DeInit(void)
 {
-    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, DISABLE);
+    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_FMP1 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, DISABLE);
     CAN_DeInit(CAN1);
     g_canConfig = NULL;
     g_canControllerState = CAN_CS_UNINIT;
     Can_ResetTxTracking();
+    Can_ResetRxQueue();
 }
 
 //AUTOSAR 标准发送接口
@@ -397,6 +458,7 @@ Can_ReturnType Can_Write(Can_HwHandleType HwTxPduId, const Can_PduType* PduInfo)
  * @param  Transition: 状态迁移请求。
  * @retval 成功返回 E_OK，否则 E_NOT_OK。
  */
+// TODO: CanIf 层暂未调用
 Std_ReturnType Can_SetControllerMode(uint8_t Controller, Can_StateTransitionType Transition)
 {
     uint8_t status;
@@ -457,6 +519,7 @@ Std_ReturnType Can_SetControllerMode(uint8_t Controller, Can_StateTransitionType
  * @param  ControllerModePtr: 输出指针。
  * @retval 成功返回 E_OK，否则 E_NOT_OK。
  */
+// TODO: CanIf 层暂未调用
 Std_ReturnType Can_GetControllerMode(uint8_t Controller, Can_ControllerStateType* ControllerModePtr)
 {
     if (!Can_IsValidController(Controller) || ControllerModePtr == NULL)
@@ -474,6 +537,7 @@ Std_ReturnType Can_GetControllerMode(uint8_t Controller, Can_ControllerStateType
  * @param  ErrorStatePtr: 输出指针。
  * @retval 成功返回 E_OK，否则 E_NOT_OK。
  */
+// TODO: CanIf 层暂未调用
 Std_ReturnType Can_GetControllerErrorState(uint8_t Controller, Can_ErrorStateType* ErrorStatePtr)
 {
     if (!Can_IsValidController(Controller) || ErrorStatePtr == NULL)
@@ -490,6 +554,7 @@ Std_ReturnType Can_GetControllerErrorState(uint8_t Controller, Can_ErrorStateTyp
  * @param  Controller: 控制器索引。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_DisableControllerInterrupts(uint8_t Controller)
 {
     if (!Can_IsValidController(Controller))
@@ -497,7 +562,7 @@ void Can_DisableControllerInterrupts(uint8_t Controller)
         return;
     }
 
-    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, DISABLE);
+    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_FMP1 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, DISABLE);
     g_canInterruptsEnabled = 0u;
 }
 
@@ -506,6 +571,7 @@ void Can_DisableControllerInterrupts(uint8_t Controller)
  * @param  Controller: 控制器索引。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_EnableControllerInterrupts(uint8_t Controller)
 {
     if (!Can_IsValidController(Controller))
@@ -513,7 +579,7 @@ void Can_EnableControllerInterrupts(uint8_t Controller)
         return;
     }
 
-    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, ENABLE);
+    CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_FMP1 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, ENABLE);
     g_canInterruptsEnabled = 1u;
 }
 
@@ -522,6 +588,7 @@ void Can_EnableControllerInterrupts(uint8_t Controller)
  * @param  versioninfo: 输出指针。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_GetVersionInfo(Std_VersionInfoType* versioninfo)
 {
     if (versioninfo == NULL)
@@ -540,6 +607,7 @@ void Can_GetVersionInfo(Std_VersionInfoType* versioninfo)
  * @brief  轮询 RX FIFO 并通知上层。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Read(void)
 {
     if (g_canControllerState != CAN_CS_STARTED)
@@ -547,14 +615,24 @@ void Can_MainFunction_Read(void)
         return;
     }
 
-    Can_ProcessRxFifo(CAN_FIFO0);
-    Can_ProcessRxFifo(CAN_FIFO1);
+    Can_RxQueueEntry entry;
+
+    while (Can_RxQueue_Pop(&entry) != 0u)
+    {
+        PduInfoType pduInfo;
+
+        pduInfo.SduLength = entry.dlc;
+        pduInfo.SduDataPtr = entry.data;
+
+        CanIf_RxIndication(&entry.hw, &pduInfo);
+    }
 }
 
 /**
  * @brief  轮询发送邮箱并确认已完成发送。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Write(void)
 {
     if (g_canControllerState != CAN_CS_STARTED)
@@ -585,6 +663,7 @@ void Can_MainFunction_Write(void)
  * @brief  轮询 Bus-off 状态。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_BusOff(void)
 {
     if (Can_ReadErrorState() == CAN_ERRORSTATE_BUSOFF)
@@ -597,6 +676,7 @@ void Can_MainFunction_BusOff(void)
  * @brief  轮询唤醒状态（占位）。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Wakeup(void)
 {
     /* No polling action required in this minimal driver. */
@@ -606,6 +686,7 @@ void Can_MainFunction_Wakeup(void)
  * @brief  轮询模式变化（占位）。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Mode(void)
 {
     /* Mode indication is handled during SetControllerMode. */
@@ -615,6 +696,7 @@ void Can_MainFunction_Mode(void)
  * @brief  轮询错误状态（最小化 Bus-off 处理）。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Error(void)
 {
     if (g_canControllerState == CAN_CS_STARTED)
@@ -631,7 +713,11 @@ void Can_IsrRxFifo0(void)
 {
     if (g_canInterruptsEnabled != 0u)
     {
-        Can_ProcessRxFifo(CAN_FIFO0);
+        if (CAN_GetITStatus(CAN1, CAN_IT_FMP0) != RESET)
+        {
+            CAN_ClearITPendingBit(CAN1, CAN_IT_FMP0);
+            Can_ProcessRxFifo(CAN_FIFO0);
+        }
     }
 }
 
@@ -643,7 +729,11 @@ void Can_IsrRxFifo1(void)
 {
     if (g_canInterruptsEnabled != 0u)
     {
-        Can_ProcessRxFifo(CAN_FIFO1);
+        if (CAN_GetITStatus(CAN1, CAN_IT_FMP1) != RESET)
+        {
+            CAN_ClearITPendingBit(CAN1, CAN_IT_FMP1);
+            Can_ProcessRxFifo(CAN_FIFO1);
+        }
     }
 }
 
@@ -655,7 +745,11 @@ void Can_IsrTx(void)
 {
     if (g_canInterruptsEnabled != 0u)
     {
-        Can_MainFunction_Write();
+        if (CAN_GetITStatus(CAN1, CAN_IT_TME) != RESET)
+        {
+            CAN_ClearITPendingBit(CAN1, CAN_IT_TME);
+            Can_MainFunction_Write();
+        }
     }
 }
 
@@ -683,16 +777,47 @@ void Can_IsrWakeup(void)
  */
 void Can_IsrError(void)
 {
-    Can_MainFunction_Error();
+    if (g_canInterruptsEnabled == 0u)
+    {
+        return;
+    }
+
+    if (CAN_GetITStatus(CAN1, CAN_IT_BOF) != RESET)
+    {
+        CAN_ClearITPendingBit(CAN1, CAN_IT_BOF);
+        CanIf_ControllerBusOff(CAN_CONTROLLER_ID);
+    }
+
+    if (CAN_GetITStatus(CAN1, CAN_IT_WKU) != RESET)
+    {
+        CAN_ClearITPendingBit(CAN1, CAN_IT_WKU);
+        Can_MainFunction_Wakeup();
+    }
+
+    if (CAN_GetITStatus(CAN1, CAN_IT_ERR) != RESET)
+    {
+        CAN_ClearITPendingBit(CAN1, CAN_IT_ERR);
+        Can_MainFunction_Error();
+    }
 }
 
+//f103c8t6芯片CAN的FIFO大小是3帧数据
 /**
- * @brief  MCU RX0 中断入口。
+ * @brief  MCU RX0 中断入口。FIFO0 中断由 USB_LP_CAN1_RX0_IRQn 触发。USB是因为和usb复用的
  * @retval 无。
  */
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
     Can_IsrRxFifo0();
+}
+
+/**
+ * @brief  MCU RX1 中断入口。FIFO1 中断由 CAN1_RX1_IRQn 触发。
+ * @retval 无。
+ */
+void CAN1_RX1_IRQHandler(void)
+{
+    Can_IsrRxFifo1();
 }
 
 /**

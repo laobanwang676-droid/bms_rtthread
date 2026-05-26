@@ -52,3 +52,4 @@
 .\objects\app.o: ..\ASW\bms_app\bms_analysis.h
 .\objects\app.o: ..\ASW\bms_app\bms_protect.h
 .\objects\app.o: ..\ASW\bms_app\bms_balance.h
+.\objects\app.o: ..\BSW\ECUM\EcuM.h

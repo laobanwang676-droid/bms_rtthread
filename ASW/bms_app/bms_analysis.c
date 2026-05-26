@@ -26,6 +26,7 @@
 BMS_AnalysisDataTypedef BMS_AnalysisData =
 {
 	.CapacityRated = BMS_BATTERY_CAPACITY,
+	.complete = false,
 };
 
 static void BMS_AnalysisTask(void *param);// 分析线程函数声明
@@ -285,6 +286,11 @@ static void BMS_AnalysisTask(void *param)
         BMS_AnalysisOcvSocCompensation();//休眠时测量开路电压校准SOC和剩余容量，为安时积分法提供准确的初始值
         BMS_AnalysisAhIntegrateToSoc(); // 安时积分法计算soc
 
+		if(BMS_AnalysisData.complete == false)
+		{
+			BMS_AnalysisData.complete = true; // 第一次分析完成后，设置完成标志
+		}
+		
         rt_thread_delay(ANALYSISI_TASK_PERIOD); // 延时，控制任务周期
     }
 }

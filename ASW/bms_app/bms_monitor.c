@@ -36,7 +36,10 @@
 #define SYS_MODE_DECISION_CURRENT	0.2f  // 0.2A作为系统模式切换的电流阈值
 
 // 全局监控数据结构，保存采样到的电池相关数据（电压、电流、温度等）
-BMS_MonitorDataTypedef BMS_MonitorData;
+BMS_MonitorDataTypedef BMS_MonitorData =
+{
+    .complete = false, // 初始化时数据未完成
+};
 
 // 采样使能标志：为 true 时允许对应采样执行
 static bool FlagVoltage = true;     // 电压采样开关,单体和总电压共用一个标志
@@ -90,6 +93,11 @@ static void Bms_MonitorTask(void *parameter)
         BMS_MonitorBattery(); // 采集电池数据
         BMS_MonitorSysMode(); // 根据采集的数据判断系统模式
 
+        if(BMS_MonitorData.complete == false)
+        {
+            BMS_MonitorData.complete = true; // 第一次采集完成后，设置完成标志
+        }
+        
         rt_thread_delay(MONITOR_TASK_PERIOD); // 延时，控制任务周期
     }
 }

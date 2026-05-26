@@ -14,8 +14,8 @@
 .\objects\bms_analysis.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\bms_analysis.o: ..\ASW\bms_app\bms_analysis.h
 .\objects\bms_analysis.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\bms_analysis.o: ..\ASW\bms_app\bms_monitor.h
 .\objects\bms_analysis.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bms_analysis.o: ..\ASW\bms_app\bms_monitor.h
 .\objects\bms_analysis.o: ..\ASW\bms_config\bms_global_define.h
 .\objects\bms_analysis.o: ..\ASW\bms_app\bms_utils.h
 .\objects\bms_analysis.o: ..\third_lib\rt-thread\include\rtdbg.h

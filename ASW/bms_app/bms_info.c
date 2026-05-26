@@ -21,7 +21,7 @@
 #define LED4_PORT     GPIOB
 #define LED4_PIN      GPIO_Pin_9
 
-#define INFO_TASK_STACK_SIZE	512// 线程栈大小
+#define INFO_TASK_STACK_SIZE	1024// 线程栈大小
 #define INFO_TASK_PRIORITY		20// 线程优先级
 #define INFO_TASK_TIMESLICE	    25// 线程时间片（单位：ms）
 #define INFO_TASK_PERIOD		3000// 信息显示任务周期（单位：ms）

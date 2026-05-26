@@ -18,6 +18,7 @@ typedef struct
 	BMS_CellDataTypedef CellData[BMS_CELL_MAX]; 	// 电芯数据,电压数据会从小到大排序
 	float CellVoltage[BMS_CELL_MAX]; 				// 电芯电压,未排序的
 	uint32_t CellTempEffectiveNumber;				// 有效值的温度数量
+	bool complete;									// 数据获取完成标志
 }BMS_MonitorDataTypedef;
 
 extern BMS_MonitorDataTypedef BMS_MonitorData;

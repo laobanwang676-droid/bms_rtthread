@@ -1,0 +1,56 @@
+GCC 与 Keil 构建差异总结与踩坑记录 (BMS_RT-Thread)
+
+1) 启动入口不一致导致系统不跑
+- 现象: CMake/GCC 生成的 HEX 烧录后不运行, Keil 正常.
+- 根因: GCC 启动文件 Reset_Handler 直接调用 main, 没进入 RT-Thread 的 rtthread_startup.
+- 解决方案:
+  - 为 GCC 提供专用启动文件并调用 entry() (RT-Thread GCC 路径), 不影响 Keil.
+  - CMake 固定引用源码目录的启动文件, 不使用 build 产物.
+
+2) 使用 build/ 目录的启动文件会被覆盖
+- 现象: 改了启动文件仍不生效.
+- 根因: build/startup_stm32f10x_md.s 属于构建产物, 重新配置/编译会覆盖.
+- 解决方案:
+  - 在源码目录新增启动文件 firmware/comsis/core/startup_stm32f10x_md_gcc.S
+  - CMakeLists.txt 指向该文件.
+
+3) RT-Thread 初始化表与 Finsh 符号表在 GCC 下被裁掉
+- 现象: 系统启动异常或组件初始化不完整; shell/命令表异常.
+- 根因: 链接脚本未保留 .rti_fn.* 段, 以及未提供 __fsymtab_start/__fsymtab_end.
+- 解决方案:
+  - 在 BMS_gcc.ld 中增加 .rti_fn 段并 KEEP.
+  - 增加 .fsymtab 段并提供 __fsymtab_start/__fsymtab_end.
+
+4) GCC 下浮点打印为空
+- 现象: 日志只有单位 (V/A/%), 数值为空.
+- 根因: newlib-nano 默认裁剪了 printf 浮点支持.
+- 解决方案:
+  - 链接选项增加 -Wl,-u,_printf_float
+
+5) 打印后断言/HardFault
+- 现象: 打印一轮后 rt_thread_sleep 断言, 甚至 HardFault.
+- 根因: GCC 的 sprintf(浮点) 栈消耗大, 线程栈太小导致线程控制块被破坏.
+- 解决方案:
+  - 提高 bms_info 线程栈 (例如 512 -> 1024), 必要时调整其它任务栈.
+
+6) 其它已确认要点
+- RT_USING_LIBC: 避免 RT-Thread 自定义 va_start 与 GCC 标准库冲突.
+- context_gcc.S: 只编译 GCC 版本的上下文切换汇编, 排除 IAR/RVDS 版本.
+
+GCC 转 Keil / Keil 转 GCC 的经验总结
+- Keil 依赖启动文件直接进入 __main, 并通过编译器特性重定向 main 到 RT-Thread.
+- GCC 必须显式走 entry()/rtthread_startup() 路径, 否则 RT-Thread 不会启动.
+- GCC 使用 newlib-nano 默认裁剪功能, 需要手动开启浮点 printf 或改为整数输出.
+- GCC 对线程栈更敏感, sprintf/float 格式化会显著增加栈占用.
+- 链接脚本对 RT-Thread 初始化表和 Finsh 符号表至关重要, 必须 KEEP.
+
+关于 HEX 大小差异 (GCC 大约比 Keil 大 10KB)
+- 主要原因:
+  1) GCC 使用 newlib/nano + 选择性启用浮点 printf, 会引入更多格式化代码.
+  2) GCC 编译默认带 -g 调试信息, 以及不同的 libgcc/libm 实现.
+  3) 链接脚本/节回收策略差异, Keil 可能更 aggressive 的裁剪.
+  4) 运行时库不同 (Keil ARMCLIB/ARMCC 与 GCC newlib).
+- 若需要缩小 GCC 体积:
+  - 避免浮点 printf, 改为整数或缩放后打印.
+  - 使用更激进的 LTO / -Os / 优化组合.
+  - 确保 --gc-sections 与必要段 KEEP 平衡.
