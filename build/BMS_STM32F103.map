@@ -332,8 +332,8 @@ Discarded input sections
                 0x00000000       0x28 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
  .debug_rnglists
                 0x00000000       0x19 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
- .debug_line    0x00000000      0x1f3 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
- .debug_str     0x00000000      0x34f CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
+ .debug_line    0x00000000      0x22a CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
+ .debug_str     0x00000000      0x365 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
  .debug_frame   0x00000000       0x44 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj
  .ARM.attributes
@@ -427,8 +427,8 @@ Discarded input sections
                 0x00000000       0x40 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
  .debug_rnglists
                 0x00000000       0x3c CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
- .debug_line    0x00000000      0x354 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
- .debug_str     0x00000000      0x58f CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
+ .debug_line    0x00000000      0x396 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
+ .debug_str     0x00000000      0x5a5 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
  .debug_frame   0x00000000       0x8c CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj
  .ARM.attributes
@@ -454,8 +454,8 @@ Discarded input sections
                 0x00000000       0x38 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
  .debug_rnglists
                 0x00000000       0x25 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
- .debug_line    0x00000000      0x19e CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
- .debug_str     0x00000000      0x2a8 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
+ .debug_line    0x00000000      0x1ca CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
+ .debug_str     0x00000000      0x2be CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
  .debug_frame   0x00000000       0x50 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj
  .ARM.attributes
@@ -566,8 +566,8 @@ Discarded input sections
                 0x00000000      0x138 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
  .debug_rnglists
                 0x00000000       0xe6 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
- .debug_line    0x00000000      0x9f7 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
- .debug_str     0x00000000      0x719 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
+ .debug_line    0x00000000      0xa0d CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
+ .debug_str     0x00000000      0x72f CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
  .debug_frame   0x00000000      0x290 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj
  .ARM.attributes
@@ -607,8 +607,8 @@ Discarded input sections
                 0x00000000       0x78 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
  .debug_rnglists
                 0x00000000       0x55 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
- .debug_line    0x00000000      0x301 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
- .debug_str     0x00000000      0x5cf CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
+ .debug_line    0x00000000      0x317 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
+ .debug_str     0x00000000      0x5e5 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
  .debug_frame   0x00000000       0xec CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj
  .ARM.attributes
@@ -692,8 +692,8 @@ Discarded input sections
                 0x00000000       0x88 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
  .debug_rnglists
                 0x00000000       0x61 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
- .debug_line    0x00000000      0x3b5 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
- .debug_str     0x00000000      0x394 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
+ .debug_line    0x00000000      0x3cb CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
+ .debug_str     0x00000000      0x3aa CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
  .debug_frame   0x00000000      0x10c CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj
  .ARM.attributes
@@ -721,8 +721,8 @@ Discarded input sections
                 0x00000000       0x48 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
  .debug_rnglists
                 0x00000000       0x31 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
- .debug_line    0x00000000      0x1e3 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
- .debug_str     0x00000000      0x242 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
+ .debug_line    0x00000000      0x1f9 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
+ .debug_str     0x00000000      0x258 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
  .debug_frame   0x00000000       0x70 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj
  .ARM.attributes
@@ -761,8 +761,8 @@ Discarded input sections
                 0x00000000       0x78 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
  .debug_rnglists
                 0x00000000       0x55 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
- .debug_line    0x00000000      0x3f0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
- .debug_str     0x00000000      0x3cd CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
+ .debug_line    0x00000000      0x406 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
+ .debug_str     0x00000000      0x3e3 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
  .debug_frame   0x00000000      0x100 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj
  .ARM.attributes
@@ -782,8 +782,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
  .debug_rnglists
                 0x00000000       0x1f CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
- .debug_line    0x00000000      0x17f CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
- .debug_str     0x00000000      0x1f9 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
+ .debug_line    0x00000000      0x195 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
+ .debug_str     0x00000000      0x20f CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
  .debug_frame   0x00000000       0x40 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj
  .ARM.attributes
@@ -820,8 +820,8 @@ Discarded input sections
                 0x00000000       0x70 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
  .debug_rnglists
                 0x00000000       0x50 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
- .debug_line    0x00000000      0x45b CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
- .debug_str     0x00000000      0x3be CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
+ .debug_line    0x00000000      0x471 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
+ .debug_str     0x00000000      0x3d4 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
  .debug_frame   0x00000000       0xc8 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj
  .ARM.attributes
@@ -906,8 +906,8 @@ Discarded input sections
                 0x00000000       0xf8 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
  .debug_rnglists
                 0x00000000       0xb8 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
- .debug_line    0x00000000      0x9ab CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
- .debug_str     0x00000000      0x5ef CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
+ .debug_line    0x00000000      0x9c1 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
+ .debug_str     0x00000000      0x605 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
  .debug_frame   0x00000000      0x244 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj
  .ARM.attributes
@@ -961,8 +961,8 @@ Discarded input sections
                 0x00000000       0xb0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
  .debug_rnglists
                 0x00000000       0x80 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
- .debug_line    0x00000000      0x8ad CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
- .debug_str     0x00000000      0x781 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
+ .debug_line    0x00000000      0x8c3 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
+ .debug_str     0x00000000      0x797 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
  .debug_frame   0x00000000      0x168 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj
  .ARM.attributes
@@ -1070,8 +1070,8 @@ Discarded input sections
                 0x00000000      0x120 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
  .debug_rnglists
                 0x00000000       0xd4 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
- .debug_line    0x00000000      0x8a4 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
- .debug_str     0x00000000      0x696 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
+ .debug_line    0x00000000      0x8ba CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
+ .debug_str     0x00000000      0x6ac CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
  .debug_frame   0x00000000      0x258 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj
  .ARM.attributes
@@ -1099,8 +1099,8 @@ Discarded input sections
                 0x00000000       0x48 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
  .debug_rnglists
                 0x00000000       0x31 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
- .debug_line    0x00000000      0x1cf CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
- .debug_str     0x00000000      0x263 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
+ .debug_line    0x00000000      0x1e5 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
+ .debug_str     0x00000000      0x279 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
  .debug_frame   0x00000000       0x70 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj
  .ARM.attributes
@@ -1134,8 +1134,8 @@ Discarded input sections
                 0x00000000       0x60 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
  .debug_rnglists
                 0x00000000       0x43 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
- .debug_line    0x00000000      0x328 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
- .debug_str     0x00000000      0x330 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
+ .debug_line    0x00000000      0x349 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
+ .debug_str     0x00000000      0x346 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
  .debug_frame   0x00000000       0xac CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj
  .ARM.attributes
@@ -1240,8 +1240,8 @@ Discarded input sections
                 0x00000000       0x88 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
  .debug_rnglists
                 0x00000000       0x61 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
- .debug_line    0x00000000      0x3ac CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
- .debug_str     0x00000000      0x3b5 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
+ .debug_line    0x00000000      0x3c2 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
+ .debug_str     0x00000000      0x3cb CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
  .debug_frame   0x00000000      0x114 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj
  .ARM.attributes
@@ -1317,8 +1317,8 @@ Discarded input sections
                 0x00000000      0x108 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
  .debug_rnglists
                 0x00000000       0xc1 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
- .debug_line    0x00000000      0x5ce CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
- .debug_str     0x00000000      0x637 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
+ .debug_line    0x00000000      0x5e4 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
+ .debug_str     0x00000000      0x64d CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
  .debug_frame   0x00000000      0x210 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj
  .ARM.attributes
@@ -1378,8 +1378,8 @@ Discarded input sections
                 0x00000000       0xd0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
  .debug_rnglists
                 0x00000000       0x98 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
- .debug_line    0x00000000      0x6e9 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
- .debug_str     0x00000000      0x644 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
+ .debug_line    0x00000000      0x6ff CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
+ .debug_str     0x00000000      0x65a CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
  .debug_frame   0x00000000      0x1c0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj
  .ARM.attributes
@@ -1627,8 +1627,8 @@ Discarded input sections
                 0x00000000       0x58 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
  .debug_rnglists
                 0x00000000       0x3d CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
- .debug_line    0x00000000      0x25f CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
- .debug_str     0x00000000      0x28b CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
+ .debug_line    0x00000000      0x275 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
+ .debug_str     0x00000000      0x2a1 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
  .debug_frame   0x00000000       0xa4 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj
  .ARM.attributes
@@ -1646,8 +1646,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
- .debug_line    0x00000000       0x6e CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
- .debug_str     0x00000000      0x179 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
+ .debug_line    0x00000000       0x79 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
+ .debug_str     0x00000000      0x18f CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj
@@ -1668,8 +1668,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
  .debug_rnglists
                 0x00000000       0x3a CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
- .debug_line    0x00000000      0x214 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
- .debug_str     0x00000000      0x1c8 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
+ .debug_line    0x00000000      0x22a CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
+ .debug_str     0x00000000      0x1de CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
  .debug_frame   0x00000000       0x50 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj
  .ARM.attributes
@@ -1727,8 +1727,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
- .debug_line    0x00000000       0x5c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
- .debug_str     0x00000000      0x167 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
+ .debug_line    0x00000000       0x67 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
+ .debug_str     0x00000000      0x17d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj
@@ -1739,8 +1739,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
- .debug_line    0x00000000       0x5f CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
- .debug_str     0x00000000      0x16a CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
+ .debug_line    0x00000000       0x6a CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
+ .debug_str     0x00000000      0x180 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj
@@ -1896,8 +1896,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
- .debug_line    0x00000000       0x60 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
- .debug_str     0x00000000      0x16b CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
+ .debug_line    0x00000000       0x6b CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
+ .debug_str     0x00000000      0x181 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj
@@ -1908,8 +1908,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
- .debug_line    0x00000000       0x60 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
- .debug_str     0x00000000      0x16b CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
+ .debug_line    0x00000000       0x6b CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
+ .debug_str     0x00000000      0x181 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj
@@ -1934,8 +1934,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
- .debug_line    0x00000000       0x5f CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
- .debug_str     0x00000000      0x176 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
+ .debug_line    0x00000000       0x6a CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
+ .debug_str     0x00000000      0x18c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj
@@ -1946,8 +1946,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x2c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
- .debug_line    0x00000000       0x5d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
- .debug_str     0x00000000      0x168 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
+ .debug_line    0x00000000       0x68 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
+ .debug_str     0x00000000      0x17e CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
  .comment       0x00000000       0x46 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj
@@ -5073,135 +5073,135 @@ LOAD linker stubs
  .debug_rnglists
                 0x00001665      0x110 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj
 
-.debug_line     0x00000000    0x11653
- .debug_line    0x00000000      0x500 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
- .debug_line    0x00000500      0x507 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj
- .debug_line    0x00000a07      0x5b3 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj
- .debug_line    0x00000fba      0x51d CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj
- .debug_line    0x000014d7      0x46e CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj
- .debug_line    0x00001945      0x667 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj
- .debug_line    0x00001fac      0x3c9 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj
- .debug_line    0x00002375      0x458 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj
- .debug_line    0x000027cd      0x353 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj
- .debug_line    0x00002b20       0xca CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj
- .debug_line    0x00002bea      0xfd5 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj
- .debug_line    0x00003bbf      0x45b CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj
- .debug_line    0x0000401a      0xbe3 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj
- .debug_line    0x00004bfd      0x33f CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj
- .debug_line    0x00004f3c      0x897 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj
- .debug_line    0x000057d3      0x433 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj
- .debug_line    0x00005c06       0x76 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
- .debug_line    0x00005c7c       0xd3 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj
- .debug_line    0x00005d4f      0x382 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj
- .debug_line    0x000060d1      0x29c CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj
- .debug_line    0x0000636d      0xd44 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj
- .debug_line    0x000070b1      0x2f3 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj
- .debug_line    0x000073a4      0x637 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj
- .debug_line    0x000079db      0x820 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj
- .debug_line    0x000081fb     0x19aa CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj
- .debug_line    0x00009ba5      0x864 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj
- .debug_line    0x0000a409      0xa73 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj
- .debug_line    0x0000ae7c      0x583 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj
- .debug_line    0x0000b3ff      0x6bb CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj
- .debug_line    0x0000baba       0xb5 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
- .debug_line    0x0000bb6f      0x3a9 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj
- .debug_line    0x0000bf18      0x1b6 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj
- .debug_line    0x0000c0ce      0x246 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj
- .debug_line    0x0000c314      0x271 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj
- .debug_line    0x0000c585     0x1597 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj
- .debug_line    0x0000db1c      0x147 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj
- .debug_line    0x0000dc63     0x12d0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj
- .debug_line    0x0000ef33      0x70f CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj
- .debug_line    0x0000f642      0x637 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj
- .debug_line    0x0000fc79      0x53e CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj
- .debug_line    0x000101b7      0x981 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj
- .debug_line    0x00010b38      0xb1b CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj
+.debug_line     0x00000000    0x11ace
+ .debug_line    0x00000000      0x563 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
+ .debug_line    0x00000563      0x52b CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj
+ .debug_line    0x00000a8e      0x5d4 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj
+ .debug_line    0x00001062      0x549 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj
+ .debug_line    0x000015ab      0x49a CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj
+ .debug_line    0x00001a45      0x688 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj
+ .debug_line    0x000020cd      0x3d4 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj
+ .debug_line    0x000024a1      0x48f CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj
+ .debug_line    0x00002930      0x38a CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj
+ .debug_line    0x00002cba       0xe0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj
+ .debug_line    0x00002d9a     0x1001 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj
+ .debug_line    0x00003d9b      0x47c CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj
+ .debug_line    0x00004217      0xbf9 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj
+ .debug_line    0x00004e10      0x355 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj
+ .debug_line    0x00005165      0x8b8 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj
+ .debug_line    0x00005a1d      0x454 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj
+ .debug_line    0x00005e71       0x76 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
+ .debug_line    0x00005ee7       0xde CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj
+ .debug_line    0x00005fc5      0x398 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj
+ .debug_line    0x0000635d      0x2bd CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj
+ .debug_line    0x0000661a      0xd5a CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj
+ .debug_line    0x00007374      0x309 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj
+ .debug_line    0x0000767d      0x64d CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj
+ .debug_line    0x00007cca      0x836 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj
+ .debug_line    0x00008500     0x19c0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj
+ .debug_line    0x00009ec0      0x87a CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj
+ .debug_line    0x0000a73a      0xa89 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj
+ .debug_line    0x0000b1c3      0x599 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj
+ .debug_line    0x0000b75c      0x6d1 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj
+ .debug_line    0x0000be2d       0xb5 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
+ .debug_line    0x0000bee2      0x3bf CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj
+ .debug_line    0x0000c2a1      0x1cc CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj
+ .debug_line    0x0000c46d      0x25c CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj
+ .debug_line    0x0000c6c9      0x287 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj
+ .debug_line    0x0000c950     0x15ad CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj
+ .debug_line    0x0000defd      0x15d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj
+ .debug_line    0x0000e05a     0x12e6 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj
+ .debug_line    0x0000f340      0x725 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj
+ .debug_line    0x0000fa65      0x64d CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj
+ .debug_line    0x000100b2      0x554 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj
+ .debug_line    0x00010606      0x997 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj
+ .debug_line    0x00010f9d      0xb31 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj
 
-.debug_str      0x00000000     0x7803
- .debug_str     0x00000000     0x7803 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
-                                0xb14 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj
-                                0x79f (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj
-                                0xd52 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj
-                                0x9ab (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj
-                                0x75c (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj
-                                0xa0e (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj
-                                0x2a4 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj
-                                0xc41 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj
-                                0x454 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj
-                                0x1a7 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj
-                               0x17bc (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj
-                                0x59a (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj
-                               0x1128 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj
-                                0x86d (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj
-                                0x583 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj
-                                0xc97 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
-                                 0x8e (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj
+.debug_str      0x00000000     0x79dc
+ .debug_str     0x00000000     0x79dc CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
+                                0xb2a (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj
+                                0x7b5 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj
+                                0xd68 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj
+                                0x9c1 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj
+                                0x772 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj
+                                0xa24 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj
+                                0x2ba (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj
+                                0xc57 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj
+                                0x46a (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj
                                 0x1bd (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj
-                                0x2ea (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj
-                                0x3bf (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj
-                                0x74c (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj
-                                0x350 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj
-                                0x537 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj
-                                0x621 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj
-                                0xe12 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj
-                                0x6d7 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj
-                                0x8df (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj
-                                0x3e5 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj
-                                0x62a (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
-                                 0x87 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj
-                                0x497 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj
-                                0x391 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj
-                                0x4bc (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj
-                                0x472 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj
-                                0x8d4 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj
-                                0x20a (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj
-                                0x80d (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj
-                                0x539 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj
-                                0x643 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj
-                                0x5c6 (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj
-                                0x7bf (size before relaxing)
- .debug_str     0x00007803        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj
-                                0x7b7 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj
+                               0x17d2 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj
+                                0x5b0 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj
+                               0x113e (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj
+                                0x883 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj
+                                0x599 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj
+                                0xcad (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
+                                 0xa4 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj
+                                0x1d3 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj
+                                0x300 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj
+                                0x3d5 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj
+                                0x762 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj
+                                0x366 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj
+                                0x54d (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj
+                                0x637 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj
+                                0xe28 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj
+                                0x6ed (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj
+                                0x8f5 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj
+                                0x3fb (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj
+                                0x640 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
+                                 0x9d (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj
+                                0x4ad (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj
+                                0x3a7 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj
+                                0x4d2 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj
+                                0x488 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj
+                                0x8ea (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj
+                                0x220 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj
+                                0x823 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj
+                                0x54f (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj
+                                0x659 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj
+                                0x5dc (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj
+                                0x7d5 (size before relaxing)
+ .debug_str     0x000079dc        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj
+                                0x7cd (size before relaxing)
 
 .debug_frame    0x00000000     0x4c18
  .debug_frame   0x00000000       0x88 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
@@ -5322,49 +5322,49 @@ LOAD linker stubs
  .debug_frame   0x00004bf8       0x20 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
 
 .debug_line_str
-                0x00000000      0x29f
+                0x00000000      0x2c0
  .debug_line_str
-                0x00000000      0x29f CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
-                                 0x72 (size before relaxing)
+                0x00000000      0x2c0 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj
+                                 0x88 (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
-                                 0x79 (size before relaxing)
+                0x000002c0        0x0 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj
+                                 0x8f (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivdf3.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpdf2.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_unorddf2.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_unorddf2.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixsfsi.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixsfsi.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixunssfsi.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixunssfsi.o)
                                  0xce (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-strcmp.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-strcmp.o)
                                  0xea (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-strlen.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(libc_a-strlen.o)
                                  0xeb (size before relaxing)
  .debug_line_str
-                0x0000029f        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x000002c0        0x0 D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_fixdfsi.o)
                                  0xce (size before relaxing)

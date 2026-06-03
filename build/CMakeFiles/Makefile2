@@ -53,10 +53,10 @@ RM = D:\APP\Cmake\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Desktop\bms_rtthread_Cmake
+CMAKE_SOURCE_DIR = D:\A_STM32_learn\F103\bms_rtthread_Cmake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Desktop\bms_rtthread_Cmake\build
+CMAKE_BINARY_DIR = D:\A_STM32_learn\F103\bms_rtthread_Cmake\build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/BMS_STM32F103.elf.dir/clean
 CMakeFiles/BMS_STM32F103.elf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Built target BMS_STM32F103.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Built target BMS_STM32F103.elf"
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BMS_STM32F103.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles 70
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 70
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BMS_STM32F103.elf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 0
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/rule
 
 # Convenience name for target.
@@ -101,7 +101,7 @@ BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/rule
 # codegen rule for target.
 CMakeFiles/BMS_STM32F103.elf.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Finished codegen for target BMS_STM32F103.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Finished codegen for target BMS_STM32F103.elf"
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/codegen
 
 # clean rule for target.
@@ -116,7 +116,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

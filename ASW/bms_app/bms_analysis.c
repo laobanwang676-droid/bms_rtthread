@@ -238,7 +238,7 @@ static void BMS_AnalysisAhIntegrateToSoc(void)
 	{
 		if(BMS_MonitorData.CellData[BMS_CELL_MAX - 1].CellVoltage >= INIT_OV_PROTECT)
 		{
-			BMS_AnalysisData.SOC = 1.0f;
+			BMS_AnalysisData.SOC = 1.0f; 
 		}
 		else if(BMS_MonitorData.CellData[0].CellVoltage <= INIT_UV_PROTECT)
 		{
@@ -278,6 +278,7 @@ static void BMS_AnalysisAhIntegrateToSoc(void)
 
 static void BMS_AnalysisTask(void *param)
 {
+	(void)param;
     BMS_AnalysisCapAndSocInit(); // 初始化容量和SOC
     while(1)
     {

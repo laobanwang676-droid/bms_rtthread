@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S
 
-D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S
 

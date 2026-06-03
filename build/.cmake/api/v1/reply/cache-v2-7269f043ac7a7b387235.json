@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Desktop/bms_rtthread_Cmake/build"
+			"value" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build"
 		},
 		{
 			"name" : "BMS_STM32F103_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Desktop/bms_rtthread_Cmake"
+			"value" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -231,7 +231,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Desktop/bms_rtthread_Cmake/build"
+			"value" : "d:/A_STM32_learn/F103/bms_rtthread_Cmake/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -675,7 +675,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Desktop/bms_rtthread_Cmake"
+			"value" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1231,11 +1231,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "The CMake toolchain file"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "D:/Desktop/bms_rtthread_Cmake/toolchain.cmake"
+			"type" : "UNINITIALIZED",
+			"value" : "d:/A_STM32_learn/F103/bms_rtthread_Cmake/toolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",

@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BMS_STM32F103.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BMS_STM32F103.elf-Debug-f894264478bb90701869.json",
+					"jsonFile" : "target-BMS_STM32F103.elf-Debug-3a3f42c7f966b9518264.json",
 					"name" : "BMS_STM32F103.elf",
 					"projectIndex" : 0
 				}
@@ -50,8 +50,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Desktop/bms_rtthread_Cmake/build",
-		"source" : "D:/Desktop/bms_rtthread_Cmake"
+		"build" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build",
+		"source" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake"
 	},
 	"version" : 
 	{

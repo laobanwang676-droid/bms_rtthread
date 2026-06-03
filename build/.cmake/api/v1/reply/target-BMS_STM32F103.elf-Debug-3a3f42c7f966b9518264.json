@@ -90,75 +90,75 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_app"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_config"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUAL"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUM"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUM"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/can"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/can"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/delay"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/delay"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/soft_i2c"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/soft_i2c"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/usart"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/usart"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/SERVICES"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/SERVICES"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/CDD/bq769"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/CDD/bq769"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/driver/inc"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/inc"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/device"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/include"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/RTE"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE"
 				}
 			],
 			"language" : "C",
@@ -259,75 +259,75 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_app"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/ASW/bms_config"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUAL"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/ECUM"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUM"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/can"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/can"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/delay"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/delay"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/soft_i2c"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/soft_i2c"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/MCAL/usart"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/usart"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/SERVICES"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/SERVICES"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/BSW/CDD/bq769"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/CDD/bq769"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/driver/inc"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/inc"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/core"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/firmware/comsis/device"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/include"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/Desktop/bms_rtthread_Cmake/RTE"
+					"path" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE"
 				}
 			],
 			"language" : "ASM",
@@ -353,7 +353,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-TD:/Desktop/bms_rtthread_Cmake/firmware/comsis/core/BMS_gcc.ld",
+				"fragment" : "-TD:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core/BMS_gcc.ld",
 				"role" : "flags"
 			},
 			{

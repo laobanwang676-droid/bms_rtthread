@@ -56,10 +56,10 @@ RM = D:\APP\Cmake\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Desktop\bms_rtthread_Cmake
+CMAKE_SOURCE_DIR = D:\A_STM32_learn\F103\bms_rtthread_Cmake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Desktop\bms_rtthread_Cmake\build
+CMAKE_BINARY_DIR = D:\A_STM32_learn\F103\bms_rtthread_Cmake\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles D:\Desktop\bms_rtthread_Cmake\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -112,7 +112,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
@@ -1976,7 +1976,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P D:\Desktop\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles\VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

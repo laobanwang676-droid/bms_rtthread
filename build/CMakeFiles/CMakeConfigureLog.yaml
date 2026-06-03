@@ -366,7 +366,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
+        D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/4.3.2/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "find-v1"
@@ -2010,8 +2010,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i"
-      binary: "D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i"
+      source: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn"
+      binary: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2020,13 +2020,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i'
+        Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
         
-        Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_145b1/fast
-        D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_145b1.dir\\build.make CMakeFiles/cmTC_145b1.dir/build
-        mingw32-make[1]: Entering directory 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i'
-        Building C object CMakeFiles/cmTC_145b1.dir/CMakeCCompilerABI.c.obj
-        D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_62139/fast
+        D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_62139.dir\\build.make CMakeFiles/cmTC_62139.dir/build
+        mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
+        Building C object CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj
+        D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -2034,8 +2034,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\'
-         D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_145b1.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\cckcbu3w.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\'
+         D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_62139.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s
         GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)
         	compiled by GNU C version 13-win32, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2052,18 +2052,18 @@ events:
          D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 0ca2b613ecc9aadefc9364d3e25b876f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\'
-         D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\cckcbu3w.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\'
+         D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s
         GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203
         COMPILER_PATH=D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/;D:/arm_gcc/bin/../libexec/gcc/;D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/;D:/arm_gcc/bin/../lib/gcc/;D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/;D:/arm_gcc/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.'
-        Linking C static library libcmTC_145b1.a
-        D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_145b1.dir\\cmake_clean_target.cmake
-        D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_145b1.dir\\link.txt --verbose=1
-        arm-none-eabi-ar qc libcmTC_145b1.a CMakeFiles/cmTC_145b1.dir/CMakeCCompilerABI.c.obj
-        D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_145b1.a
-        mingw32-make[1]: Leaving directory 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_62139.a
+        D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_62139.dir\\cmake_clean_target.cmake
+        D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_62139.dir\\link.txt --verbose=1
+        arm-none-eabi-ar qc libcmTC_62139.a CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj
+        D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_62139.a
+        mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
         
       exitCode: 0
   -
@@ -2096,13 +2096,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i']
+        ignore line: [Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_145b1/fast]
-        ignore line: [D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_145b1.dir\\build.make CMakeFiles/cmTC_145b1.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i']
-        ignore line: [Building C object CMakeFiles/cmTC_145b1.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_62139/fast]
+        ignore line: [D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_62139.dir\\build.make CMakeFiles/cmTC_62139.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
+        ignore line: [Building C object CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -2110,8 +2110,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\']
-        ignore line: [ D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_145b1.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\cckcbu3w.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\']
+        ignore line: [ D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_62139.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s]
         ignore line: [GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 13-win32  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -2128,8 +2128,8 @@ events:
         ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 0ca2b613ecc9aadefc9364d3e25b876f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\']
-        ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\cckcbu3w.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\']
+        ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s]
         ignore line: [GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203]
         ignore line: [COMPILER_PATH=D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/]
         ignore line: [D:/arm_gcc/bin/../libexec/gcc/]
@@ -2138,13 +2138,13 @@ events:
         ignore line: [D:/arm_gcc/bin/../lib/gcc/]
         ignore line: [D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/arm_gcc/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_145b1.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C static library libcmTC_145b1.a]
-        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_145b1.dir\\cmake_clean_target.cmake]
-        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_145b1.dir\\link.txt --verbose=1]
-        ignore line: [arm-none-eabi-ar qc libcmTC_145b1.a CMakeFiles/cmTC_145b1.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_145b1.a]
-        ignore line: [mingw32-make[1]: Leaving directory 'D:/Desktop/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-rg2i0i']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C static library libcmTC_62139.a]
+        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_62139.dir\\cmake_clean_target.cmake]
+        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_62139.dir\\link.txt --verbose=1]
+        ignore line: [arm-none-eabi-ar qc libcmTC_62139.a CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_62139.a]
+        ignore line: [mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
         ignore line: []
         ignore line: []
         implicit libs: []
