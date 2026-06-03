@@ -44,6 +44,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/Com_AppIf.c" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj" "gcc" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj.d"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/app.c" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj" "gcc" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj.d"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj" "gcc" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj.d"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj" "gcc" "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj.d"

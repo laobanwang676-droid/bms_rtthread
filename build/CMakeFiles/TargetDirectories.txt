@@ -1,3 +1,5 @@
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/BMS_STM32F103.elf.dir
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/flash_openocd_stlink.dir
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/flash.dir
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/edit_cache.dir
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/rebuild_cache.dir

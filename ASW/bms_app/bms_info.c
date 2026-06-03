@@ -28,6 +28,25 @@
 
 static bool FlagInfoPrintf = true; // 信息打印使能标志，为 true 时允许信息打印执行
 
+/* 将浮点数转为整数+小数格式的字符串，避免使用 %f 从而不引入浮点 printf 库 */
+static void format_float_3(char *buf, float val)
+{
+    int scaled = (int)(val * 1000.0f + (val >= 0 ? 0.5f : -0.5f));
+    int int_part = scaled / 1000;
+    int frac_part = scaled % 1000;
+    if (frac_part < 0) frac_part = -frac_part;
+    sprintf(buf, "%d.%03d", int_part, frac_part);
+}
+
+static void format_float_1(char *buf, float val)
+{
+    int scaled = (int)(val * 10.0f + (val >= 0 ? 0.5f : -0.5f));
+    int int_part = scaled / 10;
+    int frac_part = scaled % 10;
+    if (frac_part < 0) frac_part = -frac_part;
+    sprintf(buf, "%d.%d", int_part, frac_part);
+}
+
 static void BMS_InfoLedInit(void);
 static void BMS_InfoTask(void *parameter); // 信息显示线程函数声明
 
@@ -102,11 +121,12 @@ static void BMS_InfoLed(void)
 	}
 }
 
-// 实时打印BMS信息
+// 实时打印BMS信息（使用整数格式化避免引入浮点 printf 库）
 static void BMS_InfoPrintf(void)
 {
 	uint8_t index;
 	char str[64];
+	char fbuf[16]; // 浮点数格式化缓冲区
 
 	LOG_D("/*************************************************************/");
 	//系统模式
@@ -114,16 +134,19 @@ static void BMS_InfoPrintf(void)
 	LOG_D("%s", str);
 	rt_kprintf("\r\n");
 	// 电池包实际容量
-	sprintf(str, "Battery Real Capacity = %0.3fAh", BMS_AnalysisData.CapacityReal);
+	format_float_3(fbuf, BMS_AnalysisData.CapacityReal);
+	sprintf(str, "Battery Real Capacity = %sAh", fbuf);
 	LOG_D("%s", str);
 
 	// 电池包剩余容量
-	sprintf(str, "Battery Remain Capacity = %0.3fAh", BMS_AnalysisData.CapacityRemain);
+	format_float_3(fbuf, BMS_AnalysisData.CapacityRemain);
+	sprintf(str, "Battery Remain Capacity = %sAh", fbuf);
 	LOG_D("%s", str);
 	rt_kprintf("\r\n");
 
 	// SOC
-	sprintf(str, "Battery SOC = %0.1f%%", BMS_AnalysisData.SOC * 100);
+	format_float_1(fbuf, BMS_AnalysisData.SOC * 100.0f);
+	sprintf(str, "Battery SOC = %s%%", fbuf);
 	LOG_D("%s", str);
 
 	/*
@@ -142,38 +165,46 @@ static void BMS_InfoPrintf(void)
 	// rt_kprintf("\r\n");
 
 	// 单体电芯最大电压
-	sprintf(str, "Cell Max Voltage = %0.3fV", BMS_AnalysisData.CellVoltMax);
+	format_float_3(fbuf, BMS_AnalysisData.CellVoltMax);
+	sprintf(str, "Cell Max Voltage = %sV", fbuf);
 	LOG_D("%s", str);
 
 	// 单体电芯最小电压
-	sprintf(str, "Cell Min Voltage = %0.3fV", BMS_AnalysisData.CellVoltMin);
+	format_float_3(fbuf, BMS_AnalysisData.CellVoltMin);
+	sprintf(str, "Cell Min Voltage = %sV", fbuf);
 	LOG_D("%s", str);
 
 	// 最大电压差
-	sprintf(str, "Cell Max Voltage Difference = %0.3fV", BMS_AnalysisData.MaxVoltageDifference);
+	format_float_3(fbuf, BMS_AnalysisData.MaxVoltageDifference);
+	sprintf(str, "Cell Max Voltage Difference = %sV", fbuf);
 	LOG_D("%s", str);
 
 	// 平均电压
-	sprintf(str, "Cell Average Voltage = %0.3fV", BMS_AnalysisData.AverageVoltage);
+	format_float_3(fbuf, BMS_AnalysisData.AverageVoltage);
+	sprintf(str, "Cell Average Voltage = %sV", fbuf);
 	LOG_D("%s", str);
 
 	// 实时功率
-	sprintf(str, "Battery Real Power = %0.3fW", BMS_AnalysisData.PowerReal);
+	format_float_3(fbuf, BMS_AnalysisData.PowerReal);
+	sprintf(str, "Battery Real Power = %sW", fbuf);
 	LOG_D("%s", str);
 	rt_kprintf("\r\n");
 
 	// 电池总电压
-	sprintf(str, "Battery Voltage = %0.3fV", BMS_MonitorData.BatteryVoltage);
+	format_float_3(fbuf, BMS_MonitorData.BatteryVoltage);
+	sprintf(str, "Battery Voltage = %sV", fbuf);
 	LOG_D("%s", str);	
 
 	// 电池组电流
-	sprintf(str, "Battery Current = %0.3fA", BMS_MonitorData.BatteryCurrent);
+	format_float_3(fbuf, BMS_MonitorData.BatteryCurrent);
+	sprintf(str, "Battery Current = %sA", fbuf);
 	LOG_D("%s", str);
 
 	// 温度
 	for (index = 0; index < BMS_MonitorData.CellTempEffectiveNumber; index++)
 	{
-		sprintf(str, "Tempature %d = %0.1f", index + 1, BMS_MonitorData.CellTemp[index]);
+		format_float_1(fbuf, BMS_MonitorData.CellTemp[index]);
+		sprintf(str, "Tempature %d = %s", index + 1, fbuf);
 		LOG_D("%s", str);
 	}
 	// rt_kprintf("\r\n");
@@ -181,9 +212,10 @@ static void BMS_InfoPrintf(void)
 	// 电芯电压
 	for (index = 0; index < BMS_GlobalParam.Cell_Real_Number; index++)
 	{
-		sprintf(str, "Cell%-2d Voltage = %-5.3fV %s",
+		format_float_3(fbuf, BMS_MonitorData.CellVoltage[index]);
+		sprintf(str, "Cell%-2d Voltage = %-5sV %s",
 		index + 1, 
-		BMS_MonitorData.CellVoltage[index],
+		fbuf,
 		(BMS_BalanceData.BalanceRecord &  (1 << index)) > 0 ? "--->" : "");
 		LOG_D("%s", str);
 	}

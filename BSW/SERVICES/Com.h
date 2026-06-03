@@ -4,7 +4,7 @@
 #include "CanIf.h"
 
 void Com_Init(void);
-void Com_MainFunctionTx(void);
+Can_ReturnType Com_MainFunctionTx(void);
 void Com_RxIndication(const CanIf_RxMsgType* msg);
 
 #endif /* COM_H */

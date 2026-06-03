@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug (ST-Link)",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "serverpath": "D:\\openocd\\bin\\openocd.exe",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "searchDir": [
+                "D:\\openocd\\share\\openocd\\scripts"
+            ],
+            "executable": "${workspaceFolder}/build/BMS_STM32F103.elf",
+            "svdFile": "${workspaceFolder}/STM32F103.svd",
+            "preLaunchTask": "CMake Build",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed"
+        },
+        {
+            "name": "Cortex Debug (PW-Link / CMSIS-DAP)",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "serverpath": "D:\\openocd\\bin\\openocd.exe",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "searchDir": [
+                "D:\\openocd\\share\\openocd\\scripts"
+            ],
+            "executable": "${workspaceFolder}/build/BMS_STM32F103.elf",
+            "svdFile": "${workspaceFolder}/STM32F103.svd",
+            "preLaunchTask": "CMake Build",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed"
+        },
+        {
+            "name": "Cortex Debug (Attach ST-Link)",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "openocd",
+            "serverpath": "D:\\openocd\\bin\\openocd.exe",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "searchDir": [
+                "D:\\openocd\\share\\openocd\\scripts"
+            ],
+            "executable": "${workspaceFolder}/build/BMS_STM32F103.elf",
+            "svdFile": "${workspaceFolder}/STM32F103.svd",
+            "showDevDebugOutput": "parsed"
+        }
+    ]
+}

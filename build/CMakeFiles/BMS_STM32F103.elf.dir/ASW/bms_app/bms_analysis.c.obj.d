@@ -27,6 +27,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj: \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\include/rtservice.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\include/rtm.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh/finsh.h \
+ D:/arm_gcc/arm-none-eabi/include/math.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_analysis.h \
  D:/arm_gcc/lib/gcc/arm-none-eabi/15.2.1/include/stdint.h \
  D:/arm_gcc/arm-none-eabi/include/stdint.h \

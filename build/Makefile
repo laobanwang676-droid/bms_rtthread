@@ -129,6 +129,56 @@ BMS_STM32F103.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/build
 .PHONY : BMS_STM32F103.elf/fast
 
+#=============================================================================
+# Target rules for targets named flash_openocd_stlink
+
+# Build rule for target.
+flash_openocd_stlink: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 flash_openocd_stlink
+.PHONY : flash_openocd_stlink
+
+# fast build rule for target.
+flash_openocd_stlink/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash_openocd_stlink.dir\build.make CMakeFiles/flash_openocd_stlink.dir/build
+.PHONY : flash_openocd_stlink/fast
+
+#=============================================================================
+# Target rules for targets named flash
+
+# Build rule for target.
+flash: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 flash
+.PHONY : flash
+
+# fast build rule for target.
+flash/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/build
+.PHONY : flash/fast
+
+ASW/Com_AppIf.obj: ASW/Com_AppIf.c.obj
+.PHONY : ASW/Com_AppIf.obj
+
+# target to build an object file
+ASW/Com_AppIf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj
+.PHONY : ASW/Com_AppIf.c.obj
+
+ASW/Com_AppIf.i: ASW/Com_AppIf.c.i
+.PHONY : ASW/Com_AppIf.i
+
+# target to preprocess a source file
+ASW/Com_AppIf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.i
+.PHONY : ASW/Com_AppIf.c.i
+
+ASW/Com_AppIf.s: ASW/Com_AppIf.c.s
+.PHONY : ASW/Com_AppIf.s
+
+# target to generate assembly for a file
+ASW/Com_AppIf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.s
+.PHONY : ASW/Com_AppIf.c.s
+
 ASW/app.obj: ASW/app.c.obj
 .PHONY : ASW/app.obj
 
@@ -1761,7 +1811,12 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... flash
+	@echo ... flash_openocd_stlink
 	@echo ... BMS_STM32F103.elf
+	@echo ... ASW/Com_AppIf.obj
+	@echo ... ASW/Com_AppIf.i
+	@echo ... ASW/Com_AppIf.s
 	@echo ... ASW/app.obj
 	@echo ... ASW/app.i
 	@echo ... ASW/app.s

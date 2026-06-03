@@ -42,10 +42,3 @@
 .\objects\com.o: ..\third_lib\rt-thread\include\rtthread.h
 .\objects\com.o: ..\third_lib\rt-thread\components\finsh\finsh.h
 .\objects\com.o: ..\BSW\SERVICES\Com_Cfg.h
-.\objects\com.o: ..\ASW\bms_app\bms_analysis.h
-.\objects\com.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\com.o: ..\ASW\bms_app\bms_monitor.h
-.\objects\com.o: ..\ASW\bms_config\bms_global_define.h
-.\objects\com.o: ..\RTE\Rte.h
-.\objects\com.o: ..\RTE\Rte_Type.h
-.\objects\com.o: ..\RTE\Rte_App.h

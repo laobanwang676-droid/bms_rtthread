@@ -16,7 +16,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -31,7 +33,9 @@
 					"name" : "BMS_STM32F103",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -40,8 +44,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BMS_STM32F103.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BMS_STM32F103.elf-Debug-3a3f42c7f966b9518264.json",
+					"jsonFile" : "target-BMS_STM32F103.elf-Debug-2180bff11fcf57ac0726.json",
 					"name" : "BMS_STM32F103.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "flash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flash-Debug-fa0b69231694add8f2e0.json",
+					"name" : "flash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "flash_openocd_stlink::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flash_openocd_stlink-Debug-1e1bdd52eef855efdcdd.json",
+					"name" : "flash_openocd_stlink",
 					"projectIndex" : 0
 				}
 			]

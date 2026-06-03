@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "BMS_STM32F103.elf"
   "BMS_STM32F103.elf.manifest"
   "BMS_STM32F103.elf.pdb"
+  "CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj"
+  "CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj.d"
   "CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj"
   "CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj.d"
   "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj"

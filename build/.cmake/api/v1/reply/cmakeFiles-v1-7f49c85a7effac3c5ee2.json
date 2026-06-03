@@ -5,6 +5,7 @@
 			"expression" : "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/*.c",
 			"paths" : 
 			[
+				"D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/Com_AppIf.c",
 				"D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/app.c",
 				"D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c",
 				"D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c",

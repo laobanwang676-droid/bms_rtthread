@@ -71,10 +71,24 @@ include CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/codegen:
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/codegen
 
+CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
+CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/Com_AppIf.c
+CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj"
+	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\Com_AppIf.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\Com_AppIf.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\Com_AppIf.c
+
+CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.i"
+	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\Com_AppIf.c > CMakeFiles\BMS_STM32F103.elf.dir\ASW\Com_AppIf.c.i
+
+CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.s"
+	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\Com_AppIf.c -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\Com_AppIf.c.s
+
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/app.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\app.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\app.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\app.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.i: cmake_force
@@ -88,7 +102,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_analysis.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_analysis.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_analysis.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.i: cmake_force
@@ -102,7 +116,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_balance.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_balance.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_balance.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.i: cmake_force
@@ -116,7 +130,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_info.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_info.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_info.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_info.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.i: cmake_force
@@ -130,7 +144,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_monitor.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_monitor.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_monitor.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_monitor.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.i: cmake_force
@@ -144,7 +158,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_monitor.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_protect.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_protect.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_protect.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_protect.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.i: cmake_force
@@ -158,7 +172,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_protect.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_utils.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_utils.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_app\bms_utils.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_utils.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.i: cmake_force
@@ -172,7 +186,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_utils.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config/bms_control.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_config\bms_control.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\bms_config\bms_control.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_config\bms_control.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.i: cmake_force
@@ -186,7 +200,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_config/bms_control.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/board.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\board.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\board.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\board.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.i: cmake_force
@@ -200,7 +214,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/board.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/main.c
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\ASW\main.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\ASW\main.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\main.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.i: cmake_force
@@ -214,7 +228,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/main.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/CDD/bq769/bq769.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\CDD\bq769\bq769.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\CDD\bq769\bq769.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\CDD\bq769\bq769.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.i: cmake_force
@@ -228,7 +242,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/CDD/bq769/bq769.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL/CanIf.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\ECUAL\CanIf.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\ECUAL\CanIf.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\ECUAL\CanIf.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.i: cmake_force
@@ -242,7 +256,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUAL/CanIf.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUM/EcuM.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\ECUM\EcuM.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\ECUM\EcuM.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\ECUM\EcuM.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.i: cmake_force
@@ -256,7 +270,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/ECUM/EcuM.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/can/can.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\can\can.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\can\can.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\MCAL\can\can.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.i: cmake_force
@@ -270,7 +284,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/can/can.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/delay/delay.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\delay\delay.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\delay\delay.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\MCAL\delay\delay.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.i: cmake_force
@@ -284,7 +298,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/delay/delay.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/soft_i2c/soft_i2c.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\soft_i2c\soft_i2c.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\soft_i2c\soft_i2c.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\MCAL\soft_i2c\soft_i2c.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.i: cmake_force
@@ -298,7 +312,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/soft_i2c/soft_i2c.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/usart/usart.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\usart\usart.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\MCAL\usart\usart.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\MCAL\usart\usart.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.i: cmake_force
@@ -312,7 +326,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/MCAL/usart/usart.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/SERVICES/Com.c
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\BSW\SERVICES\Com.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\BSW\SERVICES\Com.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\SERVICES\Com.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.i: cmake_force
@@ -326,7 +340,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/BSW/SERVICES/Com.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte.c
 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\RTE\Rte.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\RTE\Rte.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\RTE\Rte.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.i: cmake_force
@@ -339,7 +353,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/RTE/Rte.c.s: cmake_force
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core/startup_stm32f10x_md_gcc.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building ASM object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building ASM object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\comsis\core\startup_stm32f10x_md_gcc.S.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\comsis\core\startup_stm32f10x_md_gcc.S
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S.i: cmake_force
@@ -353,7 +367,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/core/startup_stm32f10x_md_gcc.S
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device/stm32f10x_it.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\comsis\device\stm32f10x_it.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\comsis\device\stm32f10x_it.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\comsis\device\stm32f10x_it.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.i: cmake_force
@@ -367,7 +381,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/stm32f10x_it.c.s: cmake_
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device/system_stm32f10x.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\comsis\device\system_stm32f10x.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\comsis\device\system_stm32f10x.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\comsis\device\system_stm32f10x.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.i: cmake_force
@@ -381,7 +395,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/comsis/device/system_stm32f10x.c.s: cm
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/misc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\misc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\misc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\misc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.i: cmake_force
@@ -395,7 +409,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/misc.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_adc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_adc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_adc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_adc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.i: cmake_force
@@ -409,7 +423,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_adc.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_bkp.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_bkp.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_bkp.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_bkp.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.i: cmake_force
@@ -423,7 +437,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_bkp.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_can.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_can.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_can.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_can.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.i: cmake_force
@@ -437,7 +451,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_can.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_cec.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_cec.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_cec.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_cec.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.i: cmake_force
@@ -451,7 +465,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_cec.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_crc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_crc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_crc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_crc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.i: cmake_force
@@ -465,7 +479,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_crc.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dac.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dac.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dac.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_dac.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.i: cmake_force
@@ -479,7 +493,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dac.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dbgmcu.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dbgmcu.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dbgmcu.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_dbgmcu.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.i: cmake_force
@@ -493,7 +507,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dbgmcu.c.s: cmake
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_dma.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dma.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_dma.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_dma.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.i: cmake_force
@@ -507,7 +521,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_dma.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_exti.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_exti.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_exti.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_exti.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.i: cmake_force
@@ -521,7 +535,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_exti.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_flash.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_flash.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_flash.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_flash.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.i: cmake_force
@@ -535,7 +549,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_flash.c.s: cmake_
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_fsmc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_fsmc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_fsmc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_fsmc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.i: cmake_force
@@ -549,7 +563,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_fsmc.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_gpio.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_gpio.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_gpio.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_gpio.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.i: cmake_force
@@ -563,7 +577,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_gpio.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_i2c.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_i2c.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_i2c.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_i2c.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.i: cmake_force
@@ -577,7 +591,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_i2c.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_iwdg.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_iwdg.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_iwdg.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_iwdg.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.i: cmake_force
@@ -591,7 +605,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_iwdg.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_pwr.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_pwr.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_pwr.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_pwr.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.i: cmake_force
@@ -605,7 +619,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_pwr.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_rcc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_rcc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_rcc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_rcc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.i: cmake_force
@@ -619,7 +633,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rcc.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_rtc.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_rtc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_rtc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_rtc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.i: cmake_force
@@ -633,7 +647,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_rtc.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_sdio.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_sdio.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_sdio.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_sdio.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.i: cmake_force
@@ -647,7 +661,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_sdio.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_spi.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_spi.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_spi.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_spi.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.i: cmake_force
@@ -661,7 +675,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_spi.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_tim.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_tim.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_tim.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_tim.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.i: cmake_force
@@ -675,7 +689,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_tim.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_usart.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_usart.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_usart.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_usart.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.i: cmake_force
@@ -689,7 +703,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_usart.c.s: cmake_
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/src/stm32f10x_wwdg.c
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_wwdg.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\firmware\driver\src\stm32f10x_wwdg.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\firmware\driver\src\stm32f10x_wwdg.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.i: cmake_force
@@ -703,7 +717,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/firmware/driver/src/stm32f10x_wwdg.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/cmd.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\cmd.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\cmd.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh\cmd.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.i: cmake_force
@@ -717,7 +731,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/cmd.c.s: c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh\msh.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.i: cmake_force
@@ -731,7 +745,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh.c.s: c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh_file.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh_file.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh_file.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh\msh_file.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c.i: cmake_force
@@ -745,7 +759,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_file.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/msh_parse.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh_parse.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\msh_parse.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh\msh_parse.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.c.i: cmake_force
@@ -759,7 +773,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/msh_parse.
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/components/finsh/shell.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\shell.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\components\finsh\shell.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\components\finsh\shell.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.i: cmake_force
@@ -772,7 +786,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/components/finsh/shell.c.s:
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building ASM object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\libcpu\arm\cortex-m3\context_gcc.S.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\libcpu\arm\cortex-m3\context_gcc.S
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/context_gcc.S.i: cmake_force
@@ -786,7 +800,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/contex
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\libcpu\arm\cortex-m3\cpuport.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\libcpu\arm\cortex-m3\cpuport.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\libcpu\arm\cortex-m3\cpuport.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpuport.c.i: cmake_force
@@ -800,7 +814,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/libcpu/arm/cortex-m3/cpupor
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/clock.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\clock.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\clock.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\clock.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.i: cmake_force
@@ -814,7 +828,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/clock.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/components.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\components.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\components.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\components.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.i: cmake_force
@@ -828,7 +842,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/components.c.s: cmake_f
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/cpu.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\cpu.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\cpu.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\cpu.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.i: cmake_force
@@ -842,7 +856,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/cpu.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/device.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\device.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\device.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\device.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.i: cmake_force
@@ -856,7 +870,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/device.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/idle.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\idle.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\idle.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\idle.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.i: cmake_force
@@ -870,7 +884,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/idle.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/ipc.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\ipc.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\ipc.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\ipc.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.i: cmake_force
@@ -884,7 +898,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/ipc.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/irq.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\irq.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\irq.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\irq.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.i: cmake_force
@@ -898,7 +912,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/irq.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/kservice.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\kservice.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\kservice.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\kservice.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.i: cmake_force
@@ -912,7 +926,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/kservice.c.s: cmake_for
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/mem.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\mem.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\mem.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\mem.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.i: cmake_force
@@ -926,7 +940,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mem.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/memheap.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\memheap.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\memheap.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\memheap.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.i: cmake_force
@@ -940,7 +954,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/memheap.c.s: cmake_forc
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/mempool.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\mempool.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\mempool.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\mempool.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.i: cmake_force
@@ -954,7 +968,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/mempool.c.s: cmake_forc
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/object.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\object.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\object.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\object.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.i: cmake_force
@@ -968,7 +982,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/object.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/scheduler.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\scheduler.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\scheduler.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\scheduler.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.i: cmake_force
@@ -982,7 +996,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/scheduler.c.s: cmake_fo
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/signal.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\signal.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\signal.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\signal.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.i: cmake_force
@@ -996,7 +1010,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/signal.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/slab.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\slab.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\slab.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\slab.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.i: cmake_force
@@ -1010,7 +1024,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/slab.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/thread.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\thread.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\thread.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\thread.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.i: cmake_force
@@ -1024,7 +1038,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/thread.c.s: cmake_force
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/flags.make
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj: D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/src/timer.c
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj: CMakeFiles/BMS_STM32F103.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj"
 	D:\arm_gcc\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.obj -MF CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\timer.c.obj.d -o CMakeFiles\BMS_STM32F103.elf.dir\third_lib\rt-thread\src\timer.c.obj -c D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\src\timer.c
 
 CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.i: cmake_force
@@ -1037,6 +1051,7 @@ CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/timer.c.s: cmake_force
 
 # Object files for target BMS_STM32F103.elf
 BMS_STM32F103_elf_OBJECTS = \
+"CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj" \
 "CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj" \
 "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj" \
 "CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj" \
@@ -1110,6 +1125,7 @@ BMS_STM32F103_elf_OBJECTS = \
 # External object files for target BMS_STM32F103.elf
 BMS_STM32F103_elf_EXTERNAL_OBJECTS =
 
+BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/ASW/Com_AppIf.c.obj
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_analysis.c.obj
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_balance.c.obj
@@ -1182,7 +1198,7 @@ BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/third_lib/rt-thread/src/time
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/build.make
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/objects1.rsp
 BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking C executable BMS_STM32F103.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C executable BMS_STM32F103.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BMS_STM32F103.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "creating HEX file"
 	arm-none-eabi-objcopy -O ihex BMS_STM32F103.elf BMS_STM32F103.hex

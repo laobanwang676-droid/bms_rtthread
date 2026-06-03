@@ -53,3 +53,9 @@
 .\objects\app.o: ..\ASW\bms_app\bms_protect.h
 .\objects\app.o: ..\ASW\bms_app\bms_balance.h
 .\objects\app.o: ..\BSW\ECUM\EcuM.h
+.\objects\app.o: ..\BSW\SERVICES\Com_Cfg.h
+.\objects\app.o: ..\BSW\ECUAL\CanIf.h
+.\objects\app.o: ..\BSW\MCAL\can\can.h
+.\objects\app.o: ..\RTE\Rte.h
+.\objects\app.o: ..\RTE\Rte_Type.h
+.\objects\app.o: ..\RTE\Rte_App.h

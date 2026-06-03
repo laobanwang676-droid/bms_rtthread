@@ -46,4 +46,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/BMS_STM32F103.elf.dir/DependInfo.cmake"
+  "CMakeFiles/flash_openocd_stlink.dir/DependInfo.cmake"
+  "CMakeFiles/flash.dir/DependInfo.cmake"
   )

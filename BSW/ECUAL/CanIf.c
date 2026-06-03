@@ -45,7 +45,7 @@ static CanIf_RxMsgType* CanIf_AllocMsg(void)
 	rt_exit_critical();
 
 	return msg;
-}
+}	
 
 /**
  * @brief  释放一个缓存条目回池。
@@ -110,6 +110,10 @@ Can_ReturnType CanIf_Transmit(PduIdType TxPduId, const Can_PduType* PduInfo)
 	return Can_Write(0u, &localPdu);  
 }
 
+void CanIf_MainFunction_Read(void)
+{
+	Can_MainFunction_Read();
+}
 /**
  * @brief  从 CanIf 邮箱读取一条接收消息（阻塞/超时可选）。
  * @param  msg: 输出消息指针。

@@ -75,6 +75,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/BMS_STM32F103.elf.dir/clean
+clean: CMakeFiles/flash_openocd_stlink.dir/clean
+clean: CMakeFiles/flash.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -84,12 +86,12 @@ clean: CMakeFiles/BMS_STM32F103.elf.dir/clean
 CMakeFiles/BMS_STM32F103.elf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Built target BMS_STM32F103.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Built target BMS_STM32F103.elf"
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BMS_STM32F103.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 70
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 71
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BMS_STM32F103.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 0
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/rule
@@ -101,13 +103,77 @@ BMS_STM32F103.elf: CMakeFiles/BMS_STM32F103.elf.dir/rule
 # codegen rule for target.
 CMakeFiles/BMS_STM32F103.elf.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70 "Finished codegen for target BMS_STM32F103.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71 "Finished codegen for target BMS_STM32F103.elf"
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/codegen
 
 # clean rule for target.
 CMakeFiles/BMS_STM32F103.elf.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BMS_STM32F103.elf.dir\build.make CMakeFiles/BMS_STM32F103.elf.dir/clean
 .PHONY : CMakeFiles/BMS_STM32F103.elf.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/flash_openocd_stlink.dir
+
+# All Build rule for target.
+CMakeFiles/flash_openocd_stlink.dir/all: CMakeFiles/BMS_STM32F103.elf.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash_openocd_stlink.dir\build.make CMakeFiles/flash_openocd_stlink.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash_openocd_stlink.dir\build.make CMakeFiles/flash_openocd_stlink.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=72 "Built target flash_openocd_stlink"
+.PHONY : CMakeFiles/flash_openocd_stlink.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/flash_openocd_stlink.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 72
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/flash_openocd_stlink.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 0
+.PHONY : CMakeFiles/flash_openocd_stlink.dir/rule
+
+# Convenience name for target.
+flash_openocd_stlink: CMakeFiles/flash_openocd_stlink.dir/rule
+.PHONY : flash_openocd_stlink
+
+# codegen rule for target.
+CMakeFiles/flash_openocd_stlink.dir/codegen: CMakeFiles/BMS_STM32F103.elf.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash_openocd_stlink.dir\build.make CMakeFiles/flash_openocd_stlink.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num=72 "Finished codegen for target flash_openocd_stlink"
+.PHONY : CMakeFiles/flash_openocd_stlink.dir/codegen
+
+# clean rule for target.
+CMakeFiles/flash_openocd_stlink.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash_openocd_stlink.dir\build.make CMakeFiles/flash_openocd_stlink.dir/clean
+.PHONY : CMakeFiles/flash_openocd_stlink.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/flash.dir
+
+# All Build rule for target.
+CMakeFiles/flash.dir/all: CMakeFiles/flash_openocd_stlink.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num= "Built target flash"
+.PHONY : CMakeFiles/flash.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/flash.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 72
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/flash.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles 0
+.PHONY : CMakeFiles/flash.dir/rule
+
+# Convenience name for target.
+flash: CMakeFiles/flash.dir/rule
+.PHONY : flash
+
+# codegen rule for target.
+CMakeFiles/flash.dir/codegen: CMakeFiles/flash_openocd_stlink.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\A_STM32_learn\F103\bms_rtthread_Cmake\build\CMakeFiles --progress-num= "Finished codegen for target flash"
+.PHONY : CMakeFiles/flash.dir/codegen
+
+# clean rule for target.
+CMakeFiles/flash.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/clean
+.PHONY : CMakeFiles/flash.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

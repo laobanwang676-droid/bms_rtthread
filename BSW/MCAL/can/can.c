@@ -230,7 +230,8 @@ static void Can_ProcessRxFifo(uint8_t fifo)
         {
             entry.data[i] = RxMessage.Data[i];
         }
-
+        //id最长为29位，有3位多余，最高位用作扩展帧标志，次高位用作RTR标志。
+        //因此判断的时候需要注意解析
         if (RxMessage.IDE == CAN_Id_Extended)
         {
             canId = CAN_ID_EXTENDED_FLAG | (RxMessage.ExtId & 0x1FFFFFFFu);
@@ -316,6 +317,19 @@ static void CAN_NVIC_Init(void)
     CAN_ITConfig(CAN1, CAN_IT_FMP0 | CAN_IT_FMP1 | CAN_IT_TME | CAN_IT_ERR | CAN_IT_BOF | CAN_IT_WKU, ENABLE); 
 }
 
+//使能can模块
+static void can_en_init(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct;
+
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_10;
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_OD;
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_ResetBits(GPIOB, GPIO_Pin_10); // Active-low enable
+}
+
 //AUTOSAR 标准初始化接口
 /**
  * @brief  初始化 CAN 控制器。
@@ -325,6 +339,8 @@ static void CAN_NVIC_Init(void)
 // TODO: CanIf 层暂未调用，计划在Ecum层调用并传入配置
 void Can_Init(const Can_ConfigType* Config)
 {
+    can_en_init(); // 使能 CAN 模块
+
     CAN_InitTypeDef CAN_InitStructure;
     CAN_StructInit(&CAN_InitStructure);
 
@@ -341,11 +357,10 @@ void Can_Init(const Can_ConfigType* Config)
     CAN_InitStructure.CAN_RFLM = DISABLE; 
     CAN_InitStructure.CAN_TXFP = DISABLE; 
 
-    // 波特率设置: 提示，你的代码注释写着 500k，但 36M/6 / (1+8+7) = 375kbps。
-    // 如果要准确的 500kbps，建议设为 BS1=8, BS2=3
+    // 波特率设置: APB1 CAN 时钟 36MHz 时，36M / 6 / (1+8+3) = 500kbps。
     CAN_InitStructure.CAN_SJW = CAN_SJW_1tq; 
     CAN_InitStructure.CAN_BS1 = CAN_BS1_8tq; 
-    CAN_InitStructure.CAN_BS2 = CAN_BS2_7tq; 
+    CAN_InitStructure.CAN_BS2 = CAN_BS2_3tq; 
     CAN_InitStructure.CAN_Prescaler = 6;     
 
     if (Config != NULL)

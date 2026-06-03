@@ -1,21 +1,21 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "STM32F103 (ARM GCC)",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "_DEBUG",
                 "STM32F10X_MD",
-                "__weak = __attribute__((weak))",
-                "USE_STDPERIPH_DRIVER"
-                // "HSE_VALUE"
+                "USE_STDPERIPH_DRIVER",
+                "HSE_VALUE=8000000",
+                "__weak=__attribute__((weak))",
+                "__CC_ARM"
             ],
-            "compilerPath": "D:\\mingw64\\mingw64\\bin\\g++.exe",
-            "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64"
+            "compilerPath": "arm-none-eabi-gcc",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-arm"
         }
     ],
     "version": 4

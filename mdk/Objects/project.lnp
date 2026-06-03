@@ -2,6 +2,7 @@
 ".\objects\app.o"
 ".\objects\board.o"
 ".\objects\main.o"
+".\objects\com_appif.o"
 ".\objects\bms_analysis.o"
 ".\objects\bms_balance.o"
 ".\objects\bms_info.o"

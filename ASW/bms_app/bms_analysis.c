@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <rtthread.h>
+#include <math.h>
 
 #include "bms_analysis.h"
 
@@ -232,7 +233,7 @@ static void BMS_AnalysisOcvSocCompensation(void)
 //安时积分法计算soc
 static void BMS_AnalysisAhIntegrateToSoc(void)
 {
-	float current = abs((int)(BMS_MonitorData.BatteryCurrent * 1000) / 1000.0f / 3600.0f); // 转换为安时
+	float current = fabs((int)(BMS_MonitorData.BatteryCurrent * 1000) / 1000.0f / 3600.0f); // 转换为安时
 	
 	if(BMS_GlobalParam.SysMode == BMS_MODE_STANDBY)//待机模式下,电流过小,不进行安时积分,防止SOC计算不准确
 	{

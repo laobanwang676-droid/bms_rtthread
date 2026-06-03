@@ -12,6 +12,7 @@
 .\objects\bms_analysis.o: ..\third_lib\rt-thread\include\rtm.h
 .\objects\bms_analysis.o: ..\third_lib\rt-thread\include\rtthread.h
 .\objects\bms_analysis.o: ..\third_lib\rt-thread\components\finsh\finsh.h
+.\objects\bms_analysis.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\bms_analysis.o: ..\ASW\bms_app\bms_analysis.h
 .\objects\bms_analysis.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bms_analysis.o: D:\APP\keilv5\ARM\ARMCC\Bin\..\include\stdbool.h

@@ -16,7 +16,7 @@ typedef struct
 	Can_HwType hw;     // 硬件信息（ID、控制器、HOH）
 	uint8_t dlc;       // 数据长度
 	uint8_t data[8];   // 数据缓存
-} CanIf_RxMsgType;
+}CanIf_RxMsgType;
 
 /**
  * @brief  初始化 CanIf 模块（创建邮箱与缓存池）。
@@ -31,6 +31,12 @@ void CanIf_Init(void);
  * @retval CAN_OK、CAN_NOT_OK 或 CAN_BUSY。
  */
 Can_ReturnType CanIf_Transmit(PduIdType TxPduId, const Can_PduType* PduInfo);
+
+/**
+ * @brief  主循环读取函数，需定期调用以处理接收消息。
+ * @retval 无。
+ */
+void CanIf_MainFunction_Read(void);
 
 /**
  * @brief  从 CanIf 邮箱读取一条接收消息（阻塞/超时可选）。

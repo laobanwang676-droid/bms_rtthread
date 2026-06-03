@@ -43,6 +43,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -82,6 +83,8 @@ events:
       - "D:/APP/Git/cmd/mingw32-make.exe"
       - "D:/APP/Cmake/bin/mingw32-make.exe.com"
       - "D:/APP/Cmake/bin/mingw32-make.exe"
+      - "D:/openocd/bin/mingw32-make.exe.com"
+      - "D:/openocd/bin/mingw32-make.exe"
       - "D:/APP/Microsoft VS Code/bin/mingw32-make.exe.com"
       - "D:/APP/Microsoft VS Code/bin/mingw32-make.exe"
       - "D:/mingw64/mingw64/bin/mingw32-make.exe.com"
@@ -103,6 +106,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -142,6 +146,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -192,6 +197,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc"
+      - "D:/openocd/bin/arm-none-eabi-gcc.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc"
@@ -220,6 +228,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -266,6 +275,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -342,6 +352,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -405,6 +416,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -428,6 +440,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -469,6 +482,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -492,6 +506,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -533,6 +548,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -556,6 +572,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -597,6 +614,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -620,6 +638,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -661,6 +680,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -713,6 +733,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-dlltool.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-dlltool.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-dlltool"
+      - "D:/openocd/bin/arm-none-eabi-dlltool.com"
+      - "D:/openocd/bin/arm-none-eabi-dlltool.exe"
+      - "D:/openocd/bin/arm-none-eabi-dlltool"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-dlltool.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-dlltool.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-dlltool"
@@ -770,6 +793,9 @@ events:
       - "D:/APP/Cmake/bin/dlltool.com"
       - "D:/APP/Cmake/bin/dlltool.exe"
       - "D:/APP/Cmake/bin/dlltool"
+      - "D:/openocd/bin/dlltool.com"
+      - "D:/openocd/bin/dlltool.exe"
+      - "D:/openocd/bin/dlltool"
       - "D:/APP/Microsoft VS Code/bin/dlltool.com"
       - "D:/APP/Microsoft VS Code/bin/dlltool.exe"
       - "D:/APP/Microsoft VS Code/bin/dlltool"
@@ -792,6 +818,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -833,6 +860,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -856,6 +884,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -897,6 +926,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -949,6 +979,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-tapi.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-tapi.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-tapi"
+      - "D:/openocd/bin/arm-none-eabi-tapi.com"
+      - "D:/openocd/bin/arm-none-eabi-tapi.exe"
+      - "D:/openocd/bin/arm-none-eabi-tapi"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-tapi.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-tapi.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-tapi"
@@ -1006,6 +1039,9 @@ events:
       - "D:/APP/Cmake/bin/tapi.com"
       - "D:/APP/Cmake/bin/tapi.exe"
       - "D:/APP/Cmake/bin/tapi"
+      - "D:/openocd/bin/tapi.com"
+      - "D:/openocd/bin/tapi.exe"
+      - "D:/openocd/bin/tapi"
       - "D:/APP/Microsoft VS Code/bin/tapi.com"
       - "D:/APP/Microsoft VS Code/bin/tapi.exe"
       - "D:/APP/Microsoft VS Code/bin/tapi"
@@ -1033,6 +1069,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -1076,6 +1113,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -1128,6 +1166,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15.2.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15.2.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15.2"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15.2.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15.2.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15.2"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15.2.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15.2.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15.2"
@@ -1185,6 +1226,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-15"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-15"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-15"
@@ -1242,6 +1286,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar15.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar15.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar15"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar15.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar15.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar15"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar15.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar15.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar15"
@@ -1270,6 +1317,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -1313,6 +1361,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -1365,6 +1414,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15.2.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15.2.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15.2.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15.2.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15.2"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15.2.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15.2.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15.2"
@@ -1422,6 +1474,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-15"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-15"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-15"
@@ -1479,6 +1534,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib15.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib15.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib15"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib15.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib15.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib15"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib15.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib15.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib15"
@@ -1507,6 +1565,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -1546,6 +1605,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -1596,6 +1656,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc"
+      - "D:/openocd/bin/arm-none-eabi-gcc.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc"
@@ -1624,6 +1687,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -1680,6 +1744,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -1732,6 +1797,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
@@ -1789,6 +1857,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ar-"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ar-"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
@@ -1817,6 +1888,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -1860,6 +1932,7 @@ events:
       - "C:/Program Files/dotnet/"
       - "D:/APP/Git/cmd/"
       - "D:/APP/Cmake/bin/"
+      - "D:/openocd/bin/"
       - "D:/APP/Microsoft VS Code/bin/"
       - "D:/mingw64/mingw64/bin/"
       - "C:/Users/wangl/.dotnet/tools/"
@@ -1912,6 +1985,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
@@ -1969,6 +2045,9 @@ events:
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/APP/Cmake/bin/arm-none-eabi-gcc-ranlib-"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "D:/openocd/bin/arm-none-eabi-gcc-ranlib-"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
       - "D:/APP/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
@@ -1997,6 +2076,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "D:\\APP\\Git\\cmd"
         - "D:\\APP\\Cmake\\bin"
+        - "D:\\openocd\\bin"
         - "D:\\APP\\Microsoft VS Code\\bin"
         - "D:\\mingw64\\mingw64\\bin"
         - "C:\\Users\\wangl\\.dotnet\\tools"
@@ -2010,8 +2090,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn"
-      binary: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn"
+      source: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9"
+      binary: "D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2020,13 +2100,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
+        Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9'
         
-        Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_62139/fast
-        D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_62139.dir\\build.make CMakeFiles/cmTC_62139.dir/build
-        mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
-        Building C object CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj
-        D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_575a9/fast
+        D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_575a9.dir\\build.make CMakeFiles/cmTC_575a9.dir/build
+        mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9'
+        Building C object CMakeFiles/cmTC_575a9.dir/CMakeCCompilerABI.c.obj
+        D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -2034,8 +2114,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\'
-         D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_62139.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\'
+         D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_575a9.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\cc0YjwOh.s
         GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)
         	compiled by GNU C version 13-win32, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -2052,18 +2132,18 @@ events:
          D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 0ca2b613ecc9aadefc9364d3e25b876f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\'
-         D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\'
+         D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\cc0YjwOh.s
         GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203
         COMPILER_PATH=D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/;D:/arm_gcc/bin/../libexec/gcc/;D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/;D:/arm_gcc/bin/../lib/gcc/;D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/;D:/arm_gcc/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.'
-        Linking C static library libcmTC_62139.a
-        D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_62139.dir\\cmake_clean_target.cmake
-        D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_62139.dir\\link.txt --verbose=1
-        arm-none-eabi-ar qc libcmTC_62139.a CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj
-        D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_62139.a
-        mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_575a9.a
+        D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_575a9.dir\\cmake_clean_target.cmake
+        D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_575a9.dir\\link.txt --verbose=1
+        arm-none-eabi-ar qc libcmTC_575a9.a CMakeFiles/cmTC_575a9.dir/CMakeCCompilerABI.c.obj
+        D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_575a9.a
+        mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9'
         
       exitCode: 0
   -
@@ -2096,13 +2176,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
+        ignore line: [Change Dir: 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_62139/fast]
-        ignore line: [D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_62139.dir\\build.make CMakeFiles/cmTC_62139.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
-        ignore line: [Building C object CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): D:/APP/Cmake/bin/cmake.exe -E env VERBOSE=1 D:/mingw64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_575a9/fast]
+        ignore line: [D:/mingw64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_575a9.dir\\build.make CMakeFiles/cmTC_575a9.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9']
+        ignore line: [Building C object CMakeFiles/cmTC_575a9.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj -c D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\arm_gcc\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -2110,8 +2190,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\']
-        ignore line: [ D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_62139.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\']
+        ignore line: [ D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1.exe -quiet -v -iprefix D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot D:/arm_gcc/bin/../arm-none-eabi -D__USES_INITFINI__ D:\\APP\\Cmake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_575a9.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\wangl\\AppData\\Local\\Temp\\cc0YjwOh.s]
         ignore line: [GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 13-win32  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -2128,8 +2208,8 @@ events:
         ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 0ca2b613ecc9aadefc9364d3e25b876f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\']
-        ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\ccIDRNfd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\']
+        ignore line: [ D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj C:\\Users\\wangl\\AppData\\Local\\Temp\\cc0YjwOh.s]
         ignore line: [GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203]
         ignore line: [COMPILER_PATH=D:/arm_gcc/bin/../libexec/gcc/arm-none-eabi/15.2.1/]
         ignore line: [D:/arm_gcc/bin/../libexec/gcc/]
@@ -2138,13 +2218,13 @@ events:
         ignore line: [D:/arm_gcc/bin/../lib/gcc/]
         ignore line: [D:/arm_gcc/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [D:/arm_gcc/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_62139.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C static library libcmTC_62139.a]
-        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_62139.dir\\cmake_clean_target.cmake]
-        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_62139.dir\\link.txt --verbose=1]
-        ignore line: [arm-none-eabi-ar qc libcmTC_62139.a CMakeFiles/cmTC_62139.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_62139.a]
-        ignore line: [mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-msdstn']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\\cmTC_575a9.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C static library libcmTC_575a9.a]
+        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -P CMakeFiles\\cmTC_575a9.dir\\cmake_clean_target.cmake]
+        ignore line: [D:\\APP\\Cmake\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_575a9.dir\\link.txt --verbose=1]
+        ignore line: [arm-none-eabi-ar qc libcmTC_575a9.a CMakeFiles/cmTC_575a9.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\arm_gcc\\bin\\arm-none-eabi-ranlib.exe libcmTC_575a9.a]
+        ignore line: [mingw32-make[1]: Leaving directory 'D:/A_STM32_learn/F103/bms_rtthread_Cmake/build/CMakeFiles/CMakeScratch/TryCompile-bu24f9']
         ignore line: []
         ignore line: []
         implicit libs: []

@@ -4,6 +4,7 @@
 # SOURCES at CMakeLists.txt:27 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/*.c")
 set(OLD_GLOB
+  "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/Com_AppIf.c"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/app.c"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_analysis.c"
   "D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_balance.c"

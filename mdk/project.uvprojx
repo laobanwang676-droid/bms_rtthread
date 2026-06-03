@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>3</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -398,6 +398,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ASW\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>Com_AppIf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ASW\Com_AppIf.c</FilePath>
             </File>
           </Files>
         </Group>

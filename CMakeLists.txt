@@ -113,7 +113,7 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE
     -Wl,-Map=${PROJECT_NAME}.map   # 生成 .map 文件便于分析
     --specs=nosys.specs            # 提供空实现以满足系统调用符号
     --specs=nano.specs             # 使用 newlib-nano 减小体积
-    -Wl,-u,_printf_float
+    # -Wl,-u,_printf_float
 )
 
 target_link_libraries(${PROJECT_NAME}.elf PRIVATE
@@ -145,26 +145,18 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMENT "printing size information"
 )
 
-# # -----------------------------------------------------------
-# # 9. 烧录目标 (make flash / make flash_stlink / make flash_pwlink)
-# #    需要先安装对应工具并确保在 PATH 中
-# # -----------------------------------------------------------
-# # --- 方式 A: STM32CubeProgrammer (ST-Link 官方工具) ---
-# add_custom_target(flash_stlink
-#     COMMAND STM32_Programmer_CLI -c port=SWD -w ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex -v -rst
-#     COMMENT "Flashing with STM32CubeProgrammer (ST-Link)"
-#     DEPENDS ${PROJECT_NAME}.elf
-# )
+# -----------------------------------------------------------
+# 9. 烧录目标 (make flash / make flash_stlink / make flash_pwlink)
+# -----------------------------------------------------------
+# --- 方式 A: OpenOCD + ST-Link (默认) ---
+add_custom_target(flash_openocd_stlink
+    COMMAND openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
+            -c "program ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex verify reset exit"
+    COMMENT "Flashing with OpenOCD (ST-Link)"
+    DEPENDS ${PROJECT_NAME}.elf
+)
 
-# # --- 方式 B: OpenOCD + ST-Link ---
-# add_custom_target(flash_openocd_stlink
-#     COMMAND openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
-#             -c "program ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex verify reset exit"
-#     COMMENT "Flashing with OpenOCD (ST-Link)"
-#     DEPENDS ${PROJECT_NAME}.elf
-# )
-
-# # --- 方式 C: OpenOCD + CMSIS-DAP (PW-Link) ---
+# --- 方式 B: OpenOCD + CMSIS-DAP (PW-Link) ---
 # add_custom_target(flash_openocd_pwlink
 #     COMMAND openocd -f interface/cmsis-dap.cfg -f target/stm32f1x.cfg
 #             -c "program ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex verify reset exit"
@@ -172,17 +164,12 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #     DEPENDS ${PROJECT_NAME}.elf
 # )
 
-# # --- 方式 D: PyOCD (通用, 自动检测调试器) ---
+# --- 方式 C: PyOCD (通用, 自动检测调试器) ---
 # add_custom_target(flash_pyocd
 #     COMMAND pyocd flash -t stm32f103c8 ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex
 #     COMMENT "Flashing with PyOCD"
 #     DEPENDS ${PROJECT_NAME}.elf
 # )
 
-# # --- 默认 flash 目标 (根据你的烧录器选择) ---
-# # 如果你用 ST-Link，取消下面这行的注释:
-# # add_custom_target(flash DEPENDS flash_stlink)
-# # 如果你用 PW-Link，取消下面这行的注释:
-# # add_custom_target(flash DEPENDS flash_pyocd)
-# # 通用方案 (OpenOCD + ST-Link):
-# add_custom_target(flash DEPENDS flash_openocd_stlink)
+# --- 默认 flash 目标 (使用 ST-Link) ---
+add_custom_target(flash DEPENDS flash_openocd_stlink)
