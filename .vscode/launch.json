@@ -19,7 +19,9 @@
             "svdFile": "${workspaceFolder}/STM32F103.svd",
             "preLaunchTask": "CMake Build",
             "runToEntryPoint": "main",
-            "showDevDebugOutput": "parsed"
+            "showDevDebugOutput": "parsed",
+            "gdbPath": "D:\\arm_gcc\\bin\\arm-none-eabi-gdb.exe",
+            "toolchainPrefix": "arm-none-eabi"
         },
         {
             "name": "Cortex Debug (PW-Link / CMSIS-DAP)",

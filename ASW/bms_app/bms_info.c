@@ -7,6 +7,8 @@
 #include "bms_monitor.h"
 #include "bms_analysis.h"
 #include "bms_balance.h"
+#include "Com_Cfg.h"
+#include "Rte.h"
 
 #define DBG_TAG "info"
 #define DBG_LVL DBG_LOG
@@ -26,6 +28,9 @@
 #define INFO_TASK_TIMESLICE	    25// 线程时间片（单位：ms）
 #define INFO_TASK_PERIOD		3000// 信息显示任务周期（单位：ms）
 
+#define RTE_COM_RX_PERIOD_MS 10u
+
+static void rte_com_task(void *parameter); // RTE通信任务函数声明
 static bool FlagInfoPrintf = true; // 信息打印使能标志，为 true 时允许信息打印执行
 
 /* 将浮点数转为整数+小数格式的字符串，避免使用 %f 从而不引入浮点 printf 库 */
@@ -67,7 +72,37 @@ void BMS_InfoInit(void)
     {
         LOG_E("Failed to create BMS Info thread.");
     }
+
+	/*创建can通信任务*/
+    rt_thread_t rte_com_thread = rt_thread_create("rte_com", rte_com_task, NULL, 512, 22, 20);
+    if (rte_com_thread != RT_NULL)
+    {
+        rt_thread_startup(rte_com_thread);
+    }
 }
+
+static void rte_com_task(void *parameter)
+{
+    rt_tick_t last_tx_tick = rt_tick_get();
+    const rt_tick_t tx_period_ticks = rt_tick_from_millisecond(COM_BMS_STATUS_PERIOD_MS);
+    const rt_tick_t rx_period_ticks = rt_tick_from_millisecond(RTE_COM_RX_PERIOD_MS);
+
+    (void)parameter;
+
+    while (1)
+    {
+        Rte_MainFunction_ComRx(); //进行接收处理
+
+        if ((rt_tick_get() - last_tx_tick) >= tx_period_ticks)
+        {
+            (void)Rte_MainFunction_ComTx();
+            last_tx_tick = rt_tick_get();
+        }
+
+        rt_thread_delay(rx_period_ticks);
+    }
+}
+
 
 static void BMS_InfoLedInit(void)
 {

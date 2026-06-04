@@ -91,14 +91,8 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/app.c.obj: D:/A_STM32_learn/F103/bms_rtthre
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_protect.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config/bms_global_define.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/CDD/bq769/bq769.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL/CanIf.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUM/EcuM.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/can/can.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/soft_i2c/soft_i2c.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/SERVICES/Com_Cfg.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_App.h \
-  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_Type.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core/core_cm3.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device/system_stm32f10x.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/inc/misc.h \
@@ -241,6 +235,12 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj: D:/A_STM32_learn/F1
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_info.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_monitor.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config/bms_global_define.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL/CanIf.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/can/can.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/SERVICES/Com_Cfg.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_App.h \
+  D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_Type.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/core/core_cm3.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/comsis/device/system_stm32f10x.h \
   D:/A_STM32_learn/F103/bms_rtthread_Cmake/firmware/driver/inc/misc.h \
@@ -2482,10 +2482,6 @@ D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/CDD/bq769/bq769.h:
 
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUM/EcuM.h:
 
-D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte.h:
-
-D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_Type.h:
-
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/ECUAL/CanIf.c:
 
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/third_lib/rt-thread/include/rthw.h:
@@ -2503,6 +2499,10 @@ D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_Protect.h:
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_config/bms_control.h:
 
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/ASW/bms_app/bms_info.c:
+
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte.h:
+
+D:/A_STM32_learn/F103/bms_rtthread_Cmake/RTE/Rte_Type.h:
 
 D:/A_STM32_learn/F103/bms_rtthread_Cmake/BSW/MCAL/soft_i2c/soft_i2c.c:
 

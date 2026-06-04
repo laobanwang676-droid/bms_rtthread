@@ -1235,7 +1235,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "toolchain"
+			"value" : "d:/A_STM32_learn/F103/bms_rtthread_Cmake/toolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",

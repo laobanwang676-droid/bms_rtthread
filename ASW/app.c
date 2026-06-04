@@ -13,21 +13,12 @@
 #include "bms_protect.h"
 #include "bms_balance.h"
 #include "EcuM.h"
-#include "Com_Cfg.h"
-#include "Rte.h"
 
 uint16_t led_time = 200;  /* LED闪烁时间，单位ms */
 rt_thread_t led_thread;
 
 /* I2C互斥锁，保护BQ769X0接口 */
 rt_mutex_t i2c_mutex;
-
-rt_thread_t rte_com_thread;
-
-#define RTE_COM_RX_PERIOD_MS 10u
-
-static void led_init(void);
-static void rte_com_task(void *parameter);
 
 void app_init(void)
 {
@@ -69,93 +60,14 @@ void app_init(void)
 		return;
 	}
 	
-    /*创建can通信任务*/
-    rte_com_thread = rt_thread_create("rte_com", rte_com_task, NULL, 512, 22, 20);
-    if (rte_com_thread != RT_NULL)
-    {
-        rt_thread_startup(rte_com_thread);
-    }
+    EcuM_StartupTwo();// 启动ECU管理，can通信初始化
 
-    EcuM_StartupTwo();//
+	I2C_BusInitialize(); //初始化I2C总线
+	BQ769X0_Initialize(&InitData); //初始化BQ769X0
 
-	I2C_BusInitialize();
-	BQ769X0_Initialize(&InitData);
-
-    BMS_MonitorInit();
-    BMS_ProtectInit();
-    BMS_AnalysisInit();
-    BMS_InfoInit();
-    BMS_BalanceInit();
+    BMS_MonitorInit(); //优先级19
+    BMS_ProtectInit(); //优先级20
+    BMS_AnalysisInit(); //优先级21
+    BMS_InfoInit(); //串口优先级20 can通信优先级22
+    BMS_BalanceInit(); //优先级22
 }
-
-static void rte_com_task(void *parameter)
-{
-    rt_tick_t last_tx_tick = rt_tick_get();
-    const rt_tick_t tx_period_ticks = rt_tick_from_millisecond(COM_BMS_STATUS_PERIOD_MS);
-    const rt_tick_t rx_period_ticks = rt_tick_from_millisecond(RTE_COM_RX_PERIOD_MS);
-
-    (void)parameter;
-
-    while (1)
-    {
-        Rte_MainFunction_ComRx(); //进行接收处理
-
-        if ((rt_tick_get() - last_tx_tick) >= tx_period_ticks)
-        {
-            (void)Rte_MainFunction_ComTx();
-            last_tx_tick = rt_tick_get();
-        }
-
-        rt_thread_delay(rx_period_ticks);
-    }
-}
-
-void led_gpio_init(void)
-{
-    GPIO_InitTypeDef GPIO_InitStruct;
-    
-    /* 使能GPIOC时钟 */
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-    
-    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13;
-    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_OD;  
-    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_SetBits(GPIOC,GPIO_Pin_13);
-    GPIO_Init(GPIOC, &GPIO_InitStruct);
-}
-
-void led_toggle(void)
-{
-    GPIOC->ODR ^= GPIO_Pin_13;  /* 切换LED状态 */
-}   
-
-void led_task(void *parameter)
-{
-    while(1)
-    {   
-        led_toggle();
-        rt_thread_delay(led_time);
-    }   
-}
-
-static void led_init(void)
-{
-    led_gpio_init(); 
-    led_thread = rt_thread_create("led", led_task, NULL, 256, 5, 10);
-    rt_thread_startup(led_thread);
-}
-
-static int shell_test(int argc, char **argv)
-{
-    if(argc > 1)
-    {
-        led_time = atoi(argv[1]);
-        if (led_time < 50) led_time = 50;  // 最小闪烁时间限制
-    }
-    else
-    {
-        led_time = 200;  // 默认闪烁时间
-    }
-    return 0;
-}
-MSH_CMD_EXPORT(shell_test, user shell test command);

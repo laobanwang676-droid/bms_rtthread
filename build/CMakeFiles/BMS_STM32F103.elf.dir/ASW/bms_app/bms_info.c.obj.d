@@ -65,4 +65,10 @@ CMakeFiles/BMS_STM32F103.elf.dir/ASW/bms_app/bms_info.c.obj: \
  D:/arm_gcc/lib/gcc/arm-none-eabi/15.2.1/include/stdbool.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_analysis.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\ASW\bms_app\bms_balance.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\SERVICES/Com_Cfg.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\ECUAL/CanIf.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\BSW\MCAL\can/can.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\RTE/Rte.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\RTE/Rte_Type.h \
+ D:\A_STM32_learn\F103\bms_rtthread_Cmake\RTE/Rte_App.h \
  D:\A_STM32_learn\F103\bms_rtthread_Cmake\third_lib\rt-thread\include/rtdbg.h
