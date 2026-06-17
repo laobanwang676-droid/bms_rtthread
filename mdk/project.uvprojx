@@ -400,9 +400,9 @@
               <FilePath>..\ASW\main.c</FilePath>
             </File>
             <File>
-              <FileName>Com_AppIf.c</FileName>
+              <FileName>Can_Router.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ASW\Com_AppIf.c</FilePath>
+              <FilePath>..\ASW\Can_Router.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -508,6 +508,21 @@
               <FileName>Com.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSW\SERVICES\Com.c</FilePath>
+            </File>
+            <File>
+              <FileName>CanTp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\SERVICES\CanTp.c</FilePath>
+            </File>
+            <File>
+              <FileName>Dcm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\SERVICES\Dcm.c</FilePath>
+            </File>
+            <File>
+              <FileName>Dem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSW\SERVICES\Dem.c</FilePath>
             </File>
           </Files>
         </Group>

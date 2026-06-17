@@ -9,6 +9,7 @@
 #include "bms_balance.h"
 #include "Com_Cfg.h"
 #include "Rte.h"
+#include "Dcm.h"
 
 #define DBG_TAG "info"
 #define DBG_LVL DBG_LOG
@@ -31,6 +32,7 @@
 #define RTE_COM_RX_PERIOD_MS 10u
 
 static void rte_com_task(void *parameter); // RTE通信任务函数声明
+static void uds_resp_task(void *parameter); // UDS诊断响应任务函数声明
 static bool FlagInfoPrintf = true; // 信息打印使能标志，为 true 时允许信息打印执行
 
 /* 将浮点数转为整数+小数格式的字符串，避免使用 %f 从而不引入浮点 printf 库 */
@@ -74,12 +76,42 @@ void BMS_InfoInit(void)
     }
 
 	/*创建can通信任务*/
-    rt_thread_t rte_com_thread = rt_thread_create("rte_com", rte_com_task, NULL, 512, 22, 20);
+    rt_thread_t rte_com_thread = rt_thread_create("rte_com", rte_com_task, NULL, 512, 21, 20);
     if (rte_com_thread != RT_NULL)
     {
         rt_thread_startup(rte_com_thread);
     }
+
+	/*创建uds诊断响应任务*/
+	rt_thread_t uds_resp_thread = rt_thread_create("uds_resp", uds_resp_task, NULL, 512, 22, 20);
+	if (uds_resp_thread != RT_NULL)
+	{
+		rt_thread_startup(uds_resp_thread);
+	}
 }
+
+static void uds_resp_task(void *parameter)
+{
+	while (1)
+	{
+		if(rt_sem_take(uds_rx_sem, RT_WAITING_FOREVER) == RT_EOK)
+		{
+			Rte_MainFunction_Dcm(); //进行诊断处理（包括发送响应帧）
+
+			/* 检查是否有 ECU 复位请求待执行
+			 * DCM 在收到 0x11 复位请求时仅置位标志，
+			 * 等待响应帧发送完成后再执行复位
+			 */
+			if (Dcm_IsEcuResetPending())
+			{
+				/* 短暂延时确保 CAN 帧已进入硬件发送邮箱 */
+				rt_thread_delay(rt_tick_from_millisecond(10));
+				NVIC_SystemReset();
+			}
+		}
+	}
+} 
+
 
 static void rte_com_task(void *parameter)
 {

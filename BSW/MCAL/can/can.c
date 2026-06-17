@@ -336,6 +336,7 @@ static void can_en_init(void)
  * @param  Config: CAN 驱动配置。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用，计划在Ecum层调用并传入配置
 void Can_Init(const Can_ConfigType* Config)
 {
     can_en_init(); // 使能 CAN 模块
@@ -472,6 +473,7 @@ Can_ReturnType Can_Write(Can_HwHandleType HwTxPduId, const Can_PduType* PduInfo)
  * @param  Transition: 状态迁移请求。
  * @retval 成功返回 E_OK，否则 E_NOT_OK。
  */
+// TODO: CanIf 层暂未调用
 Std_ReturnType Can_SetControllerMode(uint8_t Controller, Can_StateTransitionType Transition)
 {
     uint8_t status;
@@ -532,6 +534,7 @@ Std_ReturnType Can_SetControllerMode(uint8_t Controller, Can_StateTransitionType
  * @param  ControllerModePtr: 输出指针。
  * @retval 成功返回 E_OK，否则 E_NOT_OK。
  */
+// TODO: CanIf 层暂未调用
 Std_ReturnType Can_GetControllerMode(uint8_t Controller, Can_ControllerStateType* ControllerModePtr)
 {
     if (!Can_IsValidController(Controller) || ControllerModePtr == NULL)
@@ -619,6 +622,7 @@ void Can_GetVersionInfo(Std_VersionInfoType* versioninfo)
  * @brief  轮询 RX FIFO 并通知上层。
  * @retval 无。
  */
+// TODO: CanIf 层暂未调用
 void Can_MainFunction_Read(void)
 {
     if (g_canControllerState != CAN_CS_STARTED)
