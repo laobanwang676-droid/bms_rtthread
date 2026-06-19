@@ -20,19 +20,19 @@
 /*===========================================================================
  * 内部状态变量
  *===========================================================================*/
-static Dcm_SessionType  Dcm_ActiveSession     = DCM_SESSION_DEFAULT;
-static Dcm_SecLevelType Dcm_SecLevel          = DCM_SEC_LEVEL_LOCKED;
-static uint32_t         Dcm_TesterPresentTimer = 0u;
-static bool             Dcm_TesterPresent_Seen = false;
+static Dcm_SessionType  Dcm_ActiveSession     = DCM_SESSION_DEFAULT;   /* 当前诊断会话类型（默认/编程/扩展/安全） */
+static Dcm_SecLevelType Dcm_SecLevel          = DCM_SEC_LEVEL_LOCKED;  /* 当前安全访问等级（锁定/已解锁） */
+static uint32_t         Dcm_TesterPresentTimer = 0u;                   /* TesterPresent 超时计数器（单位：ms） */
+static bool             Dcm_TesterPresent_Seen = false;                 /* 标记本周期是否收到 TesterPresent 请求 */
 
 /* 响应缓存 */
-static CanTp_MsgType  Dcm_ResponseBuffer;
-static bool         Dcm_ResponsePending      = false;
-static bool         Dcm_SuppressPositiveResp = false;
+static CanTp_MsgType  Dcm_ResponseBuffer;                      /* UDS 响应帧发送缓冲区（CAN ID + 数据 + 长度） */
+static bool           Dcm_ResponsePending      = false;          /* 标记是否有待发送的响应帧 */
+static bool           Dcm_SuppressPositiveResp = false;          /* 抑制肯定响应标志（来自请求 byte[1] bit7） */
 
 /* ECU 复位延迟标志 — 先发响应再复位 */
-static bool         Dcm_EcuResetPending      = false;
-static uint8_t      Dcm_EcuResetType         = 0u;
+static bool         Dcm_EcuResetPending      = false;          /* ECU 复位挂起标志（响应发送后执行复位） */
+static uint8_t      Dcm_EcuResetType         = 0u;             /* 待执行的复位类型（硬复位/软复位） */
 
 /*===========================================================================
  * 内部函数前置声明
@@ -77,7 +77,7 @@ void Dcm_MainFunction(void)
 
 Dcm_StatusType Dcm_ProcessRequest(const CanTp_MsgType* msg)
 {
-    uint8_t sid;
+    uint8_t sid;  /* 诊断服务 ID（Service Identifier），从请求帧第一个字节提取 */
 
     if (msg == (const CanTp_MsgType*)0)
     {
@@ -205,13 +205,13 @@ static void Dcm_SendPositiveResponse(uint8_t sid, const uint8_t* data, uint8_t l
         return;  /* 请求要求抑制正响应 */
     }
 
-    Dcm_ResponseBuffer.canId  = DCM_CANID_PHYS_RESP;
-    Dcm_ResponseBuffer.data[0] = sid | DCM_NRC_POSITIVE_RESP_MASK;
-    Dcm_ResponseBuffer.length = 1u;
+    Dcm_ResponseBuffer.canId   = DCM_CANID_PHYS_RESP;       /* 物理响应 CAN ID */
+    Dcm_ResponseBuffer.data[0] = sid | DCM_NRC_POSITIVE_RESP_MASK; /* 响应 SID = 请求 SID + 0x40 */
+    Dcm_ResponseBuffer.length  = 1u;
 
     if (data != (const uint8_t*)0 && len > 0u)
     {
-        uint8_t i;
+        uint8_t i;  /* 循环计数器：拷贝数据负载到响应缓冲区 */
         for (i = 0u; (i < len) && ((1u + i) < 8u); i++)
         {
             Dcm_ResponseBuffer.data[1u + i] = data[i];
@@ -232,10 +232,10 @@ static void Dcm_SendPositiveResponse(uint8_t sid, const uint8_t* data, uint8_t l
  */
 static void Dcm_SendNegativeResponse(uint8_t sid, uint8_t nrc)
 {
-    Dcm_ResponseBuffer.canId  = DCM_CANID_PHYS_RESP;
-    Dcm_ResponseBuffer.data[0] = 0x7Fu;
-    Dcm_ResponseBuffer.data[1] = sid;
-    Dcm_ResponseBuffer.data[2] = nrc;
+    Dcm_ResponseBuffer.canId   = DCM_CANID_PHYS_RESP;  /* 物理响应 CAN ID */
+    Dcm_ResponseBuffer.data[0] = 0x7Fu;                 /* 否定响应 SID 固定为 0x7F */
+    Dcm_ResponseBuffer.data[1] = sid;                    /* 原请求的 SID */
+    Dcm_ResponseBuffer.data[2] = nrc;                    /* 否定响应码（NRC） */
     Dcm_ResponseBuffer.length  = 3u;
 
     Dcm_ResponsePending = true;
@@ -288,7 +288,7 @@ static void Dcm_SessionTimeoutCheck(void)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleSessionControl(const CanTp_MsgType* msg)
 {
-    uint8_t subFunc;
+    uint8_t subFunc;  /* 子功能码（去掉 bit7 suppressPosRsp 后的值） */
 
     if (Dcm_GetMessageLength(msg) < 2u)
     {
@@ -309,7 +309,7 @@ static Dcm_StatusType Dcm_HandleSessionControl(const CanTp_MsgType* msg)
             Dcm_SecLevel      = DCM_SEC_LEVEL_LOCKED;  /* 会话切换后安全锁定 */
             Dcm_TesterPresentTimer = 0u;
             {
-                uint8_t respData[1];
+                uint8_t respData[1];       /* 肯定响应数据：[子功能值] */
                 respData[0] = subFunc;
                 Dcm_SendPositiveResponse(DCM_SID_DIAG_SESSION_CTRL, respData, 1u);
             }
@@ -326,8 +326,8 @@ static Dcm_StatusType Dcm_HandleSessionControl(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleEcuReset(const CanTp_MsgType* msg)
 {
-    uint8_t resetType;
-    uint8_t respData[1];
+    uint8_t resetType;       /* 复位类型子功能码（硬复位/软复位等） */
+    uint8_t respData[1];     /* 肯定响应数据：[复位类型] */
     if (Dcm_GetMessageLength(msg) < 2u)
     {
         Dcm_SendNegativeResponse(DCM_SID_ECU_RESET, DCM_NRC_INCORRECT_MSG_LEN);
@@ -362,7 +362,7 @@ static Dcm_StatusType Dcm_HandleEcuReset(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleTesterPresent(const CanTp_MsgType* msg)
 {
-    uint8_t subFunc;
+    uint8_t subFunc;  /* 子功能码：0x00=需要响应, 0x80=抑制响应 */
 
     if (Dcm_GetMessageLength(msg) < 2u)
     {
@@ -384,7 +384,7 @@ static Dcm_StatusType Dcm_HandleTesterPresent(const CanTp_MsgType* msg)
 
     /* 发送肯定响应（如未被抑制） */
     {
-        uint8_t respData[1];
+        uint8_t respData[1];       /* 肯定响应数据：[0x00] */
         respData[0] = 0x00u;
         Dcm_SendPositiveResponse(DCM_SID_TESTER_PRESENT, respData, 1u);
     }
@@ -396,7 +396,7 @@ static Dcm_StatusType Dcm_HandleTesterPresent(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
 {
-    uint16_t did;
+    uint16_t did;  /* 数据标识符（Data Identifier），Big-Endian 2字节 */
 
     if (Dcm_GetMessageLength(msg) < 3u)
     {
@@ -530,7 +530,7 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleWriteDataById(const CanTp_MsgType* msg)
 {
-    uint16_t did;
+    uint16_t did;  /* 数据标识符（Data Identifier），Big-Endian 2字节 */
 
     if (Dcm_GetMessageLength(msg) < 3u)
     {

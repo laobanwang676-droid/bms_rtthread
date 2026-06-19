@@ -35,11 +35,17 @@ void Rte_MainFunction_ComRx(void)
 	}
 }
 
+/*
+持续上报soc和总电压
+*/
 Can_ReturnType Rte_MainFunction_ComTx(void)
 {
 	return Com_MainFunctionTx();
 }
 
+/*
+can发送函数
+*/
 Can_ReturnType Rte_Call_CanIf_Transmit(PduIdType TxPduId, const Can_PduType* PduInfo)
 {
 	return CanIf_Transmit(TxPduId, PduInfo);
