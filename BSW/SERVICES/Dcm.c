@@ -17,6 +17,14 @@
 #include "Dcm.h"
 #include "Dcm_Cfg.h"
 
+/*
+ * AUTOSAR 分层说明:
+ *   DCM 属于 BSW/Services 层，通过 RTE 接口读取应用层 (ASW) 数据。
+ *   DCM 不直接引用 BMS 应用层头文件，仅依赖 Rte.h 中声明的 Rte_Read_* API。
+ *   数据流向: BMS-App → Rte_Write → RTE缓冲区 → Rte_Read → DCM
+ */
+#include "Rte.h"
+
 /*===========================================================================
  * 内部状态变量
  *===========================================================================*/
@@ -41,7 +49,7 @@ static uint8_t  Dcm_GetMessageLength(const CanTp_MsgType* msg);
 static bool     Dcm_IsFuncAddr(const CanTp_MsgType* msg);
 static void     Dcm_SendPositiveResponse(uint8_t sid, const uint8_t* data, uint8_t len);
 static void     Dcm_SendNegativeResponse(uint8_t sid, uint8_t nrc);
-static void     Dcm_SessionTimeoutCheck(void);
+static void     Dcm_SessionTimeoutCheck(uint32_t dt);
 
 /* --- 各 SID 处理函数 --- */
 static Dcm_StatusType Dcm_HandleSessionControl   (const CanTp_MsgType* msg);
@@ -70,9 +78,10 @@ void Dcm_Init(void)
     Dcm_EcuResetType       = 0u;
 }
 
-void Dcm_MainFunction(void)
+void Dcm_MainFunction(uint32_t dt)
 {
-    Dcm_SessionTimeoutCheck();
+    Dcm_SessionTimeoutCheck(dt);
+    //...后续可添加DTC状态，P2超时等
 }
 
 Dcm_StatusType Dcm_ProcessRequest(const CanTp_MsgType* msg)
@@ -92,17 +101,30 @@ Dcm_StatusType Dcm_ProcessRequest(const CanTp_MsgType* msg)
     sid = msg->data[0];
 
     /*
-     * suppressPosRsp 位检查（所有带子功能的服务通用）
-     * ISO 14229-1: 请求报文 byte[1] 的 bit7 = 1 表示抑制肯定响应
-     * 适用于: 0x10, 0x11, 0x14, 0x19, 0x22(无子功能, 不适用),
-     *          0x27, 0x2E, 0x31, 0x3E 等
+     * suppressPosRspMsgIndicationBit 检查
+     * ISO 14229-1: 只有"带子功能的服务"才检查 byte[1] bit7。
+     * 带子功能的 SID: 0x10, 0x11, 0x19, 0x27, 0x31, 0x3E
+     * 不带子功能的 SID: 0x14(ClearDTC), 0x22(ReadDataById), 0x2E(WriteDataById)
+     *   — byte[1] 是参数(如 DID 高字节)，不是子功能，不能检查 bit7。
      */
     Dcm_SuppressPositiveResp = false;
     if (msg->length >= 2u)
     {
-        if ((msg->data[1] & 0x80u) != 0u)
+        switch (sid)
         {
-            Dcm_SuppressPositiveResp = true;
+            case DCM_SID_DIAG_SESSION_CTRL:  /* 0x10 */
+            case DCM_SID_ECU_RESET:          /* 0x11 */
+            case DCM_SID_READ_DTC_INFO:      /* 0x19 */
+            case DCM_SID_SECURITY_ACCESS:    /* 0x27 */
+            case DCM_SID_ROUTINE_CONTROL:    /* 0x31 */
+            case DCM_SID_TESTER_PRESENT:     /* 0x3E */
+                if ((msg->data[1] & 0x80u) != 0u)
+                {
+                    Dcm_SuppressPositiveResp = true;
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -253,7 +275,7 @@ bool Dcm_IsEcuResetPending(void)
  * 会话超时管理
  *===========================================================================*/
 
-static void Dcm_SessionTimeoutCheck(void)
+static void Dcm_SessionTimeoutCheck(uint32_t dt)
 {
     /* 默认会话不需要超时回退 */
     if (Dcm_ActiveSession == DCM_SESSION_DEFAULT)
@@ -262,8 +284,6 @@ static void Dcm_SessionTimeoutCheck(void)
     }
 
     /* S3 Server 超时: 若在非默认会话且在 S3 时间内未收到 TesterPresent，回退默认会话 */
-    /* TODO: 需要与 OS tick 对接，此处仅给出框架逻辑 */
-    /*
     if (Dcm_TesterPresent_Seen)
     {
         Dcm_TesterPresentTimer = 0u;
@@ -271,16 +291,258 @@ static void Dcm_SessionTimeoutCheck(void)
     }
     else
     {
-        Dcm_TesterPresentTimer += DCM_MAIN_CYCLE_MS;
+        Dcm_TesterPresentTimer += dt;
         if (Dcm_TesterPresentTimer >= DCM_S3_SERVER_TIMEOUT_MS)
         {
-            Dcm_ActiveSession = DCM_SESSION_DEFAULT;
-            Dcm_SecLevel      = DCM_SEC_LEVEL_LOCKED;
+            Dcm_ActiveSession      = DCM_SESSION_DEFAULT;
+            Dcm_SecLevel           = DCM_SEC_LEVEL_LOCKED;
             Dcm_TesterPresentTimer = 0u;
         }
     }
-    */
-    (void)Dcm_TesterPresentTimer;
+}
+
+/*===========================================================================
+ * DID 数据访问辅助函数 (Dcm_DataAccess)
+ *
+ * AUTOSAR 架构说明:
+ *   DCM 模块通过 SchM (调度管理器) 或 Rte_Read 接口获取应用层数据。
+ *   本项目 RTE 层较薄，此处封装物理量→UDS 编码的转换逻辑，
+ *   将 BMS 原始浮点数据转换为 ISO 14229-1 定义的整数编码。
+ *
+ * 信号编码规则 (与 CAN 信号 DBC 保持一致):
+ *   - 电压类:  uint16, 分辨率 0.1V,   物理值 = raw × 0.1 (V)
+ *   - 电流类:   int16, 分辨率 0.1A,   物理值 = raw × 0.1 (A)
+ *   - SOC/SOH:  uint8, 分辨率 0.5%,   物理值 = raw × 0.5 (%)
+ *   - 单体电压: uint16, 分辨率 0.001V, 物理值 = raw × 0.001 (V)
+ *   - 温度类:    int8, 分辨率 1°C,    偏移量 40°C (raw = T + 40)
+ *===========================================================================*/
+
+/** @brief float → uint16 缩放转换（四舍五入，带上下限饱和） */
+static uint16_t Dcm_ScaleToUint16(float value, float resolution)
+{
+    int32_t raw;
+    if (resolution <= 0.0f) return 0u;
+    raw = (int32_t)(value / resolution + 0.5f);
+    if (raw < 0)        return 0u;
+    if (raw > (int32_t)0xFFFF) return 0xFFFFu;
+    return (uint16_t)raw;
+}
+
+/** @brief float → int16 缩放转换（四舍五入，带上下限饱和） */
+static int16_t Dcm_ScaleToInt16(float value, float resolution)
+{
+    int32_t raw;
+    if (resolution <= 0.0f) return 0;
+    raw = (int32_t)(value / resolution + (value >= 0.0f ? 0.5f : -0.5f));
+    if (raw < (int32_t)-32768) return (int16_t)-32768;
+    if (raw > (int32_t)32767)  return (int16_t)32767;
+    return (int16_t)raw;
+}
+
+/** @brief float → uint8 缩放转换（四舍五入，带上下限饱和） */
+static uint8_t Dcm_ScaleToUint8(float value, float resolution)
+{
+    int32_t raw;
+    if (resolution <= 0.0f) return 0u;
+    raw = (int32_t)(value / resolution + 0.5f);
+    if (raw < 0)   return 0u;
+    if (raw > 255) return 255u;
+    return (uint8_t)raw;
+}
+
+/**
+ * @brief  读取电池总电压 DID 0x2001
+ * @param  data: 输出缓冲区（2字节，Big-Endian）
+ * @param  len:  输出数据长度
+ */
+static void Dcm_ReadBatteryVoltage(uint8_t* data, uint8_t* len)
+{
+    float voltage;
+    uint16_t raw;
+    (void)Rte_Read_Dcm_BatteryVoltage(&voltage);
+    raw = Dcm_ScaleToUint16(voltage, 0.1f);
+    data[0] = (uint8_t)((raw >> 8) & 0xFFu);  /* MSB */
+    data[1] = (uint8_t)(raw & 0xFFu);          /* LSB */
+    *len = 2u;
+}
+
+/**
+ * @brief  读取 SOC DID 0x2003
+ * @param  data: 输出缓冲区（1字节）
+ * @param  len:  输出数据长度
+ *
+ * BMS_AnalysisData.SOC 范围 0.0~1.0，编码为 0~200（分辨率 0.5%）
+ */
+static void Dcm_ReadSOC(uint8_t* data, uint8_t* len)
+{
+    float soc;
+    float soc_pct;
+    (void)Rte_Read_Dcm_SOC(&soc);
+    soc_pct = soc * 100.0f;  /* 0.0~1.0 → 0~100% */
+    data[0] = Dcm_ScaleToUint8(soc_pct, 0.5f);
+    *len = 1u;
+}
+
+/**
+ * @brief  读取最高单体电压 DID 0x2101
+ * @param  data: 输出缓冲区（2字节，Big-Endian）
+ * @param  len:  输出数据长度
+ */
+static void Dcm_ReadMaxCellVoltage(uint8_t* data, uint8_t* len)
+{
+    float vmax;
+    uint16_t raw;
+    (void)Rte_Read_Dcm_CellVoltMax(&vmax);
+    raw = Dcm_ScaleToUint16(vmax, 0.001f);
+    data[0] = (uint8_t)((raw >> 8) & 0xFFu);
+    data[1] = (uint8_t)(raw & 0xFFu);
+    *len = 2u;
+}
+
+/**
+ * @brief  读取最低单体电压 DID 0x2102
+ * @param  data: 输出缓冲区（2字节，Big-Endian）
+ * @param  len:  输出数据长度
+ */
+static void Dcm_ReadMinCellVoltage(uint8_t* data, uint8_t* len)
+{
+    float vmin;
+    uint16_t raw;
+    (void)Rte_Read_Dcm_CellVoltMin(&vmin);
+    raw = Dcm_ScaleToUint16(vmin, 0.001f);
+    data[0] = (uint8_t)((raw >> 8) & 0xFFu);
+    data[1] = (uint8_t)(raw & 0xFFu);
+    *len = 2u;
+}
+
+/**
+ * @brief  读取最高单体温度 DID 0x2103
+ * @param  data: 输出缓冲区（1字节，偏移编码）
+ * @param  len:  输出数据长度
+ *
+ * CellTemp[] 已从小到大排序，CellTemp[N-1] 为最高温度。
+ * 编码: raw = 温度(°C) + 40，范围 -40~+215°C → 0~255。
+ */
+static void Dcm_ReadMaxCellTemp(uint8_t* data, uint8_t* len)
+{
+    float temp_c;
+    int16_t raw;
+    (void)Rte_Read_Dcm_CellTempMax(&temp_c);
+    raw = (int16_t)(temp_c + 40.0f + 0.5f);
+    if (raw < 0)   raw = 0;
+    if (raw > 255) raw = 255;
+    data[0] = (uint8_t)raw;
+    *len = 1u;
+}
+
+/**
+ * @brief  读取最低单体温度 DID 0x2104
+ * @param  data: 输出缓冲区（1字节，偏移编码）
+ * @param  len:  输出数据长度
+ *
+ * CellTemp[0] 为最低温度（已排序）。
+ * 编码: raw = 温度(°C) + 40，范围 -40~+215°C → 0~255。
+ */
+static void Dcm_ReadMinCellTemp(uint8_t* data, uint8_t* len)
+{
+    float temp_c;
+    int16_t raw;
+    (void)Rte_Read_Dcm_CellTempMin(&temp_c);
+    raw = (int16_t)(temp_c + 40.0f + 0.5f);
+    if (raw < 0)   raw = 0;
+    if (raw > 255) raw = 255;
+    data[0] = (uint8_t)raw;
+    *len = 1u;
+}
+
+/**
+ * @brief  读取 BMS 运行状态 DID 0x3001
+ * @param  data: 输出缓冲区（1字节，位域编码）
+ * @param  len:  输出数据长度
+ *
+ * 位域定义:
+ *   bit[2:0] — 系统模式 (0=NULL, 1=充电, 2=放电, 3=待机, 4=睡眠)
+ *   bit[3]   — 充电使能 (1=允许)
+ *   bit[4]   — 放电使能 (1=允许)
+ *   bit[5]   — 均衡状态 (1=均衡中)
+ *   bit[7:6] — 保留
+ */
+static void Dcm_ReadBmsStatus(uint8_t* data, uint8_t* len)
+{
+    uint8_t sysMode;
+    bool chargeEn, dischargeEn, balanceAct;
+    uint8_t status = 0u;
+
+    (void)Rte_Read_Dcm_SysMode(&sysMode);
+    (void)Rte_Read_Dcm_ChargeEnabled(&chargeEn);
+    (void)Rte_Read_Dcm_DischargeEnabled(&dischargeEn);
+    (void)Rte_Read_Dcm_BalanceActive(&balanceAct);
+
+    status |= (sysMode & 0x07u);                          /* bit[2:0]: 系统模式 (3位, 可表示0~4) */
+    if (chargeEn)    status |= 0x08u;                      /* bit3: 充电使能 */
+    if (dischargeEn) status |= 0x10u;                      /* bit4: 放电使能 */
+    if (balanceAct)  status |= 0x20u;                      /* bit5: 均衡中 */
+    data[0] = status;
+    *len = 1u;
+}
+
+/**
+ * @brief  读取保护标志位 DID 0x3004
+ * @param  data: 输出缓冲区（2字节，Big-Endian 位掩码）
+ * @param  len:  输出数据长度
+ *
+ * 位定义与 BMS_ProtectAlertTypedef 枚举一致:
+ *   bit0:  充电过压保护    bit1:  充电过流保护
+ *   bit2:  充电过温保护    bit3:  充电低温保护
+ *   bit4:  放电欠压保护    bit5:  放电过流保护
+ *   bit6:  放电短路保护    bit7:  放电过温保护
+ *   bit8:  放电低温保护    bit15~9: 保留
+ */
+static void Dcm_ReadProtectFlag(uint8_t* data, uint8_t* len)
+{
+    uint16_t flags;
+    (void)Rte_Read_Dcm_ProtectAlertFlags(&flags);
+    data[0] = (uint8_t)((flags >> 8) & 0xFFu);  /* MSB */
+    data[1] = (uint8_t)(flags & 0xFFu);          /* LSB */
+    *len = 2u;
+}
+
+/**
+ * @brief  读取当前故障码 DID 0x3005
+ * @param  data: 输出缓冲区（2字节，Big-Endian）
+ * @param  len:  输出数据长度
+ *
+ * 将 BMS_Protect.alert 保护标志位映射为标准化 DTC 故障码。
+ * 若多个故障同时存在，返回最高优先级的故障码。
+ * 优先级: 短路 > 过流 > 过压 > 欠压 > 过温 > 低温。
+ *
+ * DTC 编码映射表:
+ *   0x0101 — 充电过压    0x0102 — 放电欠压
+ *   0x0201 — 充电过流    0x0202 — 放电过流    0x0203 — 放电短路
+ *   0x0301 — 充电过温    0x0302 — 放电过温
+ *   0x0303 — 充电低温    0x0304 — 放电低温
+ *   0x0000 — 无故障
+ */
+static void Dcm_ReadFaultCode(uint8_t* data, uint8_t* len)
+{
+    uint16_t alert;
+    uint16_t dtc = 0x0000u;
+    (void)Rte_Read_Dcm_ProtectAlertFlags(&alert);
+
+    /* 按优先级映射（高优先级先检查，覆盖低优先级） */
+    if (alert & 0x0040u)      dtc = 0x0203u;  /* FlAG_ALERT_SCD  放电短路 */
+    else if (alert & 0x0020u) dtc = 0x0202u;  /* FlAG_ALERT_OCD  放电过流 */
+    else if (alert & 0x0002u) dtc = 0x0201u;  /* FlAG_ALERT_OCC  充电过流 */
+    else if (alert & 0x0001u) dtc = 0x0101u;  /* FlAG_ALERT_OV   充电过压 */
+    else if (alert & 0x0010u) dtc = 0x0102u;  /* FlAG_ALERT_UV   放电欠压 */
+    else if (alert & 0x0080u) dtc = 0x0302u;  /* FlAG_ALERT_OTD  放电过温 */
+    else if (alert & 0x0004u) dtc = 0x0301u;  /* FlAG_ALERT_OTC  充电过温 */
+    else if (alert & 0x0100u) dtc = 0x0304u;  /* FlAG_ALERT_LTD  放电低温 */
+    else if (alert & 0x0008u) dtc = 0x0303u;  /* FlAG_ALERT_LTC  充电低温 */
+
+    data[0] = (uint8_t)((dtc >> 8) & 0xFFu);  /* DTC HighByte */
+    data[1] = (uint8_t)(dtc & 0xFFu);          /* DTC LowByte */
+    *len = 2u;
 }
 
 /*===========================================================================
@@ -362,7 +624,8 @@ static Dcm_StatusType Dcm_HandleEcuReset(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleTesterPresent(const CanTp_MsgType* msg)
 {
-    uint8_t subFunc;  /* 子功能码：0x00=需要响应, 0x80=抑制响应 */
+    uint8_t subFunc;         /* 子功能码（bit0~6） */
+    bool suppressPosRsp;     /* bit7: 是否抑制正响应 */
 
     if (Dcm_GetMessageLength(msg) < 2u)
     {
@@ -370,24 +633,27 @@ static Dcm_StatusType Dcm_HandleTesterPresent(const CanTp_MsgType* msg)
         return DCM_E_MSG_LEN;
     }
 
-    subFunc = msg->data[1] & 0x7Fu;
+    suppressPosRsp = (msg->data[1] & 0x80u) != 0u;  /* 提取 bit7 抑制标志 */
+    subFunc = msg->data[1] & 0x7Fu;                  /* 提取 bit0~6 子功能值 */
 
-    /* 子功能: 0x00(需要响应), 0x80(抑制响应, bit7=1) */
+    /* 子功能: 0x00=需要响应, 0x80=抑制响应(bit7=1, 实际子功能仍为0x00) */
     if (subFunc != 0x00u)
     {
         Dcm_SendNegativeResponse(DCM_SID_TESTER_PRESENT, DCM_NRC_SUBFUNC_NOT_SUPPORTED);
         return DCM_E_SUBFUNC_NOT_SUPPORTED;
     }
 
-    /* 刷新看门狗计时器 */
+    /* 刷新 S3 超时计时器（无论是否抑制响应都要执行，保持非默认会话） */
     Dcm_TesterPresent_Seen = true;
 
-    /* 发送肯定响应（如未被抑制） */
+    /* 仅当未抑制正响应时才发送肯定响应 */
+    if (!suppressPosRsp)
     {
         uint8_t respData[1];       /* 肯定响应数据：[0x00] */
         respData[0] = 0x00u;
         Dcm_SendPositiveResponse(DCM_SID_TESTER_PRESENT, respData, 1u);
     }
+
     return DCM_OK;
 }
 
@@ -440,70 +706,172 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
 
         /* --- BMS 实时数据 --- */
         case DCM_DID_BATTERY_VOLTAGE:
-            /* TODO: Rte_Call_BmsRead_BatteryVoltage() → 4 bytes float */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [VoltMSB] [VoltLSB]
+             * 编码: uint16, 分辨率 0.1V, 范围 0~6553.5V */
+            uint8_t respData[4];  /* DID(2B) + 电压数据(2B) */
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_BATTERY_VOLTAGE >> 8) & 0xFFu); /* DID MSB */
+            respData[1] = (uint8_t)(DCM_DID_BATTERY_VOLTAGE & 0xFFu);        /* DID LSB */
+            Dcm_ReadBatteryVoltage(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_BATTERY_CURRENT:
-            /* TODO: Rte_Call_BmsRead_BatteryCurrent() */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [CurrMSB] [CurrLSB]
+             * 编码: int16, 分辨率 0.1A, 偏移 0, 充电为正/放电为负 */
+            uint8_t respData[4];  /* DID(2B) + 电流数据(2B) */
+            float current;
+            int16_t raw;
+            (void)Rte_Read_Dcm_BatteryCurrent(&current);
+            raw = Dcm_ScaleToInt16(current, 0.1f);
+            respData[0] = (uint8_t)((DCM_DID_BATTERY_CURRENT >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_BATTERY_CURRENT & 0xFFu);
+            respData[2] = (uint8_t)((raw >> 8) & 0xFFu);  /* MSB */
+            respData[3] = (uint8_t)(raw & 0xFFu);          /* LSB */
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 4u);
             break;
+        }
 
         case DCM_DID_BATTERY_SOC:
-            /* TODO: Rte_Call_BmsRead_SOC() */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [SOC]
+             * 编码: uint8, 分辨率 0.5%, 范围 0~100% (raw 0~200) */
+            uint8_t respData[3];  /* DID(2B) + SOC数据(1B) */
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_BATTERY_SOC >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_BATTERY_SOC & 0xFFu);
+            Dcm_ReadSOC(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_BATTERY_SOH:
-            /* TODO: Rte_Call_BmsRead_SOH() */
+            /* TODO: BMS_AnalysisData.SOH 尚未实现，暂返回 0x31 */
             Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
             break;
 
         case DCM_DID_MAX_CELL_VOLTAGE:
-            /* TODO: 返回最高单体电压 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [VoltMSB] [VoltLSB]
+             * 编码: uint16, 分辨率 0.001V, 范围 0~65.535V */
+            uint8_t respData[4];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_MAX_CELL_VOLTAGE >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_MAX_CELL_VOLTAGE & 0xFFu);
+            Dcm_ReadMaxCellVoltage(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_MIN_CELL_VOLTAGE:
-            /* TODO: 返回最低单体电压 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [VoltMSB] [VoltLSB]
+             * 编码: uint16, 分辨率 0.001V, 范围 0~65.535V */
+            uint8_t respData[4];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_MIN_CELL_VOLTAGE >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_MIN_CELL_VOLTAGE & 0xFFu);
+            Dcm_ReadMinCellVoltage(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_MAX_CELL_TEMP:
-            /* TODO: 返回最高单体温度 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [Temp]
+             * 编码: uint8, 偏移 40°C, raw = T+40, 范围 -40~+215°C */
+            uint8_t respData[3];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_MAX_CELL_TEMP >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_MAX_CELL_TEMP & 0xFFu);
+            Dcm_ReadMaxCellTemp(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_MIN_CELL_TEMP:
-            /* TODO: 返回最低单体温度 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [Temp]
+             * 编码: uint8, 偏移 40°C, raw = T+40, 范围 -40~+215°C */
+            uint8_t respData[3];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_MIN_CELL_TEMP >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_MIN_CELL_TEMP & 0xFFu);
+            Dcm_ReadMinCellTemp(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         /* --- BMS 状态 --- */
         case DCM_DID_BMS_STATUS:
-            /* TODO: 返回 BMS 运行状态 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [Status]
+             * 位域: bit[2:0]=SysMode, bit3=充电, bit4=放电, bit5=均衡 */
+            uint8_t respData[3];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_BMS_STATUS >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_BMS_STATUS & 0xFFu);
+            Dcm_ReadBmsStatus(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_CHARGE_STATUS:
-            /* TODO: 返回充电状态 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [ChargeState]
+             * 0x00=禁用, 0x01=充电中, 其他=保留 */
+            bool chargeEn;
+            uint8_t respData[3];
+            (void)Rte_Read_Dcm_ChargeEnabled(&chargeEn);
+            respData[0] = (uint8_t)((DCM_DID_CHARGE_STATUS >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_CHARGE_STATUS & 0xFFu);
+            respData[2] = chargeEn ? 0x01u : 0x00u;
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 3u);
             break;
+        }
 
         case DCM_DID_BALANCE_STATUS:
-            /* TODO: 返回均衡状态 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [BalanceState]
+             * 0x00=未均衡, 0x01=均衡中 */
+            bool balanceAct;
+            uint8_t respData[3];
+            (void)Rte_Read_Dcm_BalanceActive(&balanceAct);
+            respData[0] = (uint8_t)((DCM_DID_BALANCE_STATUS >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_BALANCE_STATUS & 0xFFu);
+            respData[2] = balanceAct ? 0x01u : 0x00u;
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 3u);
             break;
+        }
 
         case DCM_DID_PROTECT_FLAG:
-            /* TODO: 返回保护标志位 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [FlagMSB] [FlagLSB]
+             * 2字节保护标志位掩码，定义见 BMS_ProtectAlertTypedef */
+            uint8_t respData[4];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_PROTECT_FLAG >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_PROTECT_FLAG & 0xFFu);
+            Dcm_ReadProtectFlag(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         case DCM_DID_FAULT_CODE:
-            /* TODO: 返回当前故障码 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+        {
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [DtcHigh] [DtcLow]
+             * 标准化 DTC 编码，优先级: 短路>过流>过压>欠压>过温>低温 */
+            uint8_t respData[4];
+            uint8_t dataLen;
+            respData[0] = (uint8_t)((DCM_DID_FAULT_CODE >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_FAULT_CODE & 0xFFu);
+            Dcm_ReadFaultCode(&respData[2], &dataLen);
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 2u + dataLen);
             break;
+        }
 
         /* --- 标定参数 (可读写) --- */
         case DCM_DID_CHARGE_OVER_V_THD:

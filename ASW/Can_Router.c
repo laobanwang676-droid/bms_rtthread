@@ -24,6 +24,13 @@ static int16_t Com_ScaleToInt10(float value)
     return (int16_t)(value * 10.0f - 0.5f);
 }
 
+/*
+ * TODO: 以下为其他 ECU 主动索取单体电压/温度的请求-响应功能，
+ *       暂时注释，需要时取消注释。
+ *       注意: 取消注释时需同步取消注释 Com_Cfg.h 中的 CAN ID 定义。
+ */
+
+/*
 static uint8_t Com_SendCellVoltageResponse(void)
 {
     uint8_t count = BMS_GlobalParam.Cell_Real_Number;
@@ -112,8 +119,9 @@ static uint8_t Com_SendTemperatureResponse(void)
 
     return 1u;
 }
+*/
 
-// 获取BMS状态输入
+// 获取BMS状态输入 (周期广播 0x3F1 使用)
 uint8_t Com_GetBmsStatusInput(Com_BmsStatusInput* input)
 {
     if (input == 0)
@@ -170,12 +178,15 @@ void Com_RxIndicationHook(const CanIf_RxMsgType* msg)
 
     switch (msg->hw.CanId)//非uds诊断的ecu间消息，根据ID进行处理
     {
+        /* TODO: 其他 ECU 索取单体电压/温度，需要时取消注释 */
+        /*
         case COM_CANID_CELL_VOLT_REQ:
             (void)Com_SendCellVoltageResponse();
             break;
         case COM_CANID_TEMP_REQ:
             (void)Com_SendTemperatureResponse();
             break;
+        */
         default:
             break;
     }

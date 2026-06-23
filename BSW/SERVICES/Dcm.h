@@ -131,10 +131,12 @@ typedef enum
 void Dcm_Init(void);
 
 /**
- * @brief  主函数，由上层周期性调用以检查会话超时。
+ * @brief  主函数，由 SchM (RTE) 周期性调用，执行所有 DCM 内部周期任务。
+ * @param  dt: 距上次调用经过的时间（单位：ms），由调用方计算后传入。
+ *         RTE 层负责调用 OS tick 接口计算 dt，DCM 不依赖任何 OS API。
  *         周期建议: 10~100ms
  */
-void Dcm_MainFunction(void);
+void Dcm_MainFunction(uint32_t dt);
 
 /**
  * @brief  处理接收到的诊断 CAN 消息。

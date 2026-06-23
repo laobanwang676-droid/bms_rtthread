@@ -2,6 +2,7 @@
 #define RTE_TYPE_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef uint8_t Rte_ReturnType;
 

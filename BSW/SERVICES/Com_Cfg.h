@@ -13,10 +13,13 @@ extern rt_sem_t uds_rx_sem; // 声明接收信号量
 
 /* CAN IDs (standard 11-bit, from DBC) */
 #define COM_CANID_BMS_STATUS          ((Can_IdType)0x3F1u)
-#define COM_CANID_CELL_VOLT_REQ       ((Can_IdType)0x123u)
-#define COM_CANID_CELL_VOLT_RESP      ((Can_IdType)0x321u)
-#define COM_CANID_TEMP_REQ            ((Can_IdType)0x234u)
-#define COM_CANID_TEMP_RESP           ((Can_IdType)0x432u)
+
+/* TODO: 以下 CAN ID 为其他 ECU 主动索取单体电压/温度的请求-响应通道，
+ *       暂时注释，需要时取消注释 */
+/* #define COM_CANID_CELL_VOLT_REQ       ((Can_IdType)0x123u) */
+/* #define COM_CANID_CELL_VOLT_RESP      ((Can_IdType)0x321u) */
+/* #define COM_CANID_TEMP_REQ            ((Can_IdType)0x234u) */
+/* #define COM_CANID_TEMP_RESP           ((Can_IdType)0x432u) */
 
 /* UDS 诊断 CAN IDs — 路由到 DCM 模块 */
 #define COM_CANID_DIAG_PHYS_REQ       ((Can_IdType)0x7E0u)  /* 物理寻址请求 */
@@ -30,7 +33,7 @@ extern rt_sem_t uds_rx_sem; // 声明接收信号量
 #define COM_BMS_STATUS_DLC            ((uint8_t)4u)
 #define COM_BMS_STATUS_PERIOD_MS      ((uint32_t)1000u)
 
-/* Signal resolution (example: adjust to your DBC) */
+/* Signal resolution (adjust to your DBC) */
 #define COM_BMS_VOLTAGE_RESOLUTION_V  (0.1f)
 #define COM_BMS_SOC_RESOLUTION_PCT    (0.1f)
 
