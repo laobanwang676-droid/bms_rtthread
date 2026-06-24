@@ -30,7 +30,7 @@ extern rt_sem_t uds_rx_sem; // 声明接收信号量
 #define COM_TXPDU_BMS_STATUS          ((PduIdType)0u)
 
 /* Signal layout for COM_CANID_BMS_STATUS */
-#define COM_BMS_STATUS_DLC            ((uint8_t)4u)
+#define COM_BMS_STATUS_DLC            ((uint8_t)8u)
 #define COM_BMS_STATUS_PERIOD_MS      ((uint32_t)1000u)
 
 /* Signal resolution (adjust to your DBC) */

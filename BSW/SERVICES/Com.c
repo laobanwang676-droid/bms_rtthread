@@ -44,7 +44,7 @@ void Com_Init(void)
 
 Can_ReturnType Com_MainFunctionTx(void)
 {
-    uint8_t data[8] = {0u};
+    uint8_t data[8] = {0xAAu, 0xAAu, 0xAAu, 0xAAu, 0xAAu, 0xAAu, 0xAAu, 0xAAu};
     uint8_t dlc = 0u;
     Can_PduType pdu;
 
