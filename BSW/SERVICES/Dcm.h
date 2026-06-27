@@ -78,6 +78,7 @@ typedef enum
 #define DCM_NRC_EXCEED_NUM_ATTEMPTS      (0x36u)  /* 超过尝试次数 */
 #define DCM_NRC_TIME_DELAY_NOT_EXPIRED   (0x37u)  /* 延迟时间未到 */
 #define DCM_NRC_UPLOAD_DOWNLOAD_NOT_ACCEPTED (0x70u) /* 禁止上传/下载 */
+#define DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION (0x7Fu) /* 当前会话不支持此服务 */
 
 /*===========================================================================
  * 诊断会话超时 (ms)
@@ -170,5 +171,17 @@ void Dcm_TxConfirmation(void);
  *         而是置位此标志，等待 RTE 将响应帧发出后再执行复位。
  */
 bool Dcm_IsEcuResetPending(void);
+
+/**
+ * @brief  获取当前活跃的诊断会话类型。
+ * @retval 当前会话类型（默认/编程/扩展/安全）。
+ */
+Dcm_SessionType Dcm_GetActiveSession(void);
+
+/**
+ * @brief  获取当前安全访问等级。
+ * @retval 当前安全等级（锁定/已解锁 Lv1）。
+ */
+Dcm_SecLevelType Dcm_GetSecurityLevel(void);
 
 #endif /* DCM_H */

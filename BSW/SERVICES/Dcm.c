@@ -31,7 +31,7 @@
 static Dcm_SessionType  Dcm_ActiveSession     = DCM_SESSION_DEFAULT;   /* 当前诊断会话类型（默认/编程/扩展/安全） */
 static Dcm_SecLevelType Dcm_SecLevel          = DCM_SEC_LEVEL_LOCKED;  /* 当前安全访问等级（锁定/已解锁） */
 static uint32_t         Dcm_TesterPresentTimer = 0u;                   /* TesterPresent 超时计数器（单位：ms） */
-static bool             Dcm_TesterPresent_Seen = false;                 /* 标记本周期是否收到 TesterPresent 请求 */
+static bool             Dcm_TesterPresent_Seen = false;                 /* 标记本周期是否收到重置计时的 TesterPresent 请求 */
 
 /* 响应缓存 */
 static CanTp_MsgType  Dcm_ResponseBuffer;                      /* UDS 响应帧发送缓冲区（CAN ID + 数据 + 长度） */
@@ -61,6 +61,10 @@ static Dcm_StatusType Dcm_HandleSecurityAccess   (const CanTp_MsgType* msg);
 static Dcm_StatusType Dcm_HandleReadDtcInfo      (const CanTp_MsgType* msg);
 static Dcm_StatusType Dcm_HandleClearDtcInfo     (const CanTp_MsgType* msg);
 static Dcm_StatusType Dcm_HandleRoutineControl   (const CanTp_MsgType* msg);
+
+/* --- 会话/安全检查辅助函数 --- */
+static bool Dcm_IsSessionAllowed(Dcm_SessionType minSession);
+static bool Dcm_IsSecurityUnlocked(void);
 
 /*===========================================================================
  * 公开 API
@@ -271,6 +275,50 @@ bool Dcm_IsEcuResetPending(void)
     return Dcm_EcuResetPending;
 }
 
+/**
+ * @brief  获取当前活跃的诊断会话类型。
+ */
+Dcm_SessionType Dcm_GetActiveSession(void)
+{
+    return Dcm_ActiveSession;
+}
+
+/**
+ * @brief  获取当前安全访问等级。
+ */
+Dcm_SecLevelType Dcm_GetSecurityLevel(void)
+{
+    return Dcm_SecLevel;
+}
+
+/*===========================================================================
+ * 会话/安全检查辅助函数
+ *===========================================================================*/
+
+/**
+ * @brief  检查当前会话是否满足最低会话要求。
+ * @param  minSession: 允许执行此服务的最低会话类型
+ * @retval true:  当前会话满足要求
+ * @retval false: 当前会话不满足要求
+ *
+ * 会话等级: DEFAULT(1) < PROGRAMMING(2) < EXTENDED(3) < SAFETY(4)
+ * 例如: minSession=EXTENDED 表示只有 EXTENDED 和 SAFETY 会话允许。
+ */
+static bool Dcm_IsSessionAllowed(Dcm_SessionType minSession)
+{
+    return (Dcm_ActiveSession >= minSession);
+}
+
+/**
+ * @brief  检查当前安全等级是否已解锁。
+ * @retval true:  已解锁
+ * @retval false: 锁定
+ */
+static bool Dcm_IsSecurityUnlocked(void)
+{
+    return (Dcm_SecLevel != DCM_SEC_LEVEL_LOCKED);
+}
+
 /*===========================================================================
  * 会话超时管理
  *===========================================================================*/
@@ -371,16 +419,19 @@ static void Dcm_ReadBatteryVoltage(uint8_t* data, uint8_t* len)
  * @param  data: 输出缓冲区（1字节）
  * @param  len:  输出数据长度
  *
- * BMS_AnalysisData.SOC 范围 0.0~1.0，编码为 0~200（分辨率 0.5%）
+ * BMS_AnalysisData.SOC 范围 0.0~1.0，编码为 0~1000（分辨率 0.1%）
  */
 static void Dcm_ReadSOC(uint8_t* data, uint8_t* len)
 {
     float soc;
     float soc_pct;
+    uint16_t raw;
     (void)Rte_Read_Dcm_SOC(&soc);
     soc_pct = soc * 100.0f;  /* 0.0~1.0 → 0~100% */
-    data[0] = Dcm_ScaleToUint8(soc_pct, 0.5f);
-    *len = 1u;
+    raw = Dcm_ScaleToUint16(soc_pct, 0.1f);
+    data[0] = (uint8_t)((raw >> 8) & 0xFFu);  /* MSB */
+    data[1] = (uint8_t)(raw & 0xFFu);          /* LSB */
+    *len = 2u;
 }
 
 /**
@@ -596,6 +647,16 @@ static Dcm_StatusType Dcm_HandleEcuReset(const CanTp_MsgType* msg)
         return DCM_E_MSG_LEN;
     }
 
+    /*===========================================================================
+     * 会话前置检查 — ECU Reset 仅在非默认会话下允许
+     *===========================================================================*/
+    if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+    {
+        Dcm_SendNegativeResponse(DCM_SID_ECU_RESET,
+                                 DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+        return DCM_E_SESSION_ERROR;
+    }
+
     resetType = msg->data[1] & 0x7Fu;
 
     switch (resetType)
@@ -704,6 +765,20 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
             Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
             break;
 
+        /* --- ISO 14229-1 标准 DID --- */
+        case DCM_DID_ACTIVE_SESSION:
+        {
+            /* 0xF184 — 当前活跃诊断会话
+             * 响应: [SID+0x40] [DID_H] [DID_L] [SessionType]
+             * 编码: uint8, 0x01=默认, 0x02=编程, 0x03=扩展, 0x04=安全 */
+            uint8_t respData[3];
+            respData[0] = (uint8_t)((DCM_DID_ACTIVE_SESSION >> 8) & 0xFFu);
+            respData[1] = (uint8_t)(DCM_DID_ACTIVE_SESSION & 0xFFu);
+            respData[2] = (uint8_t)Dcm_ActiveSession;  /* 当前会话类型 */
+            Dcm_SendPositiveResponse(DCM_SID_READ_DATA_BY_ID, respData, 3u);
+            break;
+        }
+
         /* --- BMS 实时数据 --- */
         case DCM_DID_BATTERY_VOLTAGE:
         {
@@ -737,9 +812,9 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
 
         case DCM_DID_BATTERY_SOC:
         {
-            /* 响应: [SID+0x40] [DID_H] [DID_L] [SOC]
-             * 编码: uint8, 分辨率 0.5%, 范围 0~100% (raw 0~200) */
-            uint8_t respData[3];  /* DID(2B) + SOC数据(1B) */
+            /* 响应: [SID+0x40] [DID_H] [DID_L] [SOC_MSB] [SOC_LSB]
+             * 编码: uint16, 分辨率 0.1%, 范围 0~100% (raw 0~1000) */
+            uint8_t respData[4];  /* DID(2B) + SOC数据(2B) */
             uint8_t dataLen;
             respData[0] = (uint8_t)((DCM_DID_BATTERY_SOC >> 8) & 0xFFu);
             respData[1] = (uint8_t)(DCM_DID_BATTERY_SOC & 0xFFu);
@@ -873,7 +948,7 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
             break;
         }
 
-        /* --- 标定参数 (可读写) --- */
+        /* --- 标定参数 (可读写, 需要扩展会话) --- */
         case DCM_DID_CHARGE_OVER_V_THD:
         case DCM_DID_DISCHARGE_UNDER_V_THD:
         case DCM_DID_CHARGE_OVER_C_THD:
@@ -881,8 +956,17 @@ static Dcm_StatusType Dcm_HandleReadDataById(const CanTp_MsgType* msg)
         case DCM_DID_CELL_UV_THD:
         case DCM_DID_CELL_OT_THD:
         case DCM_DID_BALANCE_ENABLE_THD:
-            /* TODO: 读取标定参数值 */
-            Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+            /* 标定参数仅在扩展会话及以上可读 */
+            if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+            {
+                Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID,
+                                         DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+            }
+            else
+            {
+                /* TODO: 从 EEPROM/Flash 读取标定参数值 */
+                Dcm_SendNegativeResponse(DCM_SID_READ_DATA_BY_ID, DCM_NRC_REQUEST_OUT_OF_RANGE);
+            }
             break;
 
         default:
@@ -906,6 +990,25 @@ static Dcm_StatusType Dcm_HandleWriteDataById(const CanTp_MsgType* msg)
         return DCM_E_MSG_LEN;
     }
 
+    /*===========================================================================
+     * 会话+安全前置检查（写入标定参数必须在扩展会话+安全解锁）
+     *===========================================================================*/
+    /* Step 1: 检查会话 — 标定参数写入仅在扩展会话及以上允许 */
+    if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+    {
+        Dcm_SendNegativeResponse(DCM_SID_WRITE_DATA_BY_ID,
+                                 DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+        return DCM_E_SESSION_ERROR;
+    }
+
+    /* Step 2: 检查安全等级 — 写入标定参数需要安全解锁 */
+    if (!Dcm_IsSecurityUnlocked())
+    {
+        Dcm_SendNegativeResponse(DCM_SID_WRITE_DATA_BY_ID,
+                                 DCM_NRC_SECURITY_ACCESS_DENIED);
+        return DCM_E_SESSION_ERROR;
+    }
+
     /* DID 是 Big-Endian 2 字节 */
     did = ((uint16_t)msg->data[1] << 8) | (uint16_t)msg->data[2];
 
@@ -914,10 +1017,9 @@ static Dcm_StatusType Dcm_HandleWriteDataById(const CanTp_MsgType* msg)
      *===========================================================================*/
     switch (did)
     {
-        /* --- 标定参数 (可写) --- */
+        /* --- 标定参数 (可写, 入口已检查扩展会话+安全解锁) --- */
         case DCM_DID_CHARGE_OVER_V_THD:
             /* TODO: 校验数据长度 → 校验范围 → 写入 EEPROM/Flash */
-            /* TODO: 检查当前会话是否允许写入（编程/扩展 + 安全解锁） */
             Dcm_SendNegativeResponse(DCM_SID_WRITE_DATA_BY_ID, DCM_NRC_CONDITIONS_NOT_CORRECT);
             break;
 
@@ -959,6 +1061,16 @@ static Dcm_StatusType Dcm_HandleWriteDataById(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleSecurityAccess(const CanTp_MsgType* msg)
 {
+    /*===========================================================================
+     * 会话前置检查 — Security Access 仅在非默认会话下允许
+     *===========================================================================*/
+    if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+    {
+        Dcm_SendNegativeResponse(DCM_SID_SECURITY_ACCESS,
+                                 DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+        return DCM_E_SESSION_ERROR;
+    }
+
     /* TODO: 实现 Seed & Key 流程
      * Step 1: Tester 发送 0x27 01 (请求种子)
      *          ECU 回复 0x67 01 [Seed_4bytes]
@@ -994,6 +1106,16 @@ static Dcm_StatusType Dcm_HandleReadDtcInfo(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleClearDtcInfo(const CanTp_MsgType* msg)
 {
+    /*===========================================================================
+     * 会话前置检查 — ClearDTC 仅在非默认会话下允许
+     *===========================================================================*/
+    if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+    {
+        Dcm_SendNegativeResponse(DCM_SID_CLEAR_DTC_INFO,
+                                 DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+        return DCM_E_SESSION_ERROR;
+    }
+
     /* TODO: 调用 Dem_ClearDtcList() 清除 DTC
      * 参数: 3 字节 groupOfDTC (0xFFFFFF = 清除所有)
      */
@@ -1007,6 +1129,16 @@ static Dcm_StatusType Dcm_HandleClearDtcInfo(const CanTp_MsgType* msg)
  *===========================================================================*/
 static Dcm_StatusType Dcm_HandleRoutineControl(const CanTp_MsgType* msg)
 {
+    /*===========================================================================
+     * 会话前置检查 — Routine Control 仅在非默认会话下允许
+     *===========================================================================*/
+    if (!Dcm_IsSessionAllowed(DCM_SESSION_EXTENDED))
+    {
+        Dcm_SendNegativeResponse(DCM_SID_ROUTINE_CONTROL,
+                                 DCM_NRC_SERVICE_NOT_SUPPORTED_IN_SESSION);
+        return DCM_E_SESSION_ERROR;
+    }
+
     /* TODO: 实现自定义例程（如：强制均衡、自检、校准）
      * 子功能:
      *   0x01 - startRoutine

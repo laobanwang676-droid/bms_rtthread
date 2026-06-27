@@ -38,6 +38,7 @@
 #define DCM_DID_SOFTWARE_VERSION         (0xF102u)  /* 软件版本号 */
 #define DCM_DID_HARDWARE_VERSION         (0xF103u)  /* 硬件版本号 */
 #define DCM_DID_BOOT_SW_VERSION          (0xF104u)  /* Bootloader 版本号 */
+#define DCM_DID_ACTIVE_SESSION           (0xF184u)  /* 当前活跃诊断会话 (ISO 14229-1) */
 
 /* BMS 实时数据 */
 #define DCM_DID_BATTERY_VOLTAGE          (0x2001u)  /* 电池总电压 (V) */
